@@ -33,7 +33,7 @@ Obwohl ich nach eine sehr einfaches Implementation streben möchte, damit es nic
 
 Diese sind natürlich nur Planen, und können während der Entwicklung geändert werden. 
 
-Die folgende Komplexitätskriterien sind im Plan (aus der 5 spezifizierte Kriterien):
+Die folgende Komplexitätskriterien stehen im Plan (aus der 5 spezifizierte Kriterien):
 * Templates
 * Operatorüberladung
 * Mehrfachvererbung
