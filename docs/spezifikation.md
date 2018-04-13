@@ -23,11 +23,19 @@ Der Benutzer bekommt eine CLI Tool, die die folgende machen kann:
 
 Obwohl ich nach eine sehr einfaches Implementation streben möchte, damit es nicht schwierig wird den ganzen Software überzusehen, ist es unvermeidlich einige komplexere Sachen im Program zu verwenden. Damit zu hilfen habe ich die folgende Typusgraphen erstellt: 
 
+A VirtualMachine class für den Ausführung des Kodes: 
+
 ![VirtualMachine](typus_vm.png)
+
+Dieses VirtualMachine enthält verschieden Speichern (Stack, Registers, RAM), diese sind in den folgenden Klassen implementiert:
 
 ![Speicher und geerbte Klassen](typus_speicher.png)
 
+Sowohl Instruktionen, als auch Sprachendateien können im File geschrieben werden, diese haben folgende Typusbaum:
+
 ![Dateientypen](typus_dateien.png)
+
+Mit Dateioperationen ist diese JSON Implementation zu hilfen:
 
 ![JSON Hilfsklasse](typus_json.png)
 
