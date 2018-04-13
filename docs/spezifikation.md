@@ -16,6 +16,7 @@ Der Benutzer bekommt eine CLI Tool, die die folgende machen kann:
     2. Subroutine und Labels definieren (mit Hilfe von einer reservierten Schlusswort oder Bezeichnung, z.B. `def` oder `:`).
     3. Definitionsbibliotheken aus speziellen Dateien einladen.
     4. Soweit eingetippte Schritte ansehen und die ganze History im Datei speichern.
+    5. Registern, Stack und Speicher im File (oder der Standardausgang) screiben
 4. Mit Hilfe von verschiedenen Sprachendateien Programme zwischen Sprachen umwandeln (erledigt z.B. wirkliche Assemblykode zu generieren, der später assembliert werden kann).
 
 ## Der Komplexität
