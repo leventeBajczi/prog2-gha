@@ -41,4 +41,5 @@ Die folgende Komplexitätskriterien stehen im Plan (aus der 5 spezifizierte Krit
 
 ---
 <sup>1</sup>: Eine Beispieldatei (nur die Idee zu zeigen)
+
 ![JSON example](example_json.png)
