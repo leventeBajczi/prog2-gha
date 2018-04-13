@@ -27,7 +27,7 @@ A VirtualMachine class für den Ausführung des Kodes:
 
 ![VirtualMachine](typus_vm.png)
 
-Dieses VirtualMachine enthält verschieden Speichern (Stack, Registers, RAM), diese sind in den folgenden Klassen implementiert:
+Dieses VirtualMachine enthält verschiedene Speichern (Stack, Registers, RAM), diese sind in den folgenden Klassen implementiert:
 
 ![Speicher und geerbte Klassen](typus_speicher.png)
 
@@ -39,7 +39,7 @@ Mit Dateioperationen ist diese JSON Implementation zu hilfen:
 
 ![JSON Hilfsklasse](typus_json.png)
 
-Diese sind natürlich nur Planen, und können während der Entwicklung geändert werden. 
+Diese sind natürlich nur Planen, und können während der Entwicklung geändert werden, sie stehen hier nur um die Erklärung der Idee zu erleitern.
 
 Die folgende Komplexitätskriterien stehen im Plan (aus der 5 spezifizierte Kriterien):
 * Templates
