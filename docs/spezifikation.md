@@ -20,6 +20,20 @@ Der Benutzer bekommt eine CLI Tool, die die folgende machen kann:
 
 ## Der Komplexität
 
-Obwohl ich nach eine sehr einfaches Implementation streben möchte, damit es nicht schwierig wird den ganzen Software überzusehen, ist es unvermeidlich einige komplexere Sachen im Program verwenden. Damit zu hilfen habe ich den folgendes Typusgraphen erstellt: 
-TODO: Create drawing of a type graph (Instruktion, SimpleInstruktion, ComplexInstruktion, Datei, SprachenDatei, InstruktionDatei)
-Dieses Modell beinhaltet ?többszörös öröklődés?, Templates, virtual Methoden und viele mehr.
+Obwohl ich nach eine sehr einfaches Implementation streben möchte, damit es nicht schwierig wird den ganzen Software überzusehen, ist es unvermeidlich einige komplexere Sachen im Program verwenden. Damit zu hilfen habe ich die folgende Typusgraphen erstellt: 
+
+![VirtualMachine](typus_vm.png)
+
+![Speicher und geerbte Klassen](typus_speicher.png)
+
+![Dateientypen](typus_dateien.png)
+
+![JSON Hilfsklasse](typus_json.png)
+
+Diese sind natürlich nur Planen, und können während der Entwicklung geändert werden. 
+
+Die folgende Komplexitätskriterien sind im Plan (aus der 5 spezifizierte Kriterien):
+* Templates
+* Operatorüberladung
+* Mehrfachvererbung
+* Dynamische Membervariable
