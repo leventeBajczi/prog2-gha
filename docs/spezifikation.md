@@ -31,13 +31,9 @@ Dieses VirtualMachine enthält verschiedene Speichern (Stack, Registers, RAM), d
 
 ![Speicher und geerbte Klassen](assets/typus_speicher.png)
 
-Sowohl Instruktionen, als auch Sprachendateien können im File geschrieben werden, diese haben folgende Typusbaum:
+Sowohl Instruktionen, als auch Sprachendateien können im File geschrieben werden, bzw. mit Dateioperationen ist eine JSON Implementation zu hilfen:
 
-![Dateientypen](assets/typus_dateien.png)
-
-Mit Dateioperationen ist diese JSON Implementation zu hilfen:
-
-![JSON Hilfsklasse](assets/typus_json.png)
+![Dateientypen](assets/typus_dateien_json.png)
 
 Diese sind natürlich nur Planen, und können während der Entwicklung geändert werden, sie stehen hier nur um die Erklärung der Idee zu erleitern.
 
