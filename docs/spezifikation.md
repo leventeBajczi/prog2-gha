@@ -25,19 +25,19 @@ Obwohl ich nach eine sehr einfaches Implementation streben möchte, damit es nic
 
 A VirtualMachine class für den Ausführung des Kodes: 
 
-![VirtualMachine](typus_vm.png)
+![VirtualMachine](assets/typus_vm.png)
 
 Dieses VirtualMachine enthält verschiedene Speichern (Stack, Registers, RAM), diese sind in den folgenden Klassen implementiert:
 
-![Speicher und geerbte Klassen](typus_speicher.png)
+![Speicher und geerbte Klassen](assets/typus_speicher.png)
 
 Sowohl Instruktionen, als auch Sprachendateien können im File geschrieben werden, diese haben folgende Typusbaum:
 
-![Dateientypen](typus_dateien.png)
+![Dateientypen](assets/typus_dateien.png)
 
 Mit Dateioperationen ist diese JSON Implementation zu hilfen:
 
-![JSON Hilfsklasse](typus_json.png)
+![JSON Hilfsklasse](assets/typus_json.png)
 
 Diese sind natürlich nur Planen, und können während der Entwicklung geändert werden, sie stehen hier nur um die Erklärung der Idee zu erleitern.
 
@@ -50,4 +50,4 @@ Die folgende Komplexitätskriterien stehen im Plan (aus der 5 spezifizierte Krit
 ---
 <sup>1</sup>: Eine Beispieldatei (nur die Idee zu zeigen)
 
-![JSON example](example_json.png)
+![JSON example](assets/example_json.png)
