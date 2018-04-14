@@ -1,0 +1,3 @@
+[submodule "lib/text"]
+	path = lib/text
+	url = https://github.com/leventeBajczi/text
