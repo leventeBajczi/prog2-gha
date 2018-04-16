@@ -4,7 +4,7 @@
 #include <string>
 #include "../../lib/rapidjson/document.h"
 class JSON{
-    private:
+    protected:
         rapidjson::Document content;
     public:
         JSON();
