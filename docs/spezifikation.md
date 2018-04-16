@@ -12,7 +12,7 @@ Der Benutzer bekommt eine CLI Tool, die die folgende machen kann:
 1. Eine leere, zu füllende Sprachendatei erstellen (JSON-basiert, damit es automatisch generiert werden kann sowohl aus dieser Programm als auch mit Hilfe von 3rd Party Programms).<sup>1</sup>
 2. Eine gefüllte Sprachendatei einladen (und natürlich verifizieren, ob es wirklich gut gefüllt wurde).
 3. Aus der eingeladeten Sprache einen inneren Konzol erstellen, in denen der Benutzer folgende tun kann:
-    1. Schritt für Schritt eine Programm eintippen.
+    1. Schritt für Schritt eine Programm eintippen und diese Schritte sofort laufen lassen.
     2. Subroutine und Labels definieren (mit Hilfe von einer reservierten Schlusswort oder Bezeichnung, z.B. `def` oder `:`).
     3. Definitionsbibliotheken aus speziellen Dateien einladen.
     4. Soweit eingetippte Schritte ansehen und die ganze History im Datei speichern.
@@ -44,6 +44,6 @@ Die folgende Komplexitätskriterien stehen im Plan (aus der 5 spezifizierte Krit
 * Dynamische Membervariable
 
 ---
-<sup>1</sup>: Eine Beispieldatei (nur die Idee zu zeigen)
+<sup>1</sup>: Eine Beispieldatei (nur die Idee zu zeigen, dass es eine eineindeutige Zuordnung von Mnemoniken zu inner definierte Funktionen enthält):
 
 ![JSON example](assets/example_json.png)
