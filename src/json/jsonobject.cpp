@@ -1,29 +1,34 @@
 #include "jsonobject.hpp"
 
-#include "../../lib/rapidjson/stringbuffer.h"
-#include "../../lib/rapidjson/writer.h"
-#include "../../lib/rapidjson/value.h"
 
-JSONObject::JSONObject() : JSON(), path("")
+JSONObject::JSONObject(std::string content) : content(content)
 {
 }
-JSONObject::JSONObject(std::string con) : JSON(con), path("")
+JSONObject JSONObject::get(std::string key)
 {
+    json::JSON obj = json::JSON::Load(content);
+    JSONObject json(obj[key].ToString());
+    return json;
 }
-JSONObject::JSONObject(std::string con, std::string p) : JSON(con), path(p)
+JSONObject::operator int()
 {
+    return atoi(content.c_str());
 }
-JSONObject& JSONObject::get(std::string child)
+JSONObject::operator std::string()
 {
-    rapidjson::StringBuffer buffer;
-    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
-    content[child.c_str()].Accept(writer);
-    return *(new JSONObject(buffer.GetString(), ""));
+    return content;
+}
+JSONObject JSONObject::operator[](int n)
+{
+    json::JSON obj = json::JSON::Load(content);
+    JSONObject json(obj[n].ToString());
+    return json;
 }
 
-template <class T>
-bool JSONObject::put(std::string key, T& value)
+
+std::ostream& operator<<(std::ostream& os, JSONObject content)
 {
-    Value v(value);
-    content.PushBack()
+    json::JSON obj = json::JSON::Load(content);
+    os<<obj;
+    return os;
 }
