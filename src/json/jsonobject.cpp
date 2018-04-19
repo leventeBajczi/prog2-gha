@@ -7,7 +7,7 @@ JSONObject::JSONObject(std::string content) : content(content)
 JSONObject JSONObject::get(std::string key)
 {
     json::JSON obj = json::JSON::Load(content);
-    JSONObject json(obj[key].ToString());
+    JSONObject json(obj[key].dump());
     return json;
 }
 JSONObject::operator int()
@@ -28,7 +28,6 @@ JSONObject JSONObject::operator[](int n)
 
 std::ostream& operator<<(std::ostream& os, JSONObject content)
 {
-    json::JSON obj = json::JSON::Load(content);
-    os<<obj;
+    os<<content.content;
     return os;
 }

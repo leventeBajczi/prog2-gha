@@ -8,7 +8,7 @@ class JSONObject{
     private:
         std::string content;
     public:
-        JSONObject(std::string);
+        JSONObject(std::string = "{}");
         JSONObject get(std::string);
         template<typename T> void put(std::string, T);
         operator int();
@@ -18,13 +18,13 @@ class JSONObject{
 
 };
 
-template<typename T> void JSONObject::put(std::string key, T value)
+template<typename T> inline void JSONObject::put(std::string key, T value)
 {
     json::JSON obj = json::JSON::Load(content);
     obj[key] = value;
     content = obj.dump();
 }
-template<> void JSONObject::put(std::string key, JSONObject value)
+template<> inline void JSONObject::put(std::string key, JSONObject value)
 {
     json::JSON obj = json::JSON::Load(content);
     json::JSON obj2 = json::JSON::Load((std::string)value);
