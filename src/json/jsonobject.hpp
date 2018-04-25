@@ -2,19 +2,27 @@
 #define _JSONOBJECT
 
 #include <string>
+#include "json.hpp"
 #include <iostream>
 #include "../../lib/simplejson/json.hpp"
-class JSONObject{
-    private:
-        std::string content;
+class JSONObject : public JSON{
     public:
-        JSONObject(std::string = "{}");
-        JSONObject get(std::string);
+        JSONObject(std::string content = "{}") : JSON(content)
+        {}
+
+        JSONObject get(std::string key)
+        {
+            json::JSON obj = json::JSON::Load(content);
+            JSONObject json(obj[key].dump());
+            return json;
+        }
+
         template<typename T> void put(std::string, T);
-        operator int();
-        operator std::string();
+
+        operator int()
+        {return atoi(content.c_str());}
+
         JSONObject operator[](int);
-        friend std::ostream& operator<<(std::ostream&, JSONObject); 
 
 };
 
