@@ -44,8 +44,3 @@ std::string Sprache::print()
 {
     return (std::string)*this;
 }
-
-Instruktion Sprache::parse(std::string instr)
-{
-
-}
