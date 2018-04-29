@@ -44,11 +44,8 @@ std::string Sprache::print()
 {
     return (std::string)*this;
 }
-bool Sprache::parseAndRun(std::string instr)
-{
 
-}
-Instruktion Sprache::parseAndBuild(std::string)
+Instruktion Sprache::parse(std::string instr)
 {
 
 }

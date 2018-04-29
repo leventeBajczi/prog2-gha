@@ -5,7 +5,7 @@
 
 #include "../datei.hpp"
 #include "../../json/json.hpp"
-#include "../instrucion/instruction.hpp"
+#include "../instruction/instruction.hpp"
 
 class Sprache : public Datei, public JSONObject
 {
