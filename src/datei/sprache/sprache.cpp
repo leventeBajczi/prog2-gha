@@ -38,18 +38,17 @@ std::map<const std::string, unsigned int> Sprache::languageElements = {
 
 Sprache::Sprache(std::string data, std::string lang) : Datei(lang), JSONObject(data) 
 {
-    std::map<const std::string, unsigned int>::iterator i = Sprache::languageElements.begin();    
-    for(;i!=Sprache::languageElements.end();i++)
-    {
-        instructions.insert((std::string)(this->get(i->first).get("sign")), i->first);
-    }
+    
 }
 std::string Sprache::print()
 {
     return (std::string)*this;
 }
-bool parseAndRun(std::string instr)
+bool Sprache::parseAndRun(std::string instr)
 {
 
 }
-bool parseAndBuild(std::string);
+Instruktion Sprache::parseAndBuild(std::string)
+{
+
+}
