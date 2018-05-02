@@ -10,6 +10,7 @@ class Memory{
     public:
         Memory(unsigned int);
         ~Memory();
+        Memory(const Memory&);
         bool write(unsigned int, uint8_t);
         bool read(unsigned int, uint8_t&);
         bool shiftRight(unsigned int, uint8_t, uint8_t, uint8_t&, uint8_t);

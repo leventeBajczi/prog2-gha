@@ -1,8 +1,14 @@
 #include "memory.hpp"
+#include <cstring>
 
 Memory::Memory(unsigned int n) : size(n)
 {
     speicherBereich = new uint8_t[n];
+}
+Memory::Memory(const Memory& obj) : size(obj.size)
+{
+    speicherBereich = new uint8_t[size];
+    memcpy(speicherBereich, obj.speicherBereich, size);
 }
 Memory::~Memory()
 {
