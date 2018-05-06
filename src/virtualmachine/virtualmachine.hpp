@@ -6,6 +6,7 @@
 #include <map>
 
 #include "../memory/memory.hpp"
+#include "../datei/sprache/sprache.hpp"
 #include "../datei/instruction/complexinstruction/complexinstruction.hpp"
 
 class VirtualMachine
@@ -17,11 +18,12 @@ class VirtualMachine
         Memory specialRegisterArray;
         std::map<std::string, ComplexInstruktion> labels;
         std::map<std::string, ComplexInstruktion> subroutines;
+        Sprache language;
         
     public:
-        VirtualMachine(unsigned int = 1024, unsigned int = 16);
+        VirtualMachine(Sprache, unsigned int = 1024, unsigned int = 16);
         bool runInstruction(std::string);
-        void reRun();
+        void reRunAll();
         bool addLabel(std::string);
         bool addSubroutine(std::string);
 
