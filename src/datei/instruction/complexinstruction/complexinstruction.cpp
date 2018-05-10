@@ -1,5 +1,9 @@
 #include "complexinstruction.hpp"
 #include <cstring>
+
+ComplexInstruktion::ComplexInstruktion(std::string lang) : Instruktion(lang)
+{
+}
 ComplexInstruktion::ComplexInstruktion(std::string lang, SimpleInstruktion& begin) : Instruktion(lang)
 {
     instructions.push_back(begin);

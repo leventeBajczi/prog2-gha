@@ -15,8 +15,7 @@ class Sprache : public Datei, public JSONObject
     public:
         Sprache(std::string, std::string);
         std::string print();
-        //Instruktion& parse(std::string);
-
+        
 };
 
 #endif

@@ -10,5 +10,6 @@ class Datei{
         Datei(std::string);
         virtual std::string print() = 0;
         friend std::ostream& operator<<(std::ostream&, Datei&);
+        std::string getLang();
 };
 #endif
