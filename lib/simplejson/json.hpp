@@ -346,7 +346,7 @@ class JSON
                     bool skip = true;
                     for( auto &p : *Internal.Map ) {
                         if( !skip ) s += ",\n";
-                        s += ( pad + "\"" + p.first + "\" : " + p.second.dump( depth + 1, tab ) );
+                        s += ( pad + "" + p.first + " : " + p.second.dump( depth + 1, tab ) );
                         skip = false;
                     }
                     s += ( "\n" + pad.erase( 0, 2 ) + "}" ) ;
@@ -364,7 +364,7 @@ class JSON
                     return s;
                 }
                 case Class::String:
-                    return "\"" + json_escape( *Internal.String ) + "\"";
+                    return "" + json_escape( *Internal.String ) + "";
                 case Class::Floating:
                     return std::to_string( Internal.Float );
                 case Class::Integral:

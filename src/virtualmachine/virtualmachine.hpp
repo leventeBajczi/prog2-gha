@@ -7,7 +7,10 @@
 
 #include "../memory/memory.hpp"
 #include "../datei/sprache/sprache.hpp"
-#include "../datei/instruction/complexinstruction/complexinstruction.hpp"
+#include "../datei/instruction/instruction.hpp"
+
+
+class ComplexInstruktion;
 
 class VirtualMachine
 {
@@ -19,19 +22,8 @@ class VirtualMachine
         std::map<std::string, ComplexInstruktion> labels;
         std::map<std::string, ComplexInstruktion> subroutines;
         Sprache language;
-        std::map<std::string, void (VirtualMachine::*)(std::string, std::string)> functions;
-        auto getPtr(std::string);
-
-        void mov(std::string, std::string);
-        void add(std::string, std::string);
-        void sub(std::string, std::string);
-        void cmp(std::string, std::string);
-        void swp(std::string, std::string);
-        void sl0(std::string, std::string);
-        void sr0(std::string, std::string);
-        void jmp(std::string, std::string);
-        void jsr(std::string, std::string);
-        void rts(std::string, std::string);
+        std::map<std::string, void*> functions;
+        void* getPtr(std::string);
 
 
         

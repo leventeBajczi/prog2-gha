@@ -2,18 +2,31 @@
 
 #include <sstream>
 
+
+
+void mov(VirtualMachine& vm, std::string s1, std::string s2){}
+void add(VirtualMachine& vm, std::string s1, std::string s2){}
+void sub(VirtualMachine& vm, std::string s1, std::string s2){}
+void cmp(VirtualMachine& vm, std::string s1, std::string s2){}
+void swp(VirtualMachine& vm, std::string s1, std::string s2){}
+void sl0(VirtualMachine& vm, std::string s1, std::string s2){}
+void sr0(VirtualMachine& vm, std::string s1, std::string s2){}
+void jmp(VirtualMachine& vm, std::string s1, std::string s2){}
+void jsr(VirtualMachine& vm, std::string s1, std::string s2){}
+void rts(VirtualMachine& vm, std::string s1, std::string s2){}
+
 VirtualMachine::VirtualMachine(Sprache sprache, unsigned int memory, unsigned int general) : memory(memory), generalRegisterArray(general), specialRegisterArray(2), language(sprache)
 {
     std::map<std::string, unsigned int>::iterator i = sprache.languageElements.begin();
-    functions.insert(std::make_pair( (i++)->first, &VirtualMachine::mov));
-    functions.insert(std::make_pair( (i++)->first, &VirtualMachine::add));
-    functions.insert(std::make_pair( (i++)->first, &VirtualMachine::sub));
-    functions.insert(std::make_pair( (i++)->first, &VirtualMachine::swp));
-    functions.insert(std::make_pair( (i++)->first, &VirtualMachine::sl0));
-    functions.insert(std::make_pair( (i++)->first, &VirtualMachine::sr0));
-    functions.insert(std::make_pair( (i++)->first, &VirtualMachine::jmp));
-    functions.insert(std::make_pair( (i++)->first, &VirtualMachine::jsr));
-    functions.insert(std::make_pair( (i++)->first, &VirtualMachine::rts));
+    functions.insert(std::make_pair( (i++)->first, (void*)mov));
+    functions.insert(std::make_pair( (i++)->first, (void*)add));
+    functions.insert(std::make_pair( (i++)->first, (void*)sub));
+    functions.insert(std::make_pair( (i++)->first, (void*)swp));
+    functions.insert(std::make_pair( (i++)->first, (void*)sl0));
+    functions.insert(std::make_pair( (i++)->first, (void*)sr0));
+    functions.insert(std::make_pair( (i++)->first, (void*)jmp));
+    functions.insert(std::make_pair( (i++)->first, (void*)jsr));
+    functions.insert(std::make_pair( (i++)->first, (void*)rts));
 
     labels.insert(std::make_pair("_start",*(new ComplexInstruktion(language.getLang()))));
 }
@@ -30,7 +43,7 @@ VirtualMachine::~VirtualMachine()
     
 }
 
-auto VirtualMachine::getPtr(std::string s)
+void* VirtualMachine::getPtr(std::string s)
 {
     std::string str;
     for(auto pair : language.instructions)
@@ -82,15 +95,3 @@ bool VirtualMachine::addSubroutine(std::string s)
 {
 
 }
-
-
-void VirtualMachine::mov(std::string s1, std::string s2){}
-void VirtualMachine::add(std::string s1, std::string s2){}
-void VirtualMachine::sub(std::string s1, std::string s2){}
-void VirtualMachine::cmp(std::string s1, std::string s2){}
-void VirtualMachine::swp(std::string s1, std::string s2){}
-void VirtualMachine::sl0(std::string s1, std::string s2){}
-void VirtualMachine::sr0(std::string s1, std::string s2){}
-void VirtualMachine::jmp(std::string s1, std::string s2){}
-void VirtualMachine::jsr(std::string s1, std::string s2){}
-void VirtualMachine::rts(std::string s1, std::string s2){}

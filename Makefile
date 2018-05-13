@@ -4,11 +4,9 @@ MKDIR = mkdir -p
 ODIR = obj
 SDIR = src
 INC = -Iinc
-LIB = lib/text
 
-_OBJS = main.o virtualmachine/virtualmachine.o memory/memory.o memory/stack/stack.o memory/registerarray/registerarray.o \
-		json/jsonobject.o json/jsonarray.o datei/datei.o datei/sprache/sprache.o datei/instruction/instruction.o \
-		datei/instruction/simpleinstruction/simpleinstruction.o datei/instruction/complexinstruction/complexinstruction.o ../lib/text/build/libtext.a
+_OBJS = main.o virtualmachine/virtualmachine.o memory/memory.o \
+		datei/datei.o datei/sprache/sprache.o datei/instruction/instruction.o
 OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
 
 
@@ -18,7 +16,6 @@ $(ODIR)/%.o: $(SDIR)/%.cpp
 
 $(OUT): $(OBJS)
 	$(MKDIR) $(shell echo $(OUT) | rev | cut -d"/" -f2- | rev)
-	$(MAKE) -C $(LIB)
 	$(CC) -o $(OUT) $^
 
 .PHONY: clean
