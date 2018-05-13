@@ -24,3 +24,8 @@ void ComplexInstruktion::run()
         si.run();
     }
 }
+
+void ComplexInstruktion::add(SimpleInstruktion& si)
+{
+    instructions.push_back(si);
+}

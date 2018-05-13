@@ -12,9 +12,7 @@ std::map<const std::string, unsigned int> Sprache::languageElements = {
     {"Return from subroutine", 0}
 };
 
-Sprache::Sprache(std::string data, std::string lang) : Datei(lang), JSONObject(data) 
-{
-    std::map<std::string, const std::string> instructions = {
+Sprache::Sprache(std::string data, std::string lang) : Datei(lang), JSONObject(data), instructions({
     {this->get("Move B to A"), "Move B to A"},
     {this->get("Add B to A"), "Add B to A"},
     {this->get("Substract B from A"), "Substract B from A"},
@@ -24,7 +22,8 @@ Sprache::Sprache(std::string data, std::string lang) : Datei(lang), JSONObject(d
     {this->get("Jump inconditionally"), "Jump inconditionally"},
     {this->get("Jump to subroutine"), "Jump to subroutine"},
     {this->get("Return from subroutine"), "Return from subroutine"}
-    };
+    })
+{ 
 }
 
 std::string Sprache::print()

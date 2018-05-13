@@ -29,6 +29,27 @@ VirtualMachine::~VirtualMachine()
     }
     
 }
+
+auto VirtualMachine::getPtr(std::string s)
+{
+    std::string str;
+    for(auto pair : language.instructions)
+    {
+        if(pair.first == s)
+        {   
+            str = pair.second;
+            break;
+        }
+    }
+    for(auto pair : functions)
+    {
+        if(pair.first == str)
+        {
+            return (pair.second);
+        }
+    }
+}
+
 bool VirtualMachine::runInstruction(std::string r)
 {
     std::istringstream is(r);
@@ -37,7 +58,16 @@ bool VirtualMachine::runInstruction(std::string r)
     is>>param1;
     is>>param2;
 
-    SimpleInstruktion sNew(language.getLang(), r, )
+    SimpleInstruktion sNew(language.getLang(), r, getPtr(instruction), param1, param2);
+    sNew.run();
+    for(auto pair : labels)
+    {
+        if(pair.first == "_start")
+        {
+            pair.second.add(sNew);
+            break;
+        }
+    }
 }
 void reRunAll();
 bool addLabel(std::string);

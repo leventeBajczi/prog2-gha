@@ -13,6 +13,7 @@ class ComplexInstruktion : public Instruktion
         ComplexInstruktion(std::string, SimpleInstruktion&);
         std::string print();
         void run();
+        void add(SimpleInstruktion&);
         
 
 };
