@@ -10,9 +10,9 @@
 class Sprache : public Datei, public JSONObject
 {
     private:
-        static std::map<const std::string, unsigned int> languageElements;
-        
+        std::map<std::string, std::string> instructions;
     public:
+        static std::map<const std::string, unsigned int> languageElements;
         Sprache(std::string, std::string);
         std::string print();
         
