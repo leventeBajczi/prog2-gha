@@ -68,7 +68,29 @@ bool VirtualMachine::runInstruction(std::string r)
             break;
         }
     }
+    return true;
 }
-void reRunAll();
-bool addLabel(std::string);
-bool addSubroutine(std::string);
+void VirtualMachine::reRunAll()
+{
+
+}
+bool VirtualMachine::addLabel(std::string s)
+{
+
+}
+bool VirtualMachine::addSubroutine(std::string s)
+{
+
+}
+
+
+void VirtualMachine::mov(std::string s1, std::string s2){}
+void VirtualMachine::add(std::string s1, std::string s2){}
+void VirtualMachine::sub(std::string s1, std::string s2){}
+void VirtualMachine::cmp(std::string s1, std::string s2){}
+void VirtualMachine::swp(std::string s1, std::string s2){}
+void VirtualMachine::sl0(std::string s1, std::string s2){}
+void VirtualMachine::sr0(std::string s1, std::string s2){}
+void VirtualMachine::jmp(std::string s1, std::string s2){}
+void VirtualMachine::jsr(std::string s1, std::string s2){}
+void VirtualMachine::rts(std::string s1, std::string s2){}
