@@ -2,6 +2,7 @@
 #define _SPRACHE
 
 #include <map>
+#include <vector>
 
 #include "../datei.hpp"
 #include "../../json/json.hpp"
@@ -11,7 +12,7 @@ class Sprache : public Datei, public JSONObject
 {
     public:
         std::map<std::string, std::string> instructions;
-        static std::map<const std::string, unsigned int> languageElements;
+        static std::vector<std::string> languageElements;
         Sprache(std::string, std::string);
         std::string print();
         

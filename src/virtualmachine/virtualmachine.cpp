@@ -4,42 +4,46 @@
 
 
 
-void mov(VirtualMachine& vm, std::string s1, std::string s2){}
-void add(VirtualMachine& vm, std::string s1, std::string s2){}
-void sub(VirtualMachine& vm, std::string s1, std::string s2){}
-void cmp(VirtualMachine& vm, std::string s1, std::string s2){}
-void swp(VirtualMachine& vm, std::string s1, std::string s2){}
-void sl0(VirtualMachine& vm, std::string s1, std::string s2){}
-void sr0(VirtualMachine& vm, std::string s1, std::string s2){}
-void jmp(VirtualMachine& vm, std::string s1, std::string s2){}
-void jsr(VirtualMachine& vm, std::string s1, std::string s2){}
-void rts(VirtualMachine& vm, std::string s1, std::string s2){}
+void mov(VirtualMachine& vm, std::string s1, std::string s2){
+    std::cout<<s1<<" "<<s2<<std::endl;
+}
+void add(VirtualMachine& vm, std::string s1, std::string s2){
+    std::cout<<"Hello2"<<std::endl;
+}
+void sub(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello3"<<std::endl; }
+void cmp(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello4"<<std::endl; }
+void swp(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello5"<<std::endl; }
+void sl0(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello6"<<std::endl; }
+void sr0(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello7"<<std::endl; }
+void jmp(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello8"<<std::endl; }
+void jsr(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello9"<<std::endl; }
+void rts(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello10"<<std::endl; }
 
 VirtualMachine::VirtualMachine(Sprache sprache, unsigned int memory, unsigned int general) : memory(memory), generalRegisterArray(general), specialRegisterArray(2), language(sprache)
 {
-    std::map<std::string, unsigned int>::iterator i = sprache.languageElements.begin();
-    functions.insert(std::make_pair( (i++)->first, (void*)mov));
-    functions.insert(std::make_pair( (i++)->first, (void*)add));
-    functions.insert(std::make_pair( (i++)->first, (void*)sub));
-    functions.insert(std::make_pair( (i++)->first, (void*)swp));
-    functions.insert(std::make_pair( (i++)->first, (void*)sl0));
-    functions.insert(std::make_pair( (i++)->first, (void*)sr0));
-    functions.insert(std::make_pair( (i++)->first, (void*)jmp));
-    functions.insert(std::make_pair( (i++)->first, (void*)jsr));
-    functions.insert(std::make_pair( (i++)->first, (void*)rts));
+    std::vector<std::string>::iterator i = sprache.languageElements.begin();
+    functions.insert(std::make_pair( *(i++), (void*)mov));
+    functions.insert(std::make_pair( *(i++), (void*)add));
+    functions.insert(std::make_pair( *(i++), (void*)sub));
+    functions.insert(std::make_pair( *(i++), (void*)swp));
+    functions.insert(std::make_pair( *(i++), (void*)sl0));
+    functions.insert(std::make_pair( *(i++), (void*)sr0));
+    functions.insert(std::make_pair( *(i++), (void*)jmp));
+    functions.insert(std::make_pair( *(i++), (void*)jsr));
+    functions.insert(std::make_pair( *(i++), (void*)rts));
 
     labels.insert(std::make_pair("_start",*(new ComplexInstruktion(language.getLang()))));
 }
 VirtualMachine::~VirtualMachine()
 {
-    for(auto pair : labels)
+  /*  for(auto pair : labels)
     {
-        delete [] &pair.second;
+        delete &pair.second;
     }
     for(auto pair : subroutines)
     {
-        delete [] &pair.second;
-    }
+        delete &pair.second;
+    }*/
     
 }
 
@@ -70,9 +74,8 @@ bool VirtualMachine::runInstruction(std::string r)
     is>>instruction;
     is>>param1;
     is>>param2;
-
     SimpleInstruktion sNew(language.getLang(), r, getPtr(instruction), param1, param2);
-    sNew.run();
+    sNew.run(*this);
     for(auto pair : labels)
     {
         if(pair.first == "_start")

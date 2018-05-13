@@ -66,7 +66,6 @@ inline JSONObject::JSONObject(std::string content) : JSON(content)
 inline JSONObject JSONObject::get(std::string key)
 {
     json::JSON obj = json::JSON::Load(content);
-    std::cout<<obj[key].dump()<<std::endl;
     JSONObject json(obj[key].dump());
     return json;
 }

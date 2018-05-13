@@ -1,5 +1,6 @@
 #include <iostream>
 #include "datei/sprache/sprache.hpp"
+#include "virtualmachine/virtualmachine.hpp"
 int main()
 {
     std::string sprachendatei = "{  \
@@ -15,7 +16,9 @@ int main()
 }";
 
     Sprache sprache(sprachendatei, "mylang");
-
-    std::cout<<(std::string)sprache.get("Add B to A")<<std::endl;
+    VirtualMachine vm(sprache);
+    vm.runInstruction("swp A B");
+    vm.runInstruction("mov A B");
+    vm.runInstruction("rts A B");
     return 0;
 }

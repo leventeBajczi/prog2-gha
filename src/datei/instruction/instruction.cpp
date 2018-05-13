@@ -9,10 +9,10 @@ std::string SimpleInstruktion::print()
 {
     return representation+" "+param1+" "+param2;
 }
-void SimpleInstruktion::run()
+void SimpleInstruktion::run(VirtualMachine& vm)
 {
-    void (*ptr)(std::string, std::string) = (void (*)(std::string, std::string))function;
-    (*ptr)(param1, param2);
+    void (*ptr)(VirtualMachine&, std::string, std::string) = (void (*)(VirtualMachine&, std::string, std::string))function;
+    (*ptr)(vm, param1, param2);
 }
 
 
@@ -32,11 +32,11 @@ std::string ComplexInstruktion::print()
     }
     return ret;
 }
-void ComplexInstruktion::run()
+void ComplexInstruktion::run(VirtualMachine& vm)
 {
     for(SimpleInstruktion si : instructions)
     {
-        si.run();
+        si.run(vm);
     }
 }
 
