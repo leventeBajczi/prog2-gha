@@ -12,7 +12,7 @@ class Instruktion : public Datei
         Instruktion(std::string str) : Datei(str) {}
         virtual std::string print() = 0;
         virtual void run(VirtualMachine&) = 0;
-
+    
 };
 
 class SimpleInstruktion : public Instruktion

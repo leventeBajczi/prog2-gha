@@ -19,8 +19,8 @@ class VirtualMachine
         Memory memory;
         Memory generalRegisterArray;
         Memory specialRegisterArray;
-        std::map<std::string, ComplexInstruktion> labels;
-        std::map<std::string, ComplexInstruktion> subroutines;
+        std::map<std::string, ComplexInstruktion*> labels;
+        std::map<std::string, ComplexInstruktion*> subroutines;
         Sprache language;
         std::map<std::string, void*> functions;
         void* getPtr(std::string);
@@ -29,13 +29,13 @@ class VirtualMachine
         
     public:
         VirtualMachine(Sprache, unsigned int = 1024, unsigned int = 16);
-        ~VirtualMachine();
         bool runInstruction(std::string);
         void reRunAll();
         bool addLabel(std::string);
         bool addSubroutine(std::string);
         uint8_t& getReference(std::string);
         uint8_t getValue(std::string);
+        void runSubroutine(std::string);
 
 };
 

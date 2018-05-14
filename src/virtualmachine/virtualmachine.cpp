@@ -26,6 +26,18 @@ void jsr(VirtualMachine& vm, std::string s1, std::string s2){
     vm.runSubroutine(s1);
 }
 
+void VirtualMachine::runSubroutine(std::string s)
+{
+    for(auto pair : subroutines)
+    {
+        if(pair.first == s)
+        {
+            
+            pair.second->run((*this));
+        }
+    }
+}
+
 
 uint8_t& VirtualMachine::getReference(std::string s)
 {
@@ -89,19 +101,7 @@ VirtualMachine::VirtualMachine(Sprache sprache, unsigned int memory, unsigned in
     functions.insert(std::make_pair( *(i++), (void*)sr0));
     functions.insert(std::make_pair( *(i++), (void*)jsr));
 
-    labels.insert(std::make_pair("_start",*(new ComplexInstruktion(language.getLang()))));
-}
-VirtualMachine::~VirtualMachine()
-{
-  /*  for(auto pair : labels)
-    {
-        delete &pair.second;
-    }
-    for(auto pair : subroutines)
-    {
-        delete &pair.second;
-    }*/
-    
+    subroutines.insert(std::make_pair("_start",(new ComplexInstruktion(language.getLang()))));
 }
 
 void* VirtualMachine::getPtr(std::string s)
@@ -131,21 +131,29 @@ bool VirtualMachine::runInstruction(std::string r)
     is>>instruction;
     is>>param1;
     is>>param2;
-    SimpleInstruktion sNew(language.getLang(), r, getPtr(instruction), param1, param2);
-    sNew.run(*this);
-    for(auto pair : labels)
+    SimpleInstruktion *sNew = new SimpleInstruktion(language.getLang(), r, getPtr(instruction), param1, param2);
+    for(std::pair<std::string, ComplexInstruktion*> pair : subroutines)
     {
         if(pair.first == "_start")
         {
-            pair.second.add(sNew);
+
+            pair.second->add(*sNew);
             break;
         }
     }
+    sNew -> run(*this);
     return true;
 }
 void VirtualMachine::reRunAll()
 {
-
+    for(auto pair : subroutines)
+        {
+            if(pair.first == "_start")
+            {
+                
+                pair.second->run((*this));
+            }
+        }
 }
 bool VirtualMachine::addLabel(std::string s)
 {
