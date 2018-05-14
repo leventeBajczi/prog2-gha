@@ -18,6 +18,10 @@ int main()
     Sprache sprache(sprachendatei, "mylang");
     VirtualMachine vm(sprache);
     vm.runInstruction("mov r12 0x12");
+    std::cout<<(unsigned int)vm.getValue("r12")<<std::endl;
+    vm.runInstruction("sub r12 0x05");
+    std::cout<<(unsigned int)vm.getValue("r12")<<std::endl;
     vm.runInstruction("swp r12");
+    std::cout<<(unsigned int)vm.getValue("r12")<<std::endl;
     return 0;
 }

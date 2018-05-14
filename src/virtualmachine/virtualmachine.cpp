@@ -6,24 +6,25 @@
 
 void mov(VirtualMachine& vm, std::string s1, std::string s2){
     vm.getReference(s1) = vm.getValue(s2);
-    std::cout<<vm.getValue(s1)<<std::endl;
 }
 void add(VirtualMachine& vm, std::string s1, std::string s2){
     vm.getReference(s1) = vm.getValue(s2) + vm.getValue(s1);
 }
 void sub(VirtualMachine& vm, std::string s1, std::string s2){
-    vm.getReference(s1) = vm.getValue(s2) - vm.getValue(s1);
+    vm.getReference(s1) = vm.getValue(s1) - vm.getValue(s2);
 }
 void swp(VirtualMachine& vm, std::string s1, std::string s2){
-    std::cout<<s1<<"\t"<<vm.getValue(s1)<<std::endl;
-    vm.getReference(s1) = (vm.getValue(s1) & 0x0f) | (vm.getValue(s1) << 4);
-    std::cout<<vm.getValue(s1)<<std::endl;
+    vm.getReference(s1) = (vm.getValue(s1))  >> 4 | (vm.getValue(s1) << 4);
 }
-void sl0(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello6"<<std::endl; }
-void sr0(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello7"<<std::endl; }
-void jmp(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello8"<<std::endl; }
-void jsr(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello9"<<std::endl; }
-void rts(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello10"<<std::endl; }
+void sl0(VirtualMachine& vm, std::string s1, std::string s2){
+    vm.getReference(s1) = vm.getValue(s1) << 1;
+}
+void sr0(VirtualMachine& vm, std::string s1, std::string s2){ 
+    vm.getReference(s1) = vm.getValue(s1) >> 1;
+}
+void jsr(VirtualMachine& vm, std::string s1, std::string s2){ 
+    vm.runSubroutine(s1);
+}
 
 
 uint8_t& VirtualMachine::getReference(std::string s)
@@ -64,7 +65,7 @@ uint8_t VirtualMachine::getValue(std::string s)
         case 'r':
             ss << s.substr(1, s.size());
             ss >> reg;
-            return memory.read(generalRegisterArray.read(reg));
+            return generalRegisterArray.read(reg);
             break;
         case '0':
             iss >> std::hex >> ret;
@@ -86,9 +87,7 @@ VirtualMachine::VirtualMachine(Sprache sprache, unsigned int memory, unsigned in
     functions.insert(std::make_pair( *(i++), (void*)swp));
     functions.insert(std::make_pair( *(i++), (void*)sl0));
     functions.insert(std::make_pair( *(i++), (void*)sr0));
-    functions.insert(std::make_pair( *(i++), (void*)jmp));
     functions.insert(std::make_pair( *(i++), (void*)jsr));
-    functions.insert(std::make_pair( *(i++), (void*)rts));
 
     labels.insert(std::make_pair("_start",*(new ComplexInstruktion(language.getLang()))));
 }
