@@ -12,7 +12,7 @@ class Memory{
         ~Memory();
         Memory(const Memory&);
         bool write(unsigned int, uint8_t);
-        bool read(unsigned int, uint8_t&);
+        uint8_t& read(unsigned int);
         bool shiftRight(unsigned int, uint8_t, uint8_t, uint8_t&, uint8_t);
         bool shiftLeft(unsigned int, uint8_t, uint8_t, uint8_t&, uint8_t);
 };

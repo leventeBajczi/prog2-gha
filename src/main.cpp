@@ -17,8 +17,7 @@ int main()
 
     Sprache sprache(sprachendatei, "mylang");
     VirtualMachine vm(sprache);
-    vm.runInstruction("swp A B");
-    vm.runInstruction("mov A B");
-    vm.runInstruction("rts A B");
+    vm.runInstruction("mov r12 0x12");
+    vm.runInstruction("swp r12");
     return 0;
 }

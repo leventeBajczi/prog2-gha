@@ -5,45 +5,77 @@
 
 
 void mov(VirtualMachine& vm, std::string s1, std::string s2){
-    uint8_t value;
-    std::stringstream ss;
-    switch(s2[0])
-    {
-        case '0':
-            ss << std::hex << s2;
-            ss >> value;
-            break;
-        case '(':
-            value = vm.getMemoryAt(vm.getRegisterValue(s2.substr(1, s2.size() - 1)));
-            break;
-        case 'r':
-            value = vm.getRegisterValue(s2.substr(1, s2.size()));
-            break;
-        default:
-            //ERROR
-    }
-    switch(s1[0])
-    {
-        case '(':
-            vm.writeMemoryAt(vm.getRegisterValue(s1.substr(1, s1.size() - 1)), value);
-        case 'r':
-            vm.writeRegister(s1.substr(1, s1.size()), value);
-        default:
-            //ERROR
-    }
-
+    vm.getReference(s1) = vm.getValue(s2);
+    std::cout<<vm.getValue(s1)<<std::endl;
 }
 void add(VirtualMachine& vm, std::string s1, std::string s2){
-    std::cout<<"Hello2"<<std::endl;
+    vm.getReference(s1) = vm.getValue(s2) + vm.getValue(s1);
 }
-void sub(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello3"<<std::endl; }
-void cmp(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello4"<<std::endl; }
-void swp(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello5"<<std::endl; }
+void sub(VirtualMachine& vm, std::string s1, std::string s2){
+    vm.getReference(s1) = vm.getValue(s2) - vm.getValue(s1);
+}
+void swp(VirtualMachine& vm, std::string s1, std::string s2){
+    std::cout<<s1<<"\t"<<vm.getValue(s1)<<std::endl;
+    vm.getReference(s1) = (vm.getValue(s1) & 0x0f) | (vm.getValue(s1) << 4);
+    std::cout<<vm.getValue(s1)<<std::endl;
+}
 void sl0(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello6"<<std::endl; }
 void sr0(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello7"<<std::endl; }
 void jmp(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello8"<<std::endl; }
 void jsr(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello9"<<std::endl; }
 void rts(VirtualMachine& vm, std::string s1, std::string s2){     std::cout<<"Hello10"<<std::endl; }
+
+
+uint8_t& VirtualMachine::getReference(std::string s)
+{
+    unsigned int reg;
+    std::stringstream ss;
+    switch(s[0])
+    {
+        case '(':
+            ss << s.substr(2, s.size()-1);
+            ss >> reg;
+            return memory.read(generalRegisterArray.read(reg));
+            break;
+        case 'r':
+            ss << s.substr(1, s.size());
+            ss >> reg;
+            return generalRegisterArray.read(reg);
+            break;
+        default:
+            //ERROR
+            break;
+    }
+}
+
+uint8_t VirtualMachine::getValue(std::string s)
+{
+    unsigned int reg;
+    unsigned int ret;
+    std::stringstream ss;
+    std::istringstream iss(s);
+    switch(s[0])
+    {
+        case '(':
+            ss << s.substr(2, s.size()-1);
+            ss >> reg;
+            return memory.read(generalRegisterArray.read(reg));
+            break;
+        case 'r':
+            ss << s.substr(1, s.size());
+            ss >> reg;
+            return memory.read(generalRegisterArray.read(reg));
+            break;
+        case '0':
+            iss >> std::hex >> ret;
+            return ret;
+        default:
+            //ERROR
+            break;
+    }
+
+}
+
 
 VirtualMachine::VirtualMachine(Sprache sprache, unsigned int memory, unsigned int general) : memory(memory), generalRegisterArray(general), specialRegisterArray(2), language(sprache)
 {

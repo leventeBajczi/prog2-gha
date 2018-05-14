@@ -21,11 +21,10 @@ bool Memory::write(unsigned int address, uint8_t data)
     return true;
 
 }
-bool Memory::read(unsigned int address, uint8_t& data)
+uint8_t& Memory::read(unsigned int address)
 {
-    if(address >= size) return false;
-    data = speicherBereich[address];
-    return true;
+//  ERROR  if(address >= size) return false;
+    return speicherBereich[address];
 }
 bool Memory::shiftRight(unsigned int address, uint8_t data, uint8_t dataMask, uint8_t& flag, uint8_t mask)
 {
