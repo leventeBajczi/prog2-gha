@@ -5,7 +5,33 @@
 
 
 void mov(VirtualMachine& vm, std::string s1, std::string s2){
-    std::cout<<s1<<" "<<s2<<std::endl;
+    uint8_t value;
+    std::stringstream ss;
+    switch(s2[0])
+    {
+        case '0':
+            ss << std::hex << s2;
+            ss >> value;
+            break;
+        case '(':
+            value = vm.getMemoryAt(vm.getRegisterValue(s2.substr(1, s2.size() - 1)));
+            break;
+        case 'r':
+            value = vm.getRegisterValue(s2.substr(1, s2.size()));
+            break;
+        default:
+            //ERROR
+    }
+    switch(s1[0])
+    {
+        case '(':
+            vm.writeMemoryAt(vm.getRegisterValue(s1.substr(1, s1.size() - 1)), value);
+        case 'r':
+            vm.writeRegister(s1.substr(1, s1.size()), value);
+        default:
+            //ERROR
+    }
+
 }
 void add(VirtualMachine& vm, std::string s1, std::string s2){
     std::cout<<"Hello2"<<std::endl;
