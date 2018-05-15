@@ -1,0 +1,9 @@
+{                                                  
+"Move B to A":"mov",                                                
+"Add B to A":"add",                                                
+"Substract B from A":"sub",                                                
+"Swap the upper and lower 4 bits":"swp",                                                
+"Shift left, insert 0":"sl0",                                                
+"Shift right, insert 0":"sr0",                                                
+"Jump to subroutine":"jsr"                                                
+}

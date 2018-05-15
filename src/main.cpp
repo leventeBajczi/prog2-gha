@@ -16,19 +16,23 @@ int main(int argc, char** argv)
 
 
 std::string sprachendatei = "{  \
-                                                \"Move B to A\":\"mov\",\
-                                                \"Add B to A\":\"add\",\
-                                                \"Substract B from A\":\"sub\",\
-                                                \"Swap the upper and lower 4 bits\":\"swp\",\
-                                                \"Shift left, insert 0\":\"sl0\",\
-                                                \"Shift right, insert 0\":\"sr0\",\
-                                                \"Jump to subroutine\":\"jsr\"\
-                                                }";
+                                                \n\"Move B to A\":\"mov\",\
+                                                \n\"Add B to A\":\"add\",\
+                                                \n\"Substract B from A\":\"sub\",\
+                                                \n\"Swap the upper and lower 4 bits\":\"swp\",\
+                                                \n\"Shift left, insert 0\":\"sl0\",\
+                                                \n\"Shift right, insert 0\":\"sr0\",\
+                                                \n\"Jump to subroutine\":\"jsr\"\
+                                                \n}";
 Sprache sprache(sprachendatei, "mylang");
 VirtualMachine* vm = new VirtualMachine(sprache);
     for(int i = 1; i<argc;i++){
         if      (strcmp(argv[i], PRINT_LANGUAGE) == 0){
-            std::cout<<Sprache::printEmpty();
+            std::ofstream myfile;
+            myfile.open ("language.lang");
+            myfile << sprachendatei;
+            myfile.close();
+            return 0;
         }
         else if (strcmp(argv[i], LANGUAGE_FILE) == 0){
             std::ifstream t(argv[++i]);
@@ -47,7 +51,6 @@ VirtualMachine* vm = new VirtualMachine(sprache);
                 std::ifstream t(argv[i]);
                 std::string file((std::istreambuf_iterator<char>(t)),
                 std::istreambuf_iterator<char>());
-                std::cout<<file<<std::endl;
                 vm->addSubroutine(file);
             }
         }
@@ -56,11 +59,17 @@ VirtualMachine* vm = new VirtualMachine(sprache);
             return -1;
         }
     }
-
-vm ->reRunAll();
-std::cout<<(unsigned int)vm->getValue("(r1)")<<std::endl;
-
-delete vm;
-
-    return 0;
+    std::string line;
+    while(true)
+    {
+        std::getline(std::cin, line);
+        if(line == "quit")
+        {
+            delete vm;
+             return 0;
+        }
+        else if (line == "runAll") vm->reRunAll();
+        else if (line[0] == '(' || line[0] == 'r') std::cout<<"Wert von "<<line<<": 0x"<<std::hex<<(unsigned int)vm->getValue(line)<<std::endl;
+        else vm->runInstruction(line);   
+    }
 }
