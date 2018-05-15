@@ -4,38 +4,80 @@
 
 
 
+/**
+ * Instruktiondefinition. 
+ */
 void mov(VirtualMachine& vm, std::string s1, std::string s2){
     vm.getReference(s1) = vm.getValue(s2);
 }
+
+/**
+ * Instruktiondefinition. 
+ */
 void add(VirtualMachine& vm, std::string s1, std::string s2){
     vm.getReference(s1) = vm.getValue(s2) + vm.getValue(s1);
 }
+
+/**
+ * Instruktiondefinition. 
+ */
 void sub(VirtualMachine& vm, std::string s1, std::string s2){
     vm.getReference(s1) = vm.getValue(s1) - vm.getValue(s2);
 }
+
+/**
+ * Instruktiondefinition. 
+ */
 void swp(VirtualMachine& vm, std::string s1, std::string s2){
     vm.getReference(s1) = (vm.getValue(s1))  >> 4 | (vm.getValue(s1) << 4);
 }
+
+/**
+ * Instruktiondefinition. 
+ */
 void sl0(VirtualMachine& vm, std::string s1, std::string s2){
     vm.getReference(s1) = vm.getValue(s1) << 1;
 }
+
+/**
+ * Instruktiondefinition. 
+ */
 void sr0(VirtualMachine& vm, std::string s1, std::string s2){ 
     vm.getReference(s1) = vm.getValue(s1) >> 1;
 }
+
+/**
+ * Instruktiondefinition. 
+ */
 void jsr(VirtualMachine& vm, std::string s1, std::string s2){ 
     vm.runSubroutine(s1);
 }
+
+/**
+ * Instruktiondefinition. 
+ */
 void push(VirtualMachine& vm, std::string s1, std::string s2){ 
     vm.pushValue(vm.getValue(s1));
 }
+
+/**
+ * Instruktiondefinition. 
+ */
 void pop(VirtualMachine& vm, std::string s1, std::string s2){ 
     vm.getReference(s1) = vm.popValue();
 }
 
+/**
+ * Stackmanipulation
+ */
 void VirtualMachine::pushValue(uint8_t t)
 {
     stack.push(t);
 }
+
+/**
+ * Stackmanipulation. 
+ */
 uint8_t VirtualMachine::popValue()
 {
     uint8_t t = stack.top();
@@ -44,6 +86,9 @@ uint8_t VirtualMachine::popValue()
 }
 
 
+/**
+ * Ausführt eine andere subroutine. 
+ */
 void VirtualMachine::runSubroutine(std::string s)
 {
     for(auto pair : subroutines)
@@ -57,6 +102,9 @@ void VirtualMachine::runSubroutine(std::string s)
 }
 
 
+/**
+ * Gibt den Referenz des Wertes zurück (also es geändert werden kann). 
+ */
 uint8_t& VirtualMachine::getReference(std::string s)
 {
     unsigned int reg;
@@ -74,11 +122,14 @@ uint8_t& VirtualMachine::getReference(std::string s)
             return generalRegisterArray.read(reg);
             break;
         default:
-            //ERROR
             break;
     }
 }
 
+
+/**
+ * Gibt den Wert zurück (nicht veränderbar). 
+ */
 uint8_t VirtualMachine::getValue(std::string s)
 {
     unsigned int reg;
@@ -101,13 +152,15 @@ uint8_t VirtualMachine::getValue(std::string s)
             iss >> std::hex >> ret;
             return ret;
         default:
-            //ERROR
             break;
     }
 
 }
 
 
+/**
+ * Konstruktor der Klasse VirtualMachine.. 
+ */
 VirtualMachine::VirtualMachine(Sprache sprache, unsigned int memory, unsigned int general) : memory(memory), generalRegisterArray(general), specialRegisterArray(2), language(sprache)
 {
     std::vector<std::string>::iterator i = sprache.languageElements.begin();
@@ -124,6 +177,10 @@ VirtualMachine::VirtualMachine(Sprache sprache, unsigned int memory, unsigned in
     subroutines.insert(std::make_pair("_start",(new ComplexInstruktion(language.getLang()))));
 }
 
+
+/**
+ * Gibt den Funktionenpointer zum Befehl zurück.. 
+ */
 void* VirtualMachine::getPtr(std::string s)
 {
     std::string str;
@@ -169,6 +226,11 @@ bool VirtualMachine::runInstruction(std::string r)
     sNew -> run(*this);
     return true;
 }
+
+
+/**
+ * Ausführen jede Instruktion nocheinmal. 
+ */
 void VirtualMachine::reRunAll()
 {
     for(auto pair : subroutines)
@@ -180,6 +242,11 @@ void VirtualMachine::reRunAll()
             }
         }
 }
+
+
+/**
+ * Addieren eine Subroutine 
+ */
 bool VirtualMachine::addSubroutine(std::string s)
 {
     std::istringstream iss(s);

@@ -12,6 +12,9 @@
 
 class ComplexInstruktion;
 
+/**
+ * Klasse für den virtuellen Gerät, wodurch die Instruktionen ausgeführt werden können. 
+ */
 class VirtualMachine
 {
     private:
