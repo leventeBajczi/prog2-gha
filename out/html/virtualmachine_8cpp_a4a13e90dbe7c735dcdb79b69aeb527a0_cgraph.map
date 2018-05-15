@@ -1,5 +1,0 @@
-<map id="mov" name="mov">
-<area shape="rect" id="node2" href="$class_virtual_machine.html#a0f55b241f2e14264dfaec5449d136a50" title="VirtualMachine::getReference" alt="" coords="100,5,295,32"/>
-<area shape="rect" id="node4" href="$class_virtual_machine.html#a09bdaea77003f19912e0f101faefa26f" title="VirtualMachine::getValue" alt="" coords="114,56,281,83"/>
-<area shape="rect" id="node3" href="$class_memory.html#ab669beeca09308c880af9b13cde7f655" title="Memory::read" alt="" coords="343,31,445,57"/>
-</map>

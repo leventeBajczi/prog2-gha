@@ -1,5 +1,0 @@
-var searchData=
-[
-  ['backingdata',['BackingData',['../unionjson_1_1_j_s_o_n_1_1_backing_data.html#a7d9921b5b250d942ceb1b2e11a8b9b8b',1,'json::JSON::BackingData::BackingData(double d)'],['../unionjson_1_1_j_s_o_n_1_1_backing_data.html#a25277bc3224f9a7ed291fe209b9294d2',1,'json::JSON::BackingData::BackingData(long l)'],['../unionjson_1_1_j_s_o_n_1_1_backing_data.html#abe54395f8ce5d9918ff0704a4e1bae98',1,'json::JSON::BackingData::BackingData(bool b)'],['../unionjson_1_1_j_s_o_n_1_1_backing_data.html#a05c304ee380de872456ce7679c48b2ce',1,'json::JSON::BackingData::BackingData(string s)'],['../unionjson_1_1_j_s_o_n_1_1_backing_data.html#aeeb02720b7de2606b868f6a2d11c83ea',1,'json::JSON::BackingData::BackingData()']]],
-  ['begin',['begin',['../classjson_1_1_j_s_o_n_1_1_j_s_o_n_wrapper.html#a86f4b41d1b0e923713be08f82aba402a',1,'json::JSON::JSONWrapper::begin()'],['../classjson_1_1_j_s_o_n_1_1_j_s_o_n_wrapper.html#a8290666f91b9232eb6e3a2ffaad0949d',1,'json::JSON::JSONWrapper::begin() const'],['../classjson_1_1_j_s_o_n_1_1_j_s_o_n_const_wrapper.html#a29924543b1e49e7114d542de0a70a2d0',1,'json::JSON::JSONConstWrapper::begin()']]]
-];

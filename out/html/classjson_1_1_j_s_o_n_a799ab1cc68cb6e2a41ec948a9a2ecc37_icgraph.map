@@ -1,6 +1,0 @@
-<map id="json::JSON::Load" name="json::JSON::Load">
-<area shape="rect" id="node2" href="$class_j_s_o_n_object.html#ac2dd3ddb61b11a3ad800b09b41ac1562" title="JSONObject::get" alt="" coords="195,5,317,32"/>
-<area shape="rect" id="node3" href="$class_j_s_o_n_array.html#a8c2bac974ee9b2806e9dbb78062f3abd" title="JSONArray::operator[]" alt="" coords="180,56,332,83"/>
-<area shape="rect" id="node4" href="$class_j_s_o_n_object.html#abe961a3b81398975838f4c51a694c81a" title="JSONObject::put" alt="" coords="195,107,317,133"/>
-<area shape="rect" id="node5" href="$class_j_s_o_n_array.html#ad012cef04a71b2e708d28f88f3c1c4e7" title="JSONArray::set" alt="" coords="199,157,313,184"/>
-</map>

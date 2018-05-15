@@ -1,5 +1,0 @@
-<map id="push" name="push">
-<area shape="rect" id="node2" href="$class_virtual_machine.html#a09bdaea77003f19912e0f101faefa26f" title="VirtualMachine::getValue" alt="" coords="109,5,275,32"/>
-<area shape="rect" id="node4" href="$class_virtual_machine.html#ac20f1d6667434866f50880187c521cd4" title="VirtualMachine::pushValue" alt="" coords="104,56,280,83"/>
-<area shape="rect" id="node3" href="$class_memory.html#ab669beeca09308c880af9b13cde7f655" title="Memory::read" alt="" coords="328,5,431,32"/>
-</map>

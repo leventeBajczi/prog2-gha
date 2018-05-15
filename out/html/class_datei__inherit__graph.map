@@ -1,6 +1,0 @@
-<map id="Datei" name="Datei">
-<area shape="rect" id="node2" href="$class_instruktion.html" title="Instruktion" alt="" coords="107,80,190,107"/>
-<area shape="rect" id="node5" href="$class_sprache.html" title="Sprache" alt="" coords="215,80,285,107"/>
-<area shape="rect" id="node3" href="$class_complex_instruktion.html" title="ComplexInstruktion" alt="" coords="5,155,140,181"/>
-<area shape="rect" id="node4" href="$class_simple_instruktion.html" title="SimpleInstruktion" alt="" coords="165,155,287,181"/>
-</map>
