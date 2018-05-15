@@ -1,11 +1,11 @@
-{                                                  
-"Move B to A":"mov",                                                
-"Add B to A":"add",                                                
-"Substract B from A":"sub",                                                
-"Swap the upper and lower 4 bits":"swp",                                                
-"Shift left, insert 0":"sl0",                                                
-"Shift right, insert 0":"sr0",                                                
-"Jump to subroutine":"jsr",                                                
-"Push value to stack":"push",                                                
-"Pop value from stack":"pop"                                                
+{
+        "Move B to A":"ertek",
+        "Add B to A":"hozzaad",
+        "Substract B from A":"kivon",
+        "Swap the upper and lower 4 bits":"csere",
+        "Shift left, insert 0":"balra",
+        "Shift right, insert 0":"jobbra",
+        "Jump to subroutine":"ugras",
+        "Push value to stack":"mentes",
+        "Pop value from stack":"betoltes"
 }
