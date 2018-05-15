@@ -3,6 +3,10 @@
 
 #include <iostream>
 
+
+/**
+ * Klasse für Dateien. 
+ */
 class Datei{
     protected:
         std::string language;
