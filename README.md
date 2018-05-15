@@ -1,4 +1,4 @@
-# Große Hausaufgabe für Prog
+# Große Hausaufgabe für Prog2
 Benutzerdokumentation
 
 ## Build
@@ -6,7 +6,7 @@ Um die Projekt zu bilden, muss man diese Repository klonieren (z.B. von [GitHub]
 
 ## Laufen lassen
 Diese Programm lässt sich mit Hilfe von CLI Switches laufen lassen. Diese sind:
-* `-p`: Eine zu füllende Sprachendatei ausscreiben in den folgenden Datei (z.B. `./prog2 -p language.lang` wird eine Sample im File `language.lang` ausschreiben). Falls diese CLI Switch benutzt wird, wird der Programm nach der Filegenerierung sich schließen. 
+* `-p`: Eine zu füllende Sprachendatei ausschreiben in den folgenden Datei (z.B. `./prog2 -p language.lang` wird eine Sample im File `language.lang` ausschreiben). Falls diese CLI Switch benutzt wird, wird der Programm nach der Filegenerierung sich schließen. 
 * `-l`: Eine gefüllte Sprachendatei einladen und verarbeiten. Die Forme dieser Datei ist:
 ``` json
 {
@@ -21,7 +21,7 @@ Diese Programm lässt sich mit Hilfe von CLI Switches laufen lassen. Diese sind:
 "Pop value from stack":"pop"
 }
 ```
-* `-f`: Kann nur als die letzte CLI Switch benutzt werden. Wird die nächste Dateien als Subroutine einladen und verarbeiten (könnnen später benutzt werden). Diese Dateien sehen so aus:
+* `-f`: Kann nur als die letzte CLI Switch benutzt werden. Wird die nächste Dateien als Subroutine einladen und verarbeiten (können später benutzt werden). Diese Dateien sehen so aus:
 ```
 Name der Subroutine
 <instruction>
