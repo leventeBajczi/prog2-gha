@@ -15,6 +15,7 @@ class Sprache : public Datei, public JSONObject
         static std::vector<std::string> languageElements;
         Sprache(std::string, std::string);
         std::string print();
+        static std::string printEmpty();
         
 };
 

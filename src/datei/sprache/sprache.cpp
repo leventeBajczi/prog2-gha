@@ -21,6 +21,12 @@ Sprache::Sprache(std::string data, std::string lang) : Datei(lang), JSONObject(d
 { 
 }
 
+std::string Sprache::printEmpty()
+{
+    std::string asd;
+    return asd;
+}
+
 std::string Sprache::print()
 {
     return (std::string)*this;

@@ -1,0 +1,6 @@
+_start
+mov r12 0x01
+sl0 r12
+swp r12
+sr r12
+jsr main

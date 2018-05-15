@@ -31,7 +31,6 @@ class VirtualMachine
         VirtualMachine(Sprache, unsigned int = 1024, unsigned int = 16);
         bool runInstruction(std::string);
         void reRunAll();
-        bool addLabel(std::string);
         bool addSubroutine(std::string);
         uint8_t& getReference(std::string);
         uint8_t getValue(std::string);

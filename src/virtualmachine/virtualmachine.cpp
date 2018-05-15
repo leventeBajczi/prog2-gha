@@ -155,11 +155,20 @@ void VirtualMachine::reRunAll()
             }
         }
 }
-bool VirtualMachine::addLabel(std::string s)
-{
-
-}
 bool VirtualMachine::addSubroutine(std::string s)
 {
-
+    std::istringstream iss(s);
+    std::string buff;
+    ComplexInstruktion *ci = new ComplexInstruktion(language.getLang());
+    std::getline(iss, buff);
+    subroutines.insert(std::make_pair(buff, ci));
+    while (std::getline(iss, buff)) {
+        std::istringstream is(buff);
+        std::string instruction, param1, param2;
+        is>>instruction;
+        is>>param1;
+        is>>param2;
+        SimpleInstruktion *sNew = new SimpleInstruktion(language.getLang(), buff, getPtr(instruction), param1, param2);
+        ci->add(*sNew);
+    }
 }
