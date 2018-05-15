@@ -63,7 +63,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Data Fields</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
@@ -135,11 +134,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a36da157b300564d8007130b3f62e7c07 inherit pub_methods_class_j_s_o_n"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_s_o_n.html#a36da157b300564d8007130b3f62e7c07">operator std::string</a> ()</td></tr>
 <tr class="separator:a36da157b300564d8007130b3f62e7c07 inherit pub_methods_class_j_s_o_n"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a87ea344954f357cb05d87feb7a759374"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprache.html#a87ea344954f357cb05d87feb7a759374">printEmpty</a> ()</td></tr>
-<tr class="separator:a87ea344954f357cb05d87feb7a759374"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a6052a9ec0d1202da4b8ff6e6a52e6244"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprache.html#a6052a9ec0d1202da4b8ff6e6a52e6244">instructions</a></td></tr>
@@ -160,8 +154,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ad1ace77234b963a2994178ce7f76a181 inherit pro_attribs_class_j_s_o_n"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="sprache_8hpp_source.html#l00011">11</a> of file <a class="el" href="sprache_8hpp_source.html">sprache.hpp</a>.</p>
+<div class="textblock"><p>Child von 2 Basisklassen. Enthielt die Definitionen des Befehle. </p>
+
+<p class="definition">Definition at line <a class="el" href="sprache_8hpp_source.html#l00014">14</a> of file <a class="el" href="sprache_8hpp_source.html">sprache.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adae8df1e07febd0a493436a0fef2042b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adae8df1e07febd0a493436a0fef2042b">&#9670;&nbsp;</a></span>Sprache()</h2>
@@ -188,11 +183,12 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Konstruktor für Klasse <a class="el" href="class_sprache.html">Sprache</a>. Ordnet die Befehle zu ihnen Bedeutungen. </p>
 
-<p class="definition">Definition at line <a class="el" href="sprache_8cpp_source.html#l00014">14</a> of file <a class="el" href="sprache_8cpp_source.html">sprache.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                                               : <a class="code" href="class_datei.html#a9a9e1149154603548fdfc889821cf418">Datei</a>(lang), <a class="code" href="class_j_s_o_n_object.html#a88fb28a2f166ecc545ae94f170ddd0ab">JSONObject</a>(data), <a class="code" href="class_sprache.html#a6052a9ec0d1202da4b8ff6e6a52e6244">instructions</a>({</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Move B to A&quot;</span>), <span class="stringliteral">&quot;Move B to A&quot;</span>},</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Add B to A&quot;</span>), <span class="stringliteral">&quot;Add B to A&quot;</span>},</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Substract B from A&quot;</span>), <span class="stringliteral">&quot;Substract B from A&quot;</span>},</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Swap the upper and lower 4 bits&quot;</span>), <span class="stringliteral">&quot;Swap the upper and lower 4 bits&quot;</span>},</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Shift left, insert 0&quot;</span>), <span class="stringliteral">&quot;Shift left, insert 0&quot;</span>},</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Shift right, insert 0&quot;</span>), <span class="stringliteral">&quot;Shift right, insert 0&quot;</span>},</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Jump to subroutine&quot;</span>), <span class="stringliteral">&quot;Jump to subroutine&quot;</span>},</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Push value to stack&quot;</span>), <span class="stringliteral">&quot;Push value to stack&quot;</span>},</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Pop value from stack&quot;</span>), <span class="stringliteral">&quot;Pop value from stack&quot;</span>},</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    })</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{ </div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div><div class="ttc" id="class_datei_html_a9a9e1149154603548fdfc889821cf418"><div class="ttname"><a href="class_datei.html#a9a9e1149154603548fdfc889821cf418">Datei::Datei</a></div><div class="ttdeci">Datei(std::string)</div><div class="ttdef"><b>Definition:</b> <a href="src_2datei_2datei_8cpp_source.html#l00004">datei.cpp:4</a></div></div>
+<p class="definition">Definition at line <a class="el" href="sprache_8cpp_source.html#l00019">19</a> of file <a class="el" href="sprache_8cpp_source.html">sprache.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                               : <a class="code" href="class_datei.html#a9a9e1149154603548fdfc889821cf418">Datei</a>(lang), <a class="code" href="class_j_s_o_n_object.html#a88fb28a2f166ecc545ae94f170ddd0ab">JSONObject</a>(data), <a class="code" href="class_sprache.html#a6052a9ec0d1202da4b8ff6e6a52e6244">instructions</a>({</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Move B to A&quot;</span>), <span class="stringliteral">&quot;Move B to A&quot;</span>},</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Add B to A&quot;</span>), <span class="stringliteral">&quot;Add B to A&quot;</span>},</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Substract B from A&quot;</span>), <span class="stringliteral">&quot;Substract B from A&quot;</span>},</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Swap the upper and lower 4 bits&quot;</span>), <span class="stringliteral">&quot;Swap the upper and lower 4 bits&quot;</span>},</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Shift left, insert 0&quot;</span>), <span class="stringliteral">&quot;Shift left, insert 0&quot;</span>},</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Shift right, insert 0&quot;</span>), <span class="stringliteral">&quot;Shift right, insert 0&quot;</span>},</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Jump to subroutine&quot;</span>), <span class="stringliteral">&quot;Jump to subroutine&quot;</span>},</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Push value to stack&quot;</span>), <span class="stringliteral">&quot;Push value to stack&quot;</span>},</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {this-&gt;<span class="keyword">get</span>(<span class="stringliteral">&quot;Pop value from stack&quot;</span>), <span class="stringliteral">&quot;Pop value from stack&quot;</span>},</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    })</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{ </div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div><div class="ttc" id="class_datei_html_a9a9e1149154603548fdfc889821cf418"><div class="ttname"><a href="class_datei.html#a9a9e1149154603548fdfc889821cf418">Datei::Datei</a></div><div class="ttdeci">Datei(std::string)</div><div class="ttdef"><b>Definition:</b> <a href="src_2datei_2datei_8cpp_source.html#l00007">datei.cpp:7</a></div></div>
 <div class="ttc" id="class_j_s_o_n_object_html_a88fb28a2f166ecc545ae94f170ddd0ab"><div class="ttname"><a href="class_j_s_o_n_object.html#a88fb28a2f166ecc545ae94f170ddd0ab">JSONObject::JSONObject</a></div><div class="ttdeci">JSONObject(std::string=&quot;{}&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="src_2json_2json_8hpp_source.html#l00088">json.hpp:88</a></div></div>
-<div class="ttc" id="class_sprache_html_a6052a9ec0d1202da4b8ff6e6a52e6244"><div class="ttname"><a href="class_sprache.html#a6052a9ec0d1202da4b8ff6e6a52e6244">Sprache::instructions</a></div><div class="ttdeci">std::map&lt; std::string, std::string &gt; instructions</div><div class="ttdef"><b>Definition:</b> <a href="sprache_8hpp_source.html#l00014">sprache.hpp:14</a></div></div>
+<div class="ttc" id="class_sprache_html_a6052a9ec0d1202da4b8ff6e6a52e6244"><div class="ttname"><a href="class_sprache.html#a6052a9ec0d1202da4b8ff6e6a52e6244">Sprache::instructions</a></div><div class="ttdeci">std::map&lt; std::string, std::string &gt; instructions</div><div class="ttdef"><b>Definition:</b> <a href="sprache_8hpp_source.html#l00017">sprache.hpp:17</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -226,33 +222,6 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> (std::string)*<span class="keyword">this</span>;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
-<a id="a87ea344954f357cb05d87feb7a759374"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87ea344954f357cb05d87feb7a759374">&#9670;&nbsp;</a></span>printEmpty()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string Sprache::printEmpty </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sprache_8cpp_source.html#l00028">28</a> of file <a class="el" href="sprache_8cpp_source.html">sprache.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::string asd;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> asd;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div></div><!-- fragment -->
-</div>
-</div>
 <h2 class="groupheader">Field Documentation</h2>
 <a id="a6052a9ec0d1202da4b8ff6e6a52e6244"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6052a9ec0d1202da4b8ff6e6a52e6244">&#9670;&nbsp;</a></span>instructions</h2>
@@ -266,9 +235,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sprache_8hpp_source.html#l00014">14</a> of file <a class="el" href="sprache_8hpp_source.html">sprache.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sprache_8hpp_source.html#l00017">17</a> of file <a class="el" href="sprache_8hpp_source.html">sprache.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="virtualmachine_8cpp_source.html#l00127">VirtualMachine::getPtr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="virtualmachine_8cpp_source.html#l00184">VirtualMachine::getPtr()</a>.</p>
 
 </div>
 </div>
@@ -292,9 +261,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">    <span class="stringliteral">&quot;Move B to A&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;Add B to A&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;Substract B from A&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;Swap the upper and lower 4 bits&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;Shift left, insert 0&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;Shift right, insert 0&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;Jump to subroutine&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;Push value to stack&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;Pop value from stack&quot;</span></div><div class="line">}</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="sprache_8hpp_source.html#l00015">15</a> of file <a class="el" href="sprache_8hpp_source.html">sprache.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sprache_8hpp_source.html#l00018">18</a> of file <a class="el" href="sprache_8hpp_source.html">sprache.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="virtualmachine_8cpp_source.html#l00111">VirtualMachine::VirtualMachine()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="virtualmachine_8cpp_source.html#l00164">VirtualMachine::VirtualMachine()</a>.</p>
 
 </div>
 </div>
@@ -305,7 +274,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 15 2018 22:53:00 for Prog2 GHa by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 15 2018 23:12:22 for Prog2 GHa by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
