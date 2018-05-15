@@ -10,6 +10,9 @@
 #define USE_FILES "-f"
 
 
+/**
+ * Main Funkion des Programmes 
+ */
 int main(int argc, char** argv)
 {
 
