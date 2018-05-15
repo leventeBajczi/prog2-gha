@@ -3,6 +3,11 @@
 
 #include <cstdint>
 
+
+
+/**
+ * Klasse für die Darstellung des Speicherplatzes. 
+ */
 class Memory{
     private:
         uint8_t * speicherBereich;
