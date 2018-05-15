@@ -7,7 +7,9 @@ std::vector<std::string> Sprache::languageElements = {
     "Swap the upper and lower 4 bits",
     "Shift left, insert 0",
     "Shift right, insert 0",
-    "Jump to subroutine"
+    "Jump to subroutine",
+    "Push value to stack",
+    "Pop value from stack"
 };
 Sprache::Sprache(std::string data, std::string lang) : Datei(lang), JSONObject(data), instructions({
     {this->get("Move B to A"), "Move B to A"},
@@ -17,6 +19,8 @@ Sprache::Sprache(std::string data, std::string lang) : Datei(lang), JSONObject(d
     {this->get("Shift left, insert 0"), "Shift left, insert 0"},
     {this->get("Shift right, insert 0"), "Shift right, insert 0"},
     {this->get("Jump to subroutine"), "Jump to subroutine"},
+    {this->get("Push value to stack"), "Push value to stack"},
+    {this->get("Pop value from stack"), "Pop value from stack"},
     })
 { 
 }

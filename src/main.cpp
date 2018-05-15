@@ -22,7 +22,9 @@ std::string sprachendatei = "{  \
                                                 \n\"Swap the upper and lower 4 bits\":\"swp\",\
                                                 \n\"Shift left, insert 0\":\"sl0\",\
                                                 \n\"Shift right, insert 0\":\"sr0\",\
-                                                \n\"Jump to subroutine\":\"jsr\"\
+                                                \n\"Jump to subroutine\":\"jsr\",\
+                                                \n\"Push value to stack\":\"push\",\
+                                                \n\"Pop value from stack\":\"pop\"\
                                                 \n}";
 Sprache sprache(sprachendatei, "mylang");
 VirtualMachine* vm = new VirtualMachine(sprache);

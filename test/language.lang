@@ -5,5 +5,7 @@
 "Swap the upper and lower 4 bits":"swp",                                                
 "Shift left, insert 0":"sl0",                                                
 "Shift right, insert 0":"sr0",                                                
-"Jump to subroutine":"jsr"                                                
+"Jump to subroutine":"jsr",                                                
+"Push value to stack":"push",                                                
+"Pop value from stack":"pop"                                                
 }

@@ -25,6 +25,24 @@ void sr0(VirtualMachine& vm, std::string s1, std::string s2){
 void jsr(VirtualMachine& vm, std::string s1, std::string s2){ 
     vm.runSubroutine(s1);
 }
+void push(VirtualMachine& vm, std::string s1, std::string s2){ 
+    vm.pushValue(vm.getValue(s1));
+}
+void pop(VirtualMachine& vm, std::string s1, std::string s2){ 
+    vm.getReference(s1) = vm.popValue();
+}
+
+void VirtualMachine::pushValue(uint8_t t)
+{
+    stack.push(t);
+}
+uint8_t VirtualMachine::popValue()
+{
+    uint8_t t = stack.top();
+    stack.pop();
+    return t;
+}
+
 
 void VirtualMachine::runSubroutine(std::string s)
 {
@@ -100,7 +118,9 @@ VirtualMachine::VirtualMachine(Sprache sprache, unsigned int memory, unsigned in
     functions.insert(std::make_pair( *(i++), (void*)sl0));
     functions.insert(std::make_pair( *(i++), (void*)sr0));
     functions.insert(std::make_pair( *(i++), (void*)jsr));
-
+    functions.insert(std::make_pair( *(i++), (void*)push));
+    functions.insert(std::make_pair( *(i++), (void*)pop));
+    
     subroutines.insert(std::make_pair("_start",(new ComplexInstruktion(language.getLang()))));
 }
 

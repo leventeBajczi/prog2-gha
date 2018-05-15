@@ -35,6 +35,8 @@ class VirtualMachine
         uint8_t& getReference(std::string);
         uint8_t getValue(std::string);
         void runSubroutine(std::string);
+        void pushValue(uint8_t);
+        uint8_t popValue();
 
 };
 
