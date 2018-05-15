@@ -59,53 +59,52 @@ Die exakte Operation des Programmes zu zeigen steht hier folgender Beispiel für
 1.  Die Sprachendatei:
     
     Jede Instruktion wird mit einem anderen ersetzt. Die Sprachendatei steht hier:
-    ``` json
-    {
-        "Move B to A":"ertek",
-        "Add B to A":"hozzaad",
-        "Substract B from A":"kivon",
-        "Swap the upper and lower 4 bits":"csere",
-        "Shift left, insert 0":"balra",
-        "Shift right, insert 0":"jobbra",
-        "Jump to subroutine":"ugras",
-        "Push value to stack":"mentes",
-        "Pop value from stack":"betoltes"
-    }
-    ```
+``` json
+{
+    "Move B to A":"ertek",
+    "Add B to A":"hozzaad",
+    "Substract B from A":"kivon",
+    "Swap the upper and lower 4 bits":"csere",
+    "Shift left, insert 0":"balra",
+    "Shift right, insert 0":"jobbra",
+    "Jump to subroutine":"ugras",
+    "Push value to stack":"mentes",
+    "Pop value from stack":"betoltes"
+}
+```
 2. Die Subroutinendatei
-
-    ```
-    sbr
-    betoltes r1
-    hozzaad r1 r1
-    kivon r1 0x01
-    csere r1
-    balra r1
-    jobbra r1
-    mentes r1
-    ```
+```
+sbr
+betoltes r1
+hozzaad r1 r1
+kivon r1 0x01
+csere r1
+balra r1
+jobbra r1
+mentes r1
+```
 3. Der Laufsparametern
     
     `./prog2 -l language.lang -f sbr`
 4. Die eingetippten Zeilen:
-    ```
-    ertek r10 0x50
-    mentes r10
-    r10
-    ugras sbr
-    betoltes r10
-    r10
-    ```
+```
+ertek r10 0x50
+mentes r10
+r10
+ugras sbr
+betoltes r10
+r10
+```
 5. Die Ausgang:
-    ```
-    [levente@archlinux test]$ ./prog2 -l language.lang -f sbr
-    ertek r10 0x50
-    mentes r10
-    r10
-    Wert von r10: 0x50
-    ugras sbr
-    betoltes r10
-    r10
-    Wert von r10: 0x79
-    quit
-    ```
+```
+[levente@archlinux test]$ ./prog2 -l language.lang -f sbr
+ertek r10 0x50
+mentes r10
+r10
+Wert von r10: 0x50
+ugras sbr
+betoltes r10
+r10
+Wert von r10: 0x79
+quit
+```

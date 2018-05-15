@@ -144,6 +144,11 @@ void* VirtualMachine::getPtr(std::string s)
     }
 }
 
+
+/**
+ * Parsen eine Instruktion aus einem String, zum VM history einfügen und danach laufen lassen 
+ */
+
 bool VirtualMachine::runInstruction(std::string r)
 {
     std::istringstream is(r);
