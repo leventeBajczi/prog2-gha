@@ -8,6 +8,9 @@
 #include "../../json/json.hpp"
 #include "../instruction/instruction.hpp"
 
+/**
+ * Child von 2 Basisklassen. Enthielt die Definitionen des Befehle. 
+ */
 class Sprache : public Datei, public JSONObject
 {
     public:
@@ -15,7 +18,6 @@ class Sprache : public Datei, public JSONObject
         static std::vector<std::string> languageElements;
         Sprache(std::string, std::string);
         std::string print();
-        static std::string printEmpty();
         
 };
 

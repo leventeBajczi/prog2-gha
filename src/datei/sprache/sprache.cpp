@@ -11,6 +11,11 @@ std::vector<std::string> Sprache::languageElements = {
     "Push value to stack",
     "Pop value from stack"
 };
+
+
+/**
+ * Konstruktor für Klasse Sprache. Ordnet die Befehle zu ihnen Bedeutungen.  
+ */
 Sprache::Sprache(std::string data, std::string lang) : Datei(lang), JSONObject(data), instructions({
     {this->get("Move B to A"), "Move B to A"},
     {this->get("Add B to A"), "Add B to A"},
@@ -25,11 +30,6 @@ Sprache::Sprache(std::string data, std::string lang) : Datei(lang), JSONObject(d
 { 
 }
 
-std::string Sprache::printEmpty()
-{
-    std::string asd;
-    return asd;
-}
 
 std::string Sprache::print()
 {
