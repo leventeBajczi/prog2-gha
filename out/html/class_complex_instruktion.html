@@ -125,8 +125,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a49b90e65e1e9523b2a61e370727d9510 inherit pro_attribs_class_datei"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="instruction_8hpp_source.html#l00032">32</a> of file <a class="el" href="instruction_8hpp_source.html">instruction.hpp</a>.</p>
+<div class="textblock"><p>Klasse für mehrerern Instruktionen. Funktioniert wie eine klügere Array (aber komplexer, auch). </p>
+
+<p class="definition">Definition at line <a class="el" href="instruction_8hpp_source.html#l00042">42</a> of file <a class="el" href="instruction_8hpp_source.html">instruction.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a954dad29a6453083400008671c0c05eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a954dad29a6453083400008671c0c05eb">&#9670;&nbsp;</a></span>ComplexInstruktion() <span class="overload">[1/2]</span></h2>
@@ -143,9 +144,10 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Initialisiert <a class="el" href="class_complex_instruktion.html">ComplexInstruktion</a> nur mit der <a class="el" href="class_sprache.html">Sprache</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="instruction_8cpp_source.html#l00019">19</a> of file <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                                     : <a class="code" href="class_instruktion.html#a26d54febd2022c7402a22a8b55ba097a">Instruktion</a>(lang)</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div><div class="ttc" id="class_instruktion_html_a26d54febd2022c7402a22a8b55ba097a"><div class="ttname"><a href="class_instruktion.html#a26d54febd2022c7402a22a8b55ba097a">Instruktion::Instruktion</a></div><div class="ttdeci">Instruktion(std::string str)</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00012">instruction.hpp:12</a></div></div>
+<p class="definition">Definition at line <a class="el" href="instruction_8cpp_source.html#l00035">35</a> of file <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                                     : <a class="code" href="class_instruktion.html#a26d54febd2022c7402a22a8b55ba097a">Instruktion</a>(lang)</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div><div class="ttc" id="class_instruktion_html_a26d54febd2022c7402a22a8b55ba097a"><div class="ttname"><a href="class_instruktion.html#a26d54febd2022c7402a22a8b55ba097a">Instruktion::Instruktion</a></div><div class="ttdeci">Instruktion(std::string str)</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00016">instruction.hpp:16</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -174,12 +176,13 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Initialisiert <a class="el" href="class_complex_instruktion.html">ComplexInstruktion</a> sowohl mit der <a class="el" href="class_sprache.html">Sprache</a> als auch mit einem <a class="el" href="class_simple_instruktion.html">SimpleInstruktion</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="instruction_8cpp_source.html#l00022">22</a> of file <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instruction_8cpp_source.html#l00043">43</a> of file <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="instruction_8hpp_source.html#l00035">instructions</a>.</p>
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                                                                               : <a class="code" href="class_instruktion.html#a26d54febd2022c7402a22a8b55ba097a">Instruktion</a>(lang)</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_complex_instruktion.html#af8a7ed862ee24675b75750a470dcf22a">instructions</a>.push_back(begin);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div><div class="ttc" id="class_instruktion_html_a26d54febd2022c7402a22a8b55ba097a"><div class="ttname"><a href="class_instruktion.html#a26d54febd2022c7402a22a8b55ba097a">Instruktion::Instruktion</a></div><div class="ttdeci">Instruktion(std::string str)</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00012">instruction.hpp:12</a></div></div>
-<div class="ttc" id="class_complex_instruktion_html_af8a7ed862ee24675b75750a470dcf22a"><div class="ttname"><a href="class_complex_instruktion.html#af8a7ed862ee24675b75750a470dcf22a">ComplexInstruktion::instructions</a></div><div class="ttdeci">std::vector&lt; SimpleInstruktion &gt; instructions</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00035">instruction.hpp:35</a></div></div>
+<p class="reference">References <a class="el" href="instruction_8hpp_source.html#l00045">instructions</a>.</p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                                                               : <a class="code" href="class_instruktion.html#a26d54febd2022c7402a22a8b55ba097a">Instruktion</a>(lang)</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_complex_instruktion.html#af8a7ed862ee24675b75750a470dcf22a">instructions</a>.push_back(begin);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div><div class="ttc" id="class_instruktion_html_a26d54febd2022c7402a22a8b55ba097a"><div class="ttname"><a href="class_instruktion.html#a26d54febd2022c7402a22a8b55ba097a">Instruktion::Instruktion</a></div><div class="ttdeci">Instruktion(std::string str)</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00016">instruction.hpp:16</a></div></div>
+<div class="ttc" id="class_complex_instruktion_html_af8a7ed862ee24675b75750a470dcf22a"><div class="ttname"><a href="class_complex_instruktion.html#af8a7ed862ee24675b75750a470dcf22a">ComplexInstruktion::instructions</a></div><div class="ttdeci">std::vector&lt; SimpleInstruktion &gt; instructions</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00045">instruction.hpp:45</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -199,13 +202,14 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Eine neue <a class="el" href="class_simple_instruktion.html">SimpleInstruktion</a> einfügen. </p>
 
-<p class="definition">Definition at line <a class="el" href="instruction_8cpp_source.html#l00043">43</a> of file <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instruction_8cpp_source.html#l00077">77</a> of file <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="instruction_8hpp_source.html#l00035">instructions</a>.</p>
+<p class="reference">References <a class="el" href="instruction_8hpp_source.html#l00045">instructions</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="virtualmachine_8cpp_source.html#l00183">VirtualMachine::addSubroutine()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_complex_instruktion.html#af8a7ed862ee24675b75750a470dcf22a">instructions</a>.push_back(si);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div><div class="ttc" id="class_complex_instruktion_html_af8a7ed862ee24675b75750a470dcf22a"><div class="ttname"><a href="class_complex_instruktion.html#af8a7ed862ee24675b75750a470dcf22a">ComplexInstruktion::instructions</a></div><div class="ttdeci">std::vector&lt; SimpleInstruktion &gt; instructions</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00035">instruction.hpp:35</a></div></div>
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="class_complex_instruktion.html#af8a7ed862ee24675b75750a470dcf22a">instructions</a>.push_back(si);</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div><div class="ttc" id="class_complex_instruktion_html_af8a7ed862ee24675b75750a470dcf22a"><div class="ttname"><a href="class_complex_instruktion.html#af8a7ed862ee24675b75750a470dcf22a">ComplexInstruktion::instructions</a></div><div class="ttdeci">std::vector&lt; SimpleInstruktion &gt; instructions</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00045">instruction.hpp:45</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -240,14 +244,15 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Gibt die String-Representation des ganzen Instruktionenliste zurück. </p>
 
 <p>Implements <a class="el" href="class_instruktion.html#a267ff36e98ec889cceccb2f464c36bc6">Instruktion</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="instruction_8cpp_source.html#l00026">26</a> of file <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instruction_8cpp_source.html#l00052">52</a> of file <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="instruction_8hpp_source.html#l00035">instructions</a>.</p>
-<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::string ret = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">for</span>(<a class="code" href="class_simple_instruktion.html">SimpleInstruktion</a> si : <a class="code" href="class_complex_instruktion.html#af8a7ed862ee24675b75750a470dcf22a">instructions</a>)</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        ret+=si.print()+=<span class="charliteral">&#39;\n&#39;</span>;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">return</span> ret;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div><div class="ttc" id="class_simple_instruktion_html"><div class="ttname"><a href="class_simple_instruktion.html">SimpleInstruktion</a></div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00018">instruction.hpp:18</a></div></div>
-<div class="ttc" id="class_complex_instruktion_html_af8a7ed862ee24675b75750a470dcf22a"><div class="ttname"><a href="class_complex_instruktion.html#af8a7ed862ee24675b75750a470dcf22a">ComplexInstruktion::instructions</a></div><div class="ttdeci">std::vector&lt; SimpleInstruktion &gt; instructions</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00035">instruction.hpp:35</a></div></div>
+<p class="reference">References <a class="el" href="instruction_8hpp_source.html#l00045">instructions</a>.</p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::string ret = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">for</span>(<a class="code" href="class_simple_instruktion.html">SimpleInstruktion</a> si : <a class="code" href="class_complex_instruktion.html#af8a7ed862ee24675b75750a470dcf22a">instructions</a>)</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        ret+=si.print()+=<span class="charliteral">&#39;\n&#39;</span>;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> ret;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div><div class="ttc" id="class_simple_instruktion_html"><div class="ttname"><a href="class_simple_instruktion.html">SimpleInstruktion</a></div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00025">instruction.hpp:25</a></div></div>
+<div class="ttc" id="class_complex_instruktion_html_af8a7ed862ee24675b75750a470dcf22a"><div class="ttname"><a href="class_complex_instruktion.html#af8a7ed862ee24675b75750a470dcf22a">ComplexInstruktion::instructions</a></div><div class="ttdeci">std::vector&lt; SimpleInstruktion &gt; instructions</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00045">instruction.hpp:45</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -274,14 +279,15 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Ausführt jede <a class="el" href="class_instruktion.html">Instruktion</a>, denen sie enthielt. </p>
 
 <p>Implements <a class="el" href="class_instruktion.html#ad701f6b5537e5aa8c8c08b81a8946f63">Instruktion</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="instruction_8cpp_source.html#l00035">35</a> of file <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instruction_8cpp_source.html#l00065">65</a> of file <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="instruction_8hpp_source.html#l00035">instructions</a>.</p>
-<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">for</span>(<a class="code" href="class_simple_instruktion.html">SimpleInstruktion</a> si : <a class="code" href="class_complex_instruktion.html#af8a7ed862ee24675b75750a470dcf22a">instructions</a>)</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        si.run(vm);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div><div class="ttc" id="class_simple_instruktion_html"><div class="ttname"><a href="class_simple_instruktion.html">SimpleInstruktion</a></div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00018">instruction.hpp:18</a></div></div>
-<div class="ttc" id="class_complex_instruktion_html_af8a7ed862ee24675b75750a470dcf22a"><div class="ttname"><a href="class_complex_instruktion.html#af8a7ed862ee24675b75750a470dcf22a">ComplexInstruktion::instructions</a></div><div class="ttdeci">std::vector&lt; SimpleInstruktion &gt; instructions</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00035">instruction.hpp:35</a></div></div>
+<p class="reference">References <a class="el" href="instruction_8hpp_source.html#l00045">instructions</a>.</p>
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">for</span>(<a class="code" href="class_simple_instruktion.html">SimpleInstruktion</a> si : <a class="code" href="class_complex_instruktion.html#af8a7ed862ee24675b75750a470dcf22a">instructions</a>)</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        si.run(vm);</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div><div class="ttc" id="class_simple_instruktion_html"><div class="ttname"><a href="class_simple_instruktion.html">SimpleInstruktion</a></div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00025">instruction.hpp:25</a></div></div>
+<div class="ttc" id="class_complex_instruktion_html_af8a7ed862ee24675b75750a470dcf22a"><div class="ttname"><a href="class_complex_instruktion.html#af8a7ed862ee24675b75750a470dcf22a">ComplexInstruktion::instructions</a></div><div class="ttdeci">std::vector&lt; SimpleInstruktion &gt; instructions</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00045">instruction.hpp:45</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -306,9 +312,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="instruction_8hpp_source.html#l00035">35</a> of file <a class="el" href="instruction_8hpp_source.html">instruction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instruction_8hpp_source.html#l00045">45</a> of file <a class="el" href="instruction_8hpp_source.html">instruction.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="instruction_8cpp_source.html#l00043">add()</a>, <a class="el" href="instruction_8cpp_source.html#l00022">ComplexInstruktion()</a>, <a class="el" href="instruction_8cpp_source.html#l00026">print()</a>, and <a class="el" href="instruction_8cpp_source.html#l00035">run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="instruction_8cpp_source.html#l00077">add()</a>, <a class="el" href="instruction_8cpp_source.html#l00043">ComplexInstruktion()</a>, <a class="el" href="instruction_8cpp_source.html#l00052">print()</a>, and <a class="el" href="instruction_8cpp_source.html#l00065">run()</a>.</p>
 
 </div>
 </div>
@@ -319,7 +325,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 15 2018 22:33:56 for Prog2 GHa by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 15 2018 22:53:00 for Prog2 GHa by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

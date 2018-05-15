@@ -6,15 +6,22 @@
 
 class VirtualMachine;
 
+
+/**
+ * Den Basisklasse für die Instruktionentypen.  
+ */
 class Instruktion : public Datei
 {
     public:
-        Instruktion(std::string str) : Datei(str) {}
+        Instruktion(std::string str) : Datei(str) {}    /* Konstruktor der Instruktionklasse */
         virtual std::string print() = 0;
         virtual void run(VirtualMachine&) = 0;
     
 };
 
+/**
+ * Klasse für eine einzige Instruktion. 
+ */
 class SimpleInstruktion : public Instruktion
 {
     private:
@@ -29,6 +36,9 @@ class SimpleInstruktion : public Instruktion
 
 };
 
+/**
+ * Klasse für mehrerern Instruktionen. Funktioniert wie eine klügere Array (aber komplexer, auch). 
+ */
 class ComplexInstruktion : public Instruktion
 {
     private:

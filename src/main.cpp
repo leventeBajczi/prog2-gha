@@ -31,7 +31,7 @@ VirtualMachine* vm = new VirtualMachine(sprache);
     for(int i = 1; i<argc;i++){
         if      (strcmp(argv[i], PRINT_LANGUAGE) == 0){
             std::ofstream myfile;
-            myfile.open ("language.lang");
+            myfile.open (argv[i+1]);
             myfile << sprachendatei;
             myfile.close();
             return 0;
