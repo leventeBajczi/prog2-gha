@@ -1,6 +1,0 @@
-__start
-mov r12 0x01
-sl0 r12
-swp r12
-sr0 r12
-jsr main
