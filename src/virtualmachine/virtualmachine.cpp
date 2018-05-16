@@ -114,14 +114,17 @@ uint8_t& VirtualMachine::getReference(std::string s)
         case '(':
             ss << s.substr(2, s.size()-1);
             ss >> reg;
+            if(generalRegisterArray.read(reg) > (this->memory).getSize()) throw ("Memory is out of bounds. Please cross-check syntax!");
             return memory.read(generalRegisterArray.read(reg));
             break;
         case 'r':
             ss << s.substr(1, s.size());
             ss >> reg;
+            if(reg > generalRegisterArray.getSize()) throw ("Register does not exist. Please cross-check syntax!");
             return generalRegisterArray.read(reg);
             break;
         default:
+            throw ("Please cross-check syntax!");
             break;
     }
 }
@@ -141,17 +144,20 @@ uint8_t VirtualMachine::getValue(std::string s)
         case '(':
             ss << s.substr(2, s.size()-1);
             ss >> reg;
+            if(generalRegisterArray.read(reg) > (this->memory).getSize()) throw ("Memory is out of bounds. Please cross-check syntax!");
             return memory.read(generalRegisterArray.read(reg));
             break;
         case 'r':
             ss << s.substr(1, s.size());
             ss >> reg;
+            if(reg > generalRegisterArray.getSize()) throw ("Register does not exist. Please cross-check syntax!");
             return generalRegisterArray.read(reg);
             break;
         case '0':
             iss >> std::hex >> ret;
             return ret;
         default:
+            throw ("Please cross-check syntax!");
             break;
     }
 
@@ -211,6 +217,12 @@ bool VirtualMachine::runInstruction(std::string r)
     std::istringstream is(r);
     std::string instruction, param1, param2;
     is>>instruction;
+    bool is_ok = false;
+    for(auto i : language.instructions)
+    {
+        if(i.first == instruction) is_ok = true;
+    }
+    if(!is_ok) throw ("Please cross-check spelling of the mnemonik!");  
     is>>param1;
     is>>param2;
     SimpleInstruktion *sNew = new SimpleInstruktion(language.getLang(), r, getPtr(instruction), param1, param2);

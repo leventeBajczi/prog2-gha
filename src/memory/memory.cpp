@@ -28,6 +28,11 @@ Memory::~Memory()
 }
 
 
+const unsigned int Memory::getSize()
+{
+    return size;
+}
+
 /**
  * Schreibt data in dem Speicher beim `address` ein. 
  */

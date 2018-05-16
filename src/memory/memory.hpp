@@ -13,6 +13,7 @@ class Memory{
         uint8_t * speicherBereich;
         const unsigned int size;
     public:
+        const unsigned int getSize();
         Memory(unsigned int);
         ~Memory();
         Memory(const Memory&);

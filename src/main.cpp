@@ -30,7 +30,7 @@ std::string sprachendatei = "{  \
                                                 \n\"Pop value from stack\":\"pop\"\
                                                 \n}";
 Sprache sprache(sprachendatei, "mylang");
-VirtualMachine* vm = new VirtualMachine(sprache);
+VirtualMachine* vm = new VirtualMachine(sprache, 512, 60);
     for(int i = 1; i<argc;i++){
         if      (strcmp(argv[i], PRINT_LANGUAGE) == 0){
             std::ofstream myfile;
@@ -75,6 +75,14 @@ VirtualMachine* vm = new VirtualMachine(sprache);
         }
         else if (line == "runAll") vm->reRunAll();
         else if (line[0] == '(' || line[0] == 'r') std::cout<<"Wert von "<<line<<": 0x"<<std::hex<<(unsigned int)vm->getValue(line)<<std::endl;
-        else vm->runInstruction(line);   
+        else {
+            try{
+                vm->runInstruction(line);
+            }
+            catch(char const* e)
+            {
+                std::cout<<e<<std::endl;
+            }
+        }
     }
 }
