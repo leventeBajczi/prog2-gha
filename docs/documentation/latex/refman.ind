@@ -1,0 +1,477 @@
+\begin{theindex}
+
+  \item {$\sim$\+J\+S\+ON}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{48}
+  \item {$\sim$\+Memory}
+    \subitem {Memory}, \hyperpage{89}
+
+  \indexspace
+
+  \item {add}
+    \subitem {Complex\+Instruktion}, \hyperpage{36}
+    \subitem {virtualmachine.\+cpp}, \hyperpage{127}
+  \item {add\+Subroutine}
+    \subitem {Virtual\+Machine}, \hyperpage{103}
+  \item {append}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{50}
+  \item {Array}
+    \subitem {json}, \hyperpage{15, 16}
+  \item {Array\+Range}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{51}
+  \item {at}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{51, 52}
+
+  \indexspace
+
+  \item {Backing\+Data}
+    \subitem {json\+::\+J\+S\+O\+N\+::\+Backing\+Data}, 
+		\hyperpage{30, 31}
+  \item {begin}
+    \subitem {json\+::\+J\+S\+O\+N\+::\+J\+S\+O\+N\+Const\+Wrapper}, 
+		\hyperpage{79}
+    \subitem {json\+::\+J\+S\+O\+N\+::\+J\+S\+O\+N\+Wrapper}, 
+		\hyperpage{87}
+  \item {Bool}
+    \subitem {json\+::\+J\+S\+O\+N\+::\+Backing\+Data}, \hyperpage{31}
+
+  \indexspace
+
+  \item {Class}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{46}
+  \item {Clear\+Internal}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{53}
+  \item {Complex\+Instruktion}, \hyperpage{33}
+    \subitem {add}, \hyperpage{36}
+    \subitem {Complex\+Instruktion}, \hyperpage{35}
+    \subitem {instructions}, \hyperpage{37}
+    \subitem {print}, \hyperpage{36}
+    \subitem {run}, \hyperpage{36}
+  \item {consume\+\_\+ws}
+    \subitem {json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}, 
+		\hyperpage{18}
+  \item {content}
+    \subitem {J\+S\+ON}, \hyperpage{73}
+
+  \indexspace
+
+  \item {Datei}, \hyperpage{38}
+    \subitem {Datei}, \hyperpage{39}
+    \subitem {get\+Lang}, \hyperpage{39}
+    \subitem {language}, \hyperpage{41}
+    \subitem {operator$<$$<$}, \hyperpage{41}
+    \subitem {print}, \hyperpage{40}
+  \item {docs/assets/datei.\+cpp}, \hyperpage{113}
+  \item {docs/spezifikation.\+md}, \hyperpage{114}
+  \item {dump}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{53}
+
+  \indexspace
+
+  \item {end}
+    \subitem {json\+::\+J\+S\+O\+N\+::\+J\+S\+O\+N\+Const\+Wrapper}, 
+		\hyperpage{79}
+    \subitem {json\+::\+J\+S\+O\+N\+::\+J\+S\+O\+N\+Wrapper}, 
+		\hyperpage{87}
+
+  \indexspace
+
+  \item {Float}
+    \subitem {json\+::\+J\+S\+O\+N\+::\+Backing\+Data}, \hyperpage{31}
+  \item {function}
+    \subitem {Simple\+Instruktion}, \hyperpage{97}
+  \item {functions}
+    \subitem {Virtual\+Machine}, \hyperpage{111}
+
+  \indexspace
+
+  \item {general\+Register\+Array}
+    \subitem {Virtual\+Machine}, \hyperpage{111}
+  \item {get}
+    \subitem {J\+S\+O\+N\+Object}, \hyperpage{82}
+  \item {get\+Lang}
+    \subitem {Datei}, \hyperpage{39}
+  \item {get\+Ptr}
+    \subitem {Virtual\+Machine}, \hyperpage{104}
+  \item {get\+Reference}
+    \subitem {Virtual\+Machine}, \hyperpage{105}
+  \item {get\+Size}
+    \subitem {Memory}, \hyperpage{90}
+  \item {get\+Value}
+    \subitem {Virtual\+Machine}, \hyperpage{106}
+
+  \indexspace
+
+  \item {has\+Key}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{55}
+
+  \indexspace
+
+  \item {instructions}
+    \subitem {Complex\+Instruktion}, \hyperpage{37}
+    \subitem {Sprache}, \hyperpage{100}
+  \item {Instruktion}, \hyperpage{42}
+    \subitem {Instruktion}, \hyperpage{43}
+    \subitem {print}, \hyperpage{43}
+    \subitem {run}, \hyperpage{43}
+  \item {Int}
+    \subitem {json\+::\+J\+S\+O\+N\+::\+Backing\+Data}, \hyperpage{31}
+  \item {Internal}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{69}
+  \item {Is\+Null}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{55}
+
+  \indexspace
+
+  \item {J\+S\+O\+N\+Array}, \hyperpage{73}
+    \subitem {J\+S\+O\+N\+Array}, \hyperpage{74}
+    \subitem {operator[]}, \hyperpage{75}
+    \subitem {set}, \hyperpage{75--77}
+  \item {J\+S\+O\+N\+Const\+Wrapper}
+    \subitem {json\+::\+J\+S\+O\+N\+::\+J\+S\+O\+N\+Const\+Wrapper}, 
+		\hyperpage{78, 79}
+  \item {J\+S\+O\+N\+Object}, \hyperpage{80}
+    \subitem {get}, \hyperpage{82}
+    \subitem {J\+S\+O\+N\+Object}, \hyperpage{82}
+    \subitem {operator int}, \hyperpage{82}
+    \subitem {operator[]}, \hyperpage{83}
+    \subitem {put}, \hyperpage{83, 84}
+    \subitem {to\+Arr}, \hyperpage{85}
+  \item {J\+S\+O\+N\+Type}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{55}
+  \item {J\+S\+O\+N\+Wrapper}
+    \subitem {json\+::\+J\+S\+O\+N\+::\+J\+S\+O\+N\+Wrapper}, 
+		\hyperpage{86}
+  \item {J\+S\+ON}, \hyperpage{70}
+    \subitem {content}, \hyperpage{73}
+    \subitem {J\+S\+ON}, \hyperpage{71}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{46--49}
+    \subitem {operator std\+::string}, \hyperpage{72}
+    \subitem {operator$<$$<$}, \hyperpage{72}
+  \item {json}, \hyperpage{15}
+    \subitem {Array}, \hyperpage{15, 16}
+    \subitem {Object}, \hyperpage{16}
+    \subitem {operator$<$$<$}, \hyperpage{17}
+  \item {json\+::\+J\+S\+O\+N\+::\+Backing\+Data}, \hyperpage{29}
+    \subitem {Backing\+Data}, \hyperpage{30, 31}
+    \subitem {Bool}, \hyperpage{31}
+    \subitem {Float}, \hyperpage{31}
+    \subitem {Int}, \hyperpage{31}
+    \subitem {List}, \hyperpage{32}
+    \subitem {Map}, \hyperpage{32}
+    \subitem {String}, \hyperpage{32}
+  \item {json\+::\+J\+S\+O\+N\+::\+J\+S\+O\+N\+Const\+Wrapper}
+    \subitem {begin}, \hyperpage{79}
+    \subitem {end}, \hyperpage{79}
+    \subitem {J\+S\+O\+N\+Const\+Wrapper}, \hyperpage{78, 79}
+    \subitem {object}, \hyperpage{80}
+  \item {json\+::\+J\+S\+O\+N\+::\+J\+S\+O\+N\+Const\+Wrapper$<$ Container $>$}, 
+		\hyperpage{78}
+  \item {json\+::\+J\+S\+O\+N\+::\+J\+S\+O\+N\+Wrapper}
+    \subitem {begin}, \hyperpage{87}
+    \subitem {end}, \hyperpage{87}
+    \subitem {J\+S\+O\+N\+Wrapper}, \hyperpage{86}
+    \subitem {object}, \hyperpage{88}
+  \item {json\+::\+J\+S\+O\+N\+::\+J\+S\+O\+N\+Wrapper$<$ Container $>$}, 
+		\hyperpage{85}
+  \item {json\+::\+J\+S\+ON}, \hyperpage{44}
+    \subitem {$\sim$\+J\+S\+ON}, \hyperpage{48}
+    \subitem {append}, \hyperpage{50}
+    \subitem {Array\+Range}, \hyperpage{51}
+    \subitem {at}, \hyperpage{51, 52}
+    \subitem {Class}, \hyperpage{46}
+    \subitem {Clear\+Internal}, \hyperpage{53}
+    \subitem {dump}, \hyperpage{53}
+    \subitem {has\+Key}, \hyperpage{55}
+    \subitem {Internal}, \hyperpage{69}
+    \subitem {Is\+Null}, \hyperpage{55}
+    \subitem {J\+S\+O\+N\+Type}, \hyperpage{55}
+    \subitem {J\+S\+ON}, \hyperpage{46--49}
+    \subitem {length}, \hyperpage{56}
+    \subitem {Load}, \hyperpage{56}
+    \subitem {Make}, \hyperpage{57}
+    \subitem {Object\+Range}, \hyperpage{58}
+    \subitem {operator$<$$<$}, \hyperpage{69}
+    \subitem {operator=}, \hyperpage{58--61}
+    \subitem {operator[]}, \hyperpage{62, 63}
+    \subitem {Set\+Type}, \hyperpage{63}
+    \subitem {size}, \hyperpage{64}
+    \subitem {To\+Bool}, \hyperpage{65}
+    \subitem {To\+Float}, \hyperpage{66}
+    \subitem {To\+Int}, \hyperpage{67}
+    \subitem {To\+String}, \hyperpage{68}
+    \subitem {Type}, \hyperpage{70}
+  \item {json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}, 
+		\hyperpage{18}
+    \subitem {consume\+\_\+ws}, \hyperpage{18}
+    \subitem {json\+\_\+escape}, \hyperpage{18}
+    \subitem {parse\+\_\+array}, \hyperpage{19}
+    \subitem {parse\+\_\+bool}, \hyperpage{20}
+    \subitem {parse\+\_\+next}, \hyperpage{21}
+    \subitem {parse\+\_\+null}, \hyperpage{22}
+    \subitem {parse\+\_\+number}, \hyperpage{23}
+    \subitem {parse\+\_\+object}, \hyperpage{24}
+    \subitem {parse\+\_\+string}, \hyperpage{26}
+  \item {json\+\_\+escape}
+    \subitem {json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}, 
+		\hyperpage{18}
+  \item {jsr}
+    \subitem {virtualmachine.\+cpp}, \hyperpage{127}
+
+  \indexspace
+
+  \item {L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+F\+I\+LE}
+    \subitem {main.\+cpp}, \hyperpage{122}
+  \item {labels}
+    \subitem {Virtual\+Machine}, \hyperpage{111}
+  \item {language}
+    \subitem {Datei}, \hyperpage{41}
+    \subitem {Virtual\+Machine}, \hyperpage{112}
+  \item {language\+Elements}
+    \subitem {Sprache}, \hyperpage{101}
+  \item {length}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{56}
+  \item {lib/simplejson/json.\+hpp}, \hyperpage{114}
+  \item {List}
+    \subitem {json\+::\+J\+S\+O\+N\+::\+Backing\+Data}, \hyperpage{32}
+  \item {Load}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{56}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.\+cpp}, \hyperpage{123}
+  \item {main.\+cpp}
+    \subitem {L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+F\+I\+LE}, \hyperpage{122}
+    \subitem {main}, \hyperpage{123}
+    \subitem {P\+R\+I\+N\+T\+\_\+\+L\+A\+N\+G\+U\+A\+GE}, 
+		\hyperpage{122}
+    \subitem {U\+S\+E\+\_\+\+F\+I\+L\+ES}, \hyperpage{122}
+  \item {Make}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{57}
+  \item {Map}
+    \subitem {json\+::\+J\+S\+O\+N\+::\+Backing\+Data}, \hyperpage{32}
+  \item {Memory}, \hyperpage{88}
+    \subitem {$\sim$\+Memory}, \hyperpage{89}
+    \subitem {get\+Size}, \hyperpage{90}
+    \subitem {Memory}, \hyperpage{89}
+    \subitem {read}, \hyperpage{90}
+    \subitem {shift\+Left}, \hyperpage{91}
+    \subitem {shift\+Right}, \hyperpage{92}
+    \subitem {size}, \hyperpage{93}
+    \subitem {speicher\+Bereich}, \hyperpage{93}
+    \subitem {write}, \hyperpage{92}
+  \item {memory}
+    \subitem {Virtual\+Machine}, \hyperpage{112}
+  \item {mov}
+    \subitem {virtualmachine.\+cpp}, \hyperpage{128}
+
+  \indexspace
+
+  \item {Object}
+    \subitem {json}, \hyperpage{16}
+  \item {object}
+    \subitem {json\+::\+J\+S\+O\+N\+::\+J\+S\+O\+N\+Const\+Wrapper}, 
+		\hyperpage{80}
+    \subitem {json\+::\+J\+S\+O\+N\+::\+J\+S\+O\+N\+Wrapper}, 
+		\hyperpage{88}
+  \item {Object\+Range}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{58}
+  \item {operator int}
+    \subitem {J\+S\+O\+N\+Object}, \hyperpage{82}
+  \item {operator std\+::string}
+    \subitem {J\+S\+ON}, \hyperpage{72}
+  \item {operator$<$$<$}
+    \subitem {Datei}, \hyperpage{41}
+    \subitem {J\+S\+ON}, \hyperpage{72}
+    \subitem {json}, \hyperpage{17}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{69}
+    \subitem {src/datei/datei.\+cpp}, \hyperpage{113}
+    \subitem {src/json/json.\+hpp}, \hyperpage{117}
+  \item {operator=}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{58--61}
+  \item {operator[]}
+    \subitem {J\+S\+O\+N\+Array}, \hyperpage{75}
+    \subitem {J\+S\+O\+N\+Object}, \hyperpage{83}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{62, 63}
+
+  \indexspace
+
+  \item {P\+R\+I\+N\+T\+\_\+\+L\+A\+N\+G\+U\+A\+GE}
+    \subitem {main.\+cpp}, \hyperpage{122}
+  \item {param1}
+    \subitem {Simple\+Instruktion}, \hyperpage{97}
+  \item {param2}
+    \subitem {Simple\+Instruktion}, \hyperpage{97}
+  \item {parse\+\_\+array}
+    \subitem {json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}, 
+		\hyperpage{19}
+  \item {parse\+\_\+bool}
+    \subitem {json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}, 
+		\hyperpage{20}
+  \item {parse\+\_\+next}
+    \subitem {json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}, 
+		\hyperpage{21}
+  \item {parse\+\_\+null}
+    \subitem {json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}, 
+		\hyperpage{22}
+  \item {parse\+\_\+number}
+    \subitem {json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}, 
+		\hyperpage{23}
+  \item {parse\+\_\+object}
+    \subitem {json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}, 
+		\hyperpage{24}
+  \item {parse\+\_\+string}
+    \subitem {json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}, 
+		\hyperpage{26}
+  \item {pop}
+    \subitem {virtualmachine.\+cpp}, \hyperpage{129}
+  \item {pop\+Value}
+    \subitem {Virtual\+Machine}, \hyperpage{108}
+  \item {print}
+    \subitem {Complex\+Instruktion}, \hyperpage{36}
+    \subitem {Datei}, \hyperpage{40}
+    \subitem {Instruktion}, \hyperpage{43}
+    \subitem {Simple\+Instruktion}, \hyperpage{96}
+    \subitem {Sprache}, \hyperpage{100}
+  \item {push}
+    \subitem {virtualmachine.\+cpp}, \hyperpage{130}
+  \item {push\+Value}
+    \subitem {Virtual\+Machine}, \hyperpage{108}
+  \item {put}
+    \subitem {J\+S\+O\+N\+Object}, \hyperpage{83, 84}
+
+  \indexspace
+
+  \item {R\+E\+A\+D\+M\+E.\+md}, \hyperpage{117}
+  \item {re\+Run\+All}
+    \subitem {Virtual\+Machine}, \hyperpage{109}
+  \item {read}
+    \subitem {Memory}, \hyperpage{90}
+  \item {representation}
+    \subitem {Simple\+Instruktion}, \hyperpage{97}
+  \item {run}
+    \subitem {Complex\+Instruktion}, \hyperpage{36}
+    \subitem {Instruktion}, \hyperpage{43}
+    \subitem {Simple\+Instruktion}, \hyperpage{96}
+  \item {run\+Instruction}
+    \subitem {Virtual\+Machine}, \hyperpage{109}
+  \item {run\+Subroutine}
+    \subitem {Virtual\+Machine}, \hyperpage{110}
+
+  \indexspace
+
+  \item {set}
+    \subitem {J\+S\+O\+N\+Array}, \hyperpage{75--77}
+  \item {Set\+Type}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{63}
+  \item {shift\+Left}
+    \subitem {Memory}, \hyperpage{91}
+  \item {shift\+Right}
+    \subitem {Memory}, \hyperpage{92}
+  \item {Simple\+Instruktion}, \hyperpage{94}
+    \subitem {function}, \hyperpage{97}
+    \subitem {param1}, \hyperpage{97}
+    \subitem {param2}, \hyperpage{97}
+    \subitem {print}, \hyperpage{96}
+    \subitem {representation}, \hyperpage{97}
+    \subitem {run}, \hyperpage{96}
+    \subitem {Simple\+Instruktion}, \hyperpage{96}
+  \item {size}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{64}
+    \subitem {Memory}, \hyperpage{93}
+  \item {sl0}
+    \subitem {virtualmachine.\+cpp}, \hyperpage{131}
+  \item {special\+Register\+Array}
+    \subitem {Virtual\+Machine}, \hyperpage{112}
+  \item {speicher\+Bereich}
+    \subitem {Memory}, \hyperpage{93}
+  \item {Sprache}, \hyperpage{98}
+    \subitem {instructions}, \hyperpage{100}
+    \subitem {language\+Elements}, \hyperpage{101}
+    \subitem {print}, \hyperpage{100}
+    \subitem {Sprache}, \hyperpage{100}
+  \item {sr0}
+    \subitem {virtualmachine.\+cpp}, \hyperpage{132}
+  \item {src/datei/datei.\+cpp}, \hyperpage{113}
+    \subitem {operator$<$$<$}, \hyperpage{113}
+  \item {src/datei/datei.\+hpp}, \hyperpage{117}
+  \item {src/datei/instruction/instruction.\+cpp}, \hyperpage{118}
+  \item {src/datei/instruction/instruction.\+hpp}, \hyperpage{119}
+  \item {src/datei/sprache/sprache.\+cpp}, \hyperpage{120}
+  \item {src/datei/sprache/sprache.\+hpp}, \hyperpage{121}
+  \item {src/json/json.\+hpp}, \hyperpage{116}
+    \subitem {operator$<$$<$}, \hyperpage{117}
+  \item {src/main.\+cpp}, \hyperpage{121}
+  \item {src/memory/memory.\+cpp}, \hyperpage{124}
+  \item {src/memory/memory.\+hpp}, \hyperpage{125}
+  \item {src/virtualmachine/virtualmachine.\+cpp}, \hyperpage{126}
+  \item {src/virtualmachine/virtualmachine.\+hpp}, \hyperpage{135}
+  \item {stack}
+    \subitem {Virtual\+Machine}, \hyperpage{112}
+  \item {String}
+    \subitem {json\+::\+J\+S\+O\+N\+::\+Backing\+Data}, \hyperpage{32}
+  \item {sub}
+    \subitem {virtualmachine.\+cpp}, \hyperpage{133}
+  \item {subroutines}
+    \subitem {Virtual\+Machine}, \hyperpage{112}
+  \item {swp}
+    \subitem {virtualmachine.\+cpp}, \hyperpage{134}
+
+  \indexspace
+
+  \item {to\+Arr}
+    \subitem {J\+S\+O\+N\+Object}, \hyperpage{85}
+  \item {To\+Bool}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{65}
+  \item {To\+Float}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{66}
+  \item {To\+Int}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{67}
+  \item {To\+String}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{68}
+  \item {Type}
+    \subitem {json\+::\+J\+S\+ON}, \hyperpage{70}
+
+  \indexspace
+
+  \item {U\+S\+E\+\_\+\+F\+I\+L\+ES}
+    \subitem {main.\+cpp}, \hyperpage{122}
+
+  \indexspace
+
+  \item {Virtual\+Machine}, \hyperpage{101}
+    \subitem {add\+Subroutine}, \hyperpage{103}
+    \subitem {functions}, \hyperpage{111}
+    \subitem {general\+Register\+Array}, \hyperpage{111}
+    \subitem {get\+Ptr}, \hyperpage{104}
+    \subitem {get\+Reference}, \hyperpage{105}
+    \subitem {get\+Value}, \hyperpage{106}
+    \subitem {labels}, \hyperpage{111}
+    \subitem {language}, \hyperpage{112}
+    \subitem {memory}, \hyperpage{112}
+    \subitem {pop\+Value}, \hyperpage{108}
+    \subitem {push\+Value}, \hyperpage{108}
+    \subitem {re\+Run\+All}, \hyperpage{109}
+    \subitem {run\+Instruction}, \hyperpage{109}
+    \subitem {run\+Subroutine}, \hyperpage{110}
+    \subitem {special\+Register\+Array}, \hyperpage{112}
+    \subitem {stack}, \hyperpage{112}
+    \subitem {subroutines}, \hyperpage{112}
+    \subitem {Virtual\+Machine}, \hyperpage{102}
+  \item {virtualmachine.\+cpp}
+    \subitem {add}, \hyperpage{127}
+    \subitem {jsr}, \hyperpage{127}
+    \subitem {mov}, \hyperpage{128}
+    \subitem {pop}, \hyperpage{129}
+    \subitem {push}, \hyperpage{130}
+    \subitem {sl0}, \hyperpage{131}
+    \subitem {sr0}, \hyperpage{132}
+    \subitem {sub}, \hyperpage{133}
+    \subitem {swp}, \hyperpage{134}
+
+  \indexspace
+
+  \item {write}
+    \subitem {Memory}, \hyperpage{92}
+
+\end{theindex}
