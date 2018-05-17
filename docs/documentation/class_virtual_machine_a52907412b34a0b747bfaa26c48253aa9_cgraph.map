@@ -1,0 +1,5 @@
+<map id="VirtualMachine::addSubroutine" name="VirtualMachine::addSubroutine">
+<area shape="rect" id="node2" href="$class_complex_instruktion.html#ae92fcdd92e0328d4eed826dea81b8c9c" title="ComplexInstruktion::add" alt="" coords="252,5,416,32"/>
+<area shape="rect" id="node3" href="$class_datei.html#aeeaf8e269f4d2b53e209ad905b5b75c5" title="Datei::getLang" alt="" coords="281,56,387,83"/>
+<area shape="rect" id="node4" href="$class_virtual_machine.html#a7029636f9766e0394a8b9d60264a3565" title="VirtualMachine::getPtr" alt="" coords="259,107,409,133"/>
+</map>
