@@ -1,0 +1,543 @@
+\hypertarget{namespacejson_1_1anonymous__namespace_02json_8hpp_03}{}\section{json\+:\+:anonymous\+\_\+namespace\{json.\+hpp\} Namespace Reference}
+\label{namespacejson_1_1anonymous__namespace_02json_8hpp_03}\index{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a623a6fca4cd1735d2bf3d081b875a350}{json\+\_\+escape}} (const string \&str)
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_acd55b945d1583038db8633516df7cf3f}{parse\+\_\+next}} (const string \&, size\+\_\+t \&)
+\item 
+void \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a3a6e9a9e2d1cf7848055ae69f04be8b7}{consume\+\_\+ws}} (const string \&str, size\+\_\+t \&offset)
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a69b6c8f8bb93130f5c6dab832000f915}{parse\+\_\+object}} (const string \&str, size\+\_\+t \&offset)
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a6a3598f1545d6015c9db8015fc42f7ff}{parse\+\_\+array}} (const string \&str, size\+\_\+t \&offset)
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a274c7a1f9001093d6b093abb5481122b}{parse\+\_\+string}} (const string \&str, size\+\_\+t \&offset)
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a9cc81652562c9d3c0f639ce43057f09a}{parse\+\_\+number}} (const string \&str, size\+\_\+t \&offset)
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_ae47f0a41d47e83e2ce1f5f267e938c1e}{parse\+\_\+bool}} (const string \&str, size\+\_\+t \&offset)
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_ad65e6ea0d2d880b099cf399600bf5666}{parse\+\_\+null}} (const string \&str, size\+\_\+t \&offset)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a3a6e9a9e2d1cf7848055ae69f04be8b7}\label{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a3a6e9a9e2d1cf7848055ae69f04be8b7}} 
+\index{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}!consume\+\_\+ws@{consume\+\_\+ws}}
+\index{consume\+\_\+ws@{consume\+\_\+ws}!json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}}
+\subsubsection{\texorpdfstring{consume\+\_\+ws()}{consume\_ws()}}
+{\footnotesize\ttfamily void json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::consume\+\_\+ws (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 444 of file json.\+hpp.
+
+
+
+Referenced by parse\+\_\+array(), parse\+\_\+next(), and parse\+\_\+object().
+
+
+\begin{DoxyCode}
+444                                                          \{
+445         \textcolor{keywordflow}{while}( isspace( str[offset] ) ) ++offset;
+446     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a3a6e9a9e2d1cf7848055ae69f04be8b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a623a6fca4cd1735d2bf3d081b875a350}\label{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a623a6fca4cd1735d2bf3d081b875a350}} 
+\index{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}!json\+\_\+escape@{json\+\_\+escape}}
+\index{json\+\_\+escape@{json\+\_\+escape}!json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}}
+\subsubsection{\texorpdfstring{json\+\_\+escape()}{json\_escape()}}
+{\footnotesize\ttfamily string json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::json\+\_\+escape (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file json.\+hpp.
+
+
+
+Referenced by json\+::\+J\+S\+O\+N\+::dump(), and json\+::\+J\+S\+O\+N\+::\+To\+String().
+
+
+\begin{DoxyCode}
+28                                             \{
+29         \textcolor{keywordtype}{string} output;
+30         \textcolor{keywordflow}{for}( \textcolor{keywordtype}{unsigned} i = 0; i < str.length(); ++i )
+31             \textcolor{keywordflow}{switch}( str[i] ) \{
+32                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)"'}: output += \textcolor{stringliteral}{"\(\backslash\)\(\backslash\)\(\backslash\)""}; \textcolor{keywordflow}{break};
+33                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'}: output += \textcolor{stringliteral}{"\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)"}; \textcolor{keywordflow}{break};
+34                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)b'}: output += \textcolor{stringliteral}{"\(\backslash\)\(\backslash\)b"};  \textcolor{keywordflow}{break};
+35                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)f'}: output += \textcolor{stringliteral}{"\(\backslash\)\(\backslash\)f"};  \textcolor{keywordflow}{break};
+36                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)n'}: output += \textcolor{stringliteral}{"\(\backslash\)\(\backslash\)n"};  \textcolor{keywordflow}{break};
+37                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)r'}: output += \textcolor{stringliteral}{"\(\backslash\)\(\backslash\)r"};  \textcolor{keywordflow}{break};
+38                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)t'}: output += \textcolor{stringliteral}{"\(\backslash\)\(\backslash\)t"};  \textcolor{keywordflow}{break};
+39                 default  : output += str[i]; \textcolor{keywordflow}{break};
+40             \}
+41         \textcolor{keywordflow}{return} std::move( output );
+42     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a623a6fca4cd1735d2bf3d081b875a350_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a6a3598f1545d6015c9db8015fc42f7ff}\label{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a6a3598f1545d6015c9db8015fc42f7ff}} 
+\index{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}!parse\+\_\+array@{parse\+\_\+array}}
+\index{parse\+\_\+array@{parse\+\_\+array}!json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}}
+\subsubsection{\texorpdfstring{parse\+\_\+array()}{parse\_array()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+array (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 484 of file json.\+hpp.
+
+
+
+References json\+::\+J\+S\+O\+N\+::\+Array, json\+::\+Array(), consume\+\_\+ws(), json\+::\+J\+S\+O\+N\+::\+Make(), and parse\+\_\+next().
+
+
+
+Referenced by parse\+\_\+next().
+
+
+\begin{DoxyCode}
+484                                                           \{
+485         \mbox{\hyperlink{class_j_s_o_n}{JSON}} \mbox{\hyperlink{namespacejson_a8c39b1bf99577bc140f0647d0192219f}{Array}} = JSON::Make( \mbox{\hyperlink{namespacejson_a8c39b1bf99577bc140f0647d0192219f}{JSON::Class::Array}} );
+486         \textcolor{keywordtype}{unsigned} index = 0;
+487         
+488         ++offset;
+489         \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a3a6e9a9e2d1cf7848055ae69f04be8b7}{consume\_ws}}( str, offset );
+490         \textcolor{keywordflow}{if}( str[offset] == \textcolor{charliteral}{']'} ) \{
+491             ++offset; \textcolor{keywordflow}{return} std::move( \mbox{\hyperlink{namespacejson_a8c39b1bf99577bc140f0647d0192219f}{Array}} );
+492         \}
+493 
+494         \textcolor{keywordflow}{while}( \textcolor{keyword}{true} ) \{
+495             \mbox{\hyperlink{namespacejson_a8c39b1bf99577bc140f0647d0192219f}{Array}}[index++] = \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_acd55b945d1583038db8633516df7cf3f}{parse\_next}}( str, offset );
+496             \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a3a6e9a9e2d1cf7848055ae69f04be8b7}{consume\_ws}}( str, offset );
+497 
+498             \textcolor{keywordflow}{if}( str[offset] == \textcolor{charliteral}{','} ) \{
+499                 ++offset; \textcolor{keywordflow}{continue};
+500             \}
+501             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( str[offset] == \textcolor{charliteral}{']'} ) \{
+502                 ++offset; \textcolor{keywordflow}{break};
+503             \}
+504             \textcolor{keywordflow}{else} \{
+505                 std::cerr << \textcolor{stringliteral}{"ERROR: Array: Expected ',' or ']', found '"} << str[offset] << \textcolor{stringliteral}{"'\(\backslash\)n"};
+506                 \textcolor{keywordflow}{return} std::move( JSON::Make( \mbox{\hyperlink{namespacejson_a8c39b1bf99577bc140f0647d0192219f}{JSON::Class::Array}} ) );
+507             \}
+508         \}
+509 
+510         \textcolor{keywordflow}{return} std::move( \mbox{\hyperlink{namespacejson_a8c39b1bf99577bc140f0647d0192219f}{Array}} );
+511     \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a6a3598f1545d6015c9db8015fc42f7ff_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a6a3598f1545d6015c9db8015fc42f7ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacejson_1_1anonymous__namespace_02json_8hpp_03_ae47f0a41d47e83e2ce1f5f267e938c1e}\label{namespacejson_1_1anonymous__namespace_02json_8hpp_03_ae47f0a41d47e83e2ce1f5f267e938c1e}} 
+\index{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}!parse\+\_\+bool@{parse\+\_\+bool}}
+\index{parse\+\_\+bool@{parse\+\_\+bool}!json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}}
+\subsubsection{\texorpdfstring{parse\+\_\+bool()}{parse\_bool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+bool (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 601 of file json.\+hpp.
+
+
+
+References json\+::\+J\+S\+O\+N\+::\+Make(), json\+::\+J\+S\+O\+N\+::\+Null, and json\+::\+J\+S\+O\+N\+::\+To\+Bool().
+
+
+
+Referenced by parse\+\_\+next().
+
+
+\begin{DoxyCode}
+601                                                          \{
+602         \mbox{\hyperlink{class_j_s_o_n}{JSON}} Bool;
+603         \textcolor{keywordflow}{if}( str.substr( offset, 4 ) == \textcolor{stringliteral}{"true"} )
+604             Bool = \textcolor{keyword}{true};
+605         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( str.substr( offset, 5 ) == \textcolor{stringliteral}{"false"} )
+606             Bool = \textcolor{keyword}{false};
+607         \textcolor{keywordflow}{else} \{
+608             std::cerr << \textcolor{stringliteral}{"ERROR: Bool: Expected 'true' or 'false', found '"} << str.substr( offset, 5 ) << \textcolor{stringliteral}{"
+      '\(\backslash\)n"};
+609             \textcolor{keywordflow}{return} std::move( JSON::Make( JSON::Class::Null ) );
+610         \}
+611         offset += (Bool.ToBool() ? 4 : 5);
+612         \textcolor{keywordflow}{return} std::move( Bool );
+613     \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_1_1anonymous__namespace_02json_8hpp_03_ae47f0a41d47e83e2ce1f5f267e938c1e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_1_1anonymous__namespace_02json_8hpp_03_ae47f0a41d47e83e2ce1f5f267e938c1e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacejson_1_1anonymous__namespace_02json_8hpp_03_acd55b945d1583038db8633516df7cf3f}\label{namespacejson_1_1anonymous__namespace_02json_8hpp_03_acd55b945d1583038db8633516df7cf3f}} 
+\index{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}!parse\+\_\+next@{parse\+\_\+next}}
+\index{parse\+\_\+next@{parse\+\_\+next}!json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}}
+\subsubsection{\texorpdfstring{parse\+\_\+next()}{parse\_next()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+next (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 625 of file json.\+hpp.
+
+
+
+References consume\+\_\+ws(), parse\+\_\+array(), parse\+\_\+bool(), parse\+\_\+null(), parse\+\_\+number(), parse\+\_\+object(), and parse\+\_\+string().
+
+
+
+Referenced by json\+::\+J\+S\+O\+N\+::\+Load(), parse\+\_\+array(), and parse\+\_\+object().
+
+
+\begin{DoxyCode}
+625                                                          \{
+626         \textcolor{keywordtype}{char} value;
+627         \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a3a6e9a9e2d1cf7848055ae69f04be8b7}{consume\_ws}}( str, offset );
+628         value = str[offset];
+629         \textcolor{keywordflow}{switch}( value ) \{
+630             \textcolor{keywordflow}{case} \textcolor{charliteral}{'['} : \textcolor{keywordflow}{return} std::move( \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a6a3598f1545d6015c9db8015fc42f7ff}{parse\_array}}( str, offset ) );
+631             \textcolor{keywordflow}{case} \textcolor{charliteral}{'\{'} : \textcolor{keywordflow}{return} std::move( \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a69b6c8f8bb93130f5c6dab832000f915}{parse\_object}}( str, offset ) );
+632             \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)"'}: \textcolor{keywordflow}{return} std::move( \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a274c7a1f9001093d6b093abb5481122b}{parse\_string}}( str, offset ) );
+633             \textcolor{keywordflow}{case} \textcolor{charliteral}{'t'} :
+634             \textcolor{keywordflow}{case} \textcolor{charliteral}{'f'} : \textcolor{keywordflow}{return} std::move( \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_ae47f0a41d47e83e2ce1f5f267e938c1e}{parse\_bool}}( str, offset ) );
+635             \textcolor{keywordflow}{case} \textcolor{charliteral}{'n'} : \textcolor{keywordflow}{return} std::move( \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_ad65e6ea0d2d880b099cf399600bf5666}{parse\_null}}( str, offset ) );
+636             default  : \textcolor{keywordflow}{if}( ( value <= '9' && value >= \textcolor{charliteral}{'0'} ) || value == \textcolor{charliteral}{'-'} )
+637                            \textcolor{keywordflow}{return} std::move( \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a9cc81652562c9d3c0f639ce43057f09a}{parse\_number}}( str, offset ) );
+638         \}
+639         std::cerr << \textcolor{stringliteral}{"ERROR: Parse: Unknown starting character '"} << value << \textcolor{stringliteral}{"'\(\backslash\)n"};
+640         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_j_s_o_n}{JSON}}();
+641     \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_1_1anonymous__namespace_02json_8hpp_03_acd55b945d1583038db8633516df7cf3f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_1_1anonymous__namespace_02json_8hpp_03_acd55b945d1583038db8633516df7cf3f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacejson_1_1anonymous__namespace_02json_8hpp_03_ad65e6ea0d2d880b099cf399600bf5666}\label{namespacejson_1_1anonymous__namespace_02json_8hpp_03_ad65e6ea0d2d880b099cf399600bf5666}} 
+\index{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}!parse\+\_\+null@{parse\+\_\+null}}
+\index{parse\+\_\+null@{parse\+\_\+null}!json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}}
+\subsubsection{\texorpdfstring{parse\+\_\+null()}{parse\_null()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+null (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 615 of file json.\+hpp.
+
+
+
+References json\+::\+J\+S\+O\+N\+::\+Make(), and json\+::\+J\+S\+O\+N\+::\+Null.
+
+
+
+Referenced by parse\+\_\+next().
+
+
+\begin{DoxyCode}
+615                                                          \{
+616         \mbox{\hyperlink{class_j_s_o_n}{JSON}} Null;
+617         \textcolor{keywordflow}{if}( str.substr( offset, 4 ) != \textcolor{stringliteral}{"null"} ) \{
+618             std::cerr << \textcolor{stringliteral}{"ERROR: Null: Expected 'null', found '"} << str.substr( offset, 4 ) << \textcolor{stringliteral}{"'\(\backslash\)n"};
+619             \textcolor{keywordflow}{return} std::move( JSON::Make( JSON::Class::Null ) );
+620         \}
+621         offset += 4;
+622         \textcolor{keywordflow}{return} std::move( Null );
+623     \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_1_1anonymous__namespace_02json_8hpp_03_ad65e6ea0d2d880b099cf399600bf5666_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_1_1anonymous__namespace_02json_8hpp_03_ad65e6ea0d2d880b099cf399600bf5666_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a9cc81652562c9d3c0f639ce43057f09a}\label{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a9cc81652562c9d3c0f639ce43057f09a}} 
+\index{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}!parse\+\_\+number@{parse\+\_\+number}}
+\index{parse\+\_\+number@{parse\+\_\+number}!json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}}
+\subsubsection{\texorpdfstring{parse\+\_\+number()}{parse\_number()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+number (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 551 of file json.\+hpp.
+
+
+
+References json\+::\+J\+S\+O\+N\+::\+Make(), and json\+::\+J\+S\+O\+N\+::\+Null.
+
+
+
+Referenced by parse\+\_\+next().
+
+
+\begin{DoxyCode}
+551                                                            \{
+552         \mbox{\hyperlink{class_j_s_o_n}{JSON}} Number;
+553         \textcolor{keywordtype}{string} val, exp\_str;
+554         \textcolor{keywordtype}{char} c;
+555         \textcolor{keywordtype}{bool} isDouble = \textcolor{keyword}{false};
+556         \textcolor{keywordtype}{long} exp = 0;
+557         \textcolor{keywordflow}{while}( \textcolor{keyword}{true} ) \{
+558             c = str[offset++];
+559             \textcolor{keywordflow}{if}( (c == \textcolor{charliteral}{'-'}) || (c >= \textcolor{charliteral}{'0'} && c <= \textcolor{charliteral}{'9'}) )
+560                 val += c;
+561             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( c == \textcolor{charliteral}{'.'} ) \{
+562                 val += c; 
+563                 isDouble = \textcolor{keyword}{true};
+564             \}
+565             \textcolor{keywordflow}{else}
+566                 \textcolor{keywordflow}{break};
+567         \}
+568         \textcolor{keywordflow}{if}( c == \textcolor{charliteral}{'E'} || c == \textcolor{charliteral}{'e'} ) \{
+569             c = str[ offset++ ];
+570             \textcolor{keywordflow}{if}( c == \textcolor{charliteral}{'-'} )\{ ++offset; exp\_str += \textcolor{charliteral}{'-'};\}
+571             \textcolor{keywordflow}{while}( \textcolor{keyword}{true} ) \{
+572                 c = str[ offset++ ];
+573                 \textcolor{keywordflow}{if}( c >= \textcolor{charliteral}{'0'} && c <= \textcolor{charliteral}{'9'} )
+574                     exp\_str += c;
+575                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( !isspace( c ) && c != \textcolor{charliteral}{','} && c != \textcolor{charliteral}{']'} && c != \textcolor{charliteral}{'\}'} ) \{
+576                     std::cerr << \textcolor{stringliteral}{"ERROR: Number: Expected a number for exponent, found '"} << c << \textcolor{stringliteral}{"'\(\backslash\)n"};
+577                     \textcolor{keywordflow}{return} std::move( JSON::Make( JSON::Class::Null ) );
+578                 \}
+579                 \textcolor{keywordflow}{else}
+580                     \textcolor{keywordflow}{break};
+581             \}
+582             exp = std::stol( exp\_str );
+583         \}
+584         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( !isspace( c ) && c != \textcolor{charliteral}{','} && c != \textcolor{charliteral}{']'} && c != \textcolor{charliteral}{'\}'} ) \{
+585             std::cerr << \textcolor{stringliteral}{"ERROR: Number: unexpected character '"} << c << \textcolor{stringliteral}{"'\(\backslash\)n"};
+586             \textcolor{keywordflow}{return} std::move( JSON::Make( JSON::Class::Null ) );
+587         \}
+588         --offset;
+589         
+590         \textcolor{keywordflow}{if}( isDouble )
+591             Number = std::stod( val ) * std::pow( 10, exp );
+592         \textcolor{keywordflow}{else} \{
+593             \textcolor{keywordflow}{if}( !exp\_str.empty() )
+594                 Number = std::stol( val ) * std::pow( 10, exp );
+595             \textcolor{keywordflow}{else}
+596                 Number = std::stol( val );
+597         \}
+598         \textcolor{keywordflow}{return} std::move( Number );
+599     \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a9cc81652562c9d3c0f639ce43057f09a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a9cc81652562c9d3c0f639ce43057f09a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a69b6c8f8bb93130f5c6dab832000f915}\label{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a69b6c8f8bb93130f5c6dab832000f915}} 
+\index{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}!parse\+\_\+object@{parse\+\_\+object}}
+\index{parse\+\_\+object@{parse\+\_\+object}!json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}}
+\subsubsection{\texorpdfstring{parse\+\_\+object()}{parse\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+object (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 448 of file json.\+hpp.
+
+
+
+References consume\+\_\+ws(), json\+::\+J\+S\+O\+N\+::\+Make(), json\+::\+J\+S\+O\+N\+::\+Object, json\+::\+Object(), parse\+\_\+next(), and json\+::\+J\+S\+O\+N\+::\+To\+String().
+
+
+
+Referenced by parse\+\_\+next().
+
+
+\begin{DoxyCode}
+448                                                            \{
+449         \mbox{\hyperlink{class_j_s_o_n}{JSON}} \mbox{\hyperlink{namespacejson_a7bc7d25f21c18a652a42db29cfdabd06}{Object}} = JSON::Make( \mbox{\hyperlink{namespacejson_a7bc7d25f21c18a652a42db29cfdabd06}{JSON::Class::Object}} );
+450 
+451         ++offset;
+452         \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a3a6e9a9e2d1cf7848055ae69f04be8b7}{consume\_ws}}( str, offset );
+453         \textcolor{keywordflow}{if}( str[offset] == \textcolor{charliteral}{'\}'} ) \{
+454             ++offset; \textcolor{keywordflow}{return} std::move( \mbox{\hyperlink{namespacejson_a7bc7d25f21c18a652a42db29cfdabd06}{Object}} );
+455         \}
+456 
+457         \textcolor{keywordflow}{while}( \textcolor{keyword}{true} ) \{
+458             \mbox{\hyperlink{class_j_s_o_n}{JSON}} Key = \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_acd55b945d1583038db8633516df7cf3f}{parse\_next}}( str, offset );
+459             \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a3a6e9a9e2d1cf7848055ae69f04be8b7}{consume\_ws}}( str, offset );
+460             \textcolor{keywordflow}{if}( str[offset] != \textcolor{charliteral}{':'} ) \{
+461                 std::cerr << \textcolor{stringliteral}{"Error: Object: Expected colon, found '"} << str[offset] << \textcolor{stringliteral}{"'\(\backslash\)n"};
+462                 \textcolor{keywordflow}{break};
+463             \}
+464             \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a3a6e9a9e2d1cf7848055ae69f04be8b7}{consume\_ws}}( str, ++offset );
+465             \mbox{\hyperlink{class_j_s_o_n}{JSON}} Value = \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_acd55b945d1583038db8633516df7cf3f}{parse\_next}}( str, offset );
+466             \mbox{\hyperlink{namespacejson_a7bc7d25f21c18a652a42db29cfdabd06}{Object}}[Key.ToString()] = Value;
+467             
+468             \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a3a6e9a9e2d1cf7848055ae69f04be8b7}{consume\_ws}}( str, offset );
+469             \textcolor{keywordflow}{if}( str[offset] == \textcolor{charliteral}{','} ) \{
+470                 ++offset; \textcolor{keywordflow}{continue};
+471             \}
+472             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( str[offset] == \textcolor{charliteral}{'\}'} ) \{
+473                 ++offset; \textcolor{keywordflow}{break};
+474             \}
+475             \textcolor{keywordflow}{else} \{
+476                 std::cerr << \textcolor{stringliteral}{"ERROR: Object: Expected comma, found '"} << str[offset] << \textcolor{stringliteral}{"'\(\backslash\)n"};
+477                 \textcolor{keywordflow}{break};
+478             \}
+479         \}
+480 
+481         \textcolor{keywordflow}{return} std::move( \mbox{\hyperlink{namespacejson_a7bc7d25f21c18a652a42db29cfdabd06}{Object}} );
+482     \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a69b6c8f8bb93130f5c6dab832000f915_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a69b6c8f8bb93130f5c6dab832000f915_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a274c7a1f9001093d6b093abb5481122b}\label{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a274c7a1f9001093d6b093abb5481122b}} 
+\index{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}!parse\+\_\+string@{parse\+\_\+string}}
+\index{parse\+\_\+string@{parse\+\_\+string}!json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}@{json\+::anonymous\+\_\+namespace\lcurly{}json.\+hpp\rcurly{}}}
+\subsubsection{\texorpdfstring{parse\+\_\+string()}{parse\_string()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+string (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 513 of file json.\+hpp.
+
+
+
+References json\+::\+J\+S\+O\+N\+::\+Make(), and json\+::\+J\+S\+O\+N\+::\+String.
+
+
+
+Referenced by parse\+\_\+next().
+
+
+\begin{DoxyCode}
+513                                                            \{
+514         \mbox{\hyperlink{class_j_s_o_n}{JSON}} String;
+515         \textcolor{keywordtype}{string} val;
+516         \textcolor{keywordflow}{for}( \textcolor{keywordtype}{char} c = str[++offset]; c != \textcolor{charliteral}{'\(\backslash\)"'} ; c = str[++offset] ) \{
+517             \textcolor{keywordflow}{if}( c == \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'} ) \{
+518                 \textcolor{keywordflow}{switch}( str[ ++offset ] ) \{
+519                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)"'}: val += \textcolor{charliteral}{'\(\backslash\)"'}; \textcolor{keywordflow}{break};
+520                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'}: val += \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'}; \textcolor{keywordflow}{break};
+521                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'/'} : val += \textcolor{charliteral}{'/'} ; \textcolor{keywordflow}{break};
+522                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'b'} : val += \textcolor{charliteral}{'\(\backslash\)b'}; \textcolor{keywordflow}{break};
+523                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'f'} : val += \textcolor{charliteral}{'\(\backslash\)f'}; \textcolor{keywordflow}{break};
+524                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'n'} : val += \textcolor{charliteral}{'\(\backslash\)n'}; \textcolor{keywordflow}{break};
+525                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'r'} : val += \textcolor{charliteral}{'\(\backslash\)r'}; \textcolor{keywordflow}{break};
+526                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'t'} : val += \textcolor{charliteral}{'\(\backslash\)t'}; \textcolor{keywordflow}{break};
+527                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'u'} : \{
+528                     val += \textcolor{stringliteral}{"\(\backslash\)\(\backslash\)u"} ;
+529                     \textcolor{keywordflow}{for}( \textcolor{keywordtype}{unsigned} i = 1; i <= 4; ++i ) \{
+530                         c = str[offset+i];
+531                         \textcolor{keywordflow}{if}( (c >= \textcolor{charliteral}{'0'} && c <= \textcolor{charliteral}{'9'}) || (c >= \textcolor{charliteral}{'a'} && c <= \textcolor{charliteral}{'f'}) || (c >= \textcolor{charliteral}{'A'} && c <= \textcolor{charliteral}{'F'}) )
+532                             val += c;
+533                         \textcolor{keywordflow}{else} \{
+534                             std::cerr << \textcolor{stringliteral}{"ERROR: String: Expected hex character in unicode escape, found '"}
+       << c << \textcolor{stringliteral}{"'\(\backslash\)n"};
+535                             \textcolor{keywordflow}{return} std::move( JSON::Make( JSON::Class::String ) );
+536                         \}
+537                     \}
+538                     offset += 4;
+539                 \} \textcolor{keywordflow}{break};
+540                 default  : val += \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'}; \textcolor{keywordflow}{break};
+541                 \}
+542             \}
+543             \textcolor{keywordflow}{else}
+544                 val += c;
+545         \}
+546         ++offset;
+547         String = val;
+548         \textcolor{keywordflow}{return} std::move( String );
+549     \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a274c7a1f9001093d6b093abb5481122b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a274c7a1f9001093d6b093abb5481122b_icgraph}
+\end{center}
+\end{figure}

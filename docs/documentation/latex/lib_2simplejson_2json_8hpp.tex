@@ -1,0 +1,75 @@
+\hypertarget{lib_2simplejson_2json_8hpp}{}\section{lib/simplejson/json.hpp File Reference}
+\label{lib_2simplejson_2json_8hpp}\index{lib/simplejson/json.\+hpp@{lib/simplejson/json.\+hpp}}
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$initializer\+\_\+list$>$}\newline
+{\ttfamily \#include $<$ostream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for json.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_2simplejson_2json_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib_2simplejson_2json_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classjson_1_1_j_s_o_n}{json\+::\+J\+S\+ON}}
+\item 
+union \mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data}{json\+::\+J\+S\+O\+N\+::\+Backing\+Data}}
+\item 
+class \mbox{\hyperlink{classjson_1_1_j_s_o_n_1_1_j_s_o_n_wrapper}{json\+::\+J\+S\+O\+N\+::\+J\+S\+O\+N\+Wrapper$<$ Container $>$}}
+\item 
+class \mbox{\hyperlink{classjson_1_1_j_s_o_n_1_1_j_s_o_n_const_wrapper}{json\+::\+J\+S\+O\+N\+::\+J\+S\+O\+N\+Const\+Wrapper$<$ Container $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacejson}{json}}
+\item 
+ \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03}{json\+::anonymous\+\_\+namespace\{json.\+hpp\}}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a623a6fca4cd1735d2bf3d081b875a350}{json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::json\+\_\+escape}} (const string \&str)
+\item 
+\mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_a805054691c80da00fd9129387f834c21}{json\+::\+Array}} ()
+\item 
+{\footnotesize template$<$typename... T$>$ }\\\mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_a8c39b1bf99577bc140f0647d0192219f}{json\+::\+Array}} (T... args)
+\item 
+\mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_a7bc7d25f21c18a652a42db29cfdabd06}{json\+::\+Object}} ()
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespacejson_a348c2e5bffbeca243a52de2977e71b08}{json\+::operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}} \&json)
+\item 
+\mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_acd55b945d1583038db8633516df7cf3f}{json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+next}} (const string \&, size\+\_\+t \&)
+\item 
+void \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a3a6e9a9e2d1cf7848055ae69f04be8b7}{json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::consume\+\_\+ws}} (const string \&str, size\+\_\+t \&offset)
+\item 
+\mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a69b6c8f8bb93130f5c6dab832000f915}{json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+object}} (const string \&str, size\+\_\+t \&offset)
+\item 
+\mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a6a3598f1545d6015c9db8015fc42f7ff}{json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+array}} (const string \&str, size\+\_\+t \&offset)
+\item 
+\mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a274c7a1f9001093d6b093abb5481122b}{json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+string}} (const string \&str, size\+\_\+t \&offset)
+\item 
+\mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a9cc81652562c9d3c0f639ce43057f09a}{json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+number}} (const string \&str, size\+\_\+t \&offset)
+\item 
+\mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_ae47f0a41d47e83e2ce1f5f267e938c1e}{json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+bool}} (const string \&str, size\+\_\+t \&offset)
+\item 
+\mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_ad65e6ea0d2d880b099cf399600bf5666}{json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+null}} (const string \&str, size\+\_\+t \&offset)
+\end{DoxyCompactItemize}

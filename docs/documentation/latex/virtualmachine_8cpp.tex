@@ -1,0 +1,397 @@
+\hypertarget{virtualmachine_8cpp}{}\section{src/virtualmachine/virtualmachine.cpp File Reference}
+\label{virtualmachine_8cpp}\index{src/virtualmachine/virtualmachine.\+cpp@{src/virtualmachine/virtualmachine.\+cpp}}
+{\ttfamily \#include \char`\"{}virtualmachine.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+Include dependency graph for virtualmachine.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{virtualmachine_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{virtualmachine_8cpp_a4a13e90dbe7c735dcdb79b69aeb527a0}{mov}} (\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&vm, std\+::string s1, std\+::string s2)
+\item 
+void \mbox{\hyperlink{virtualmachine_8cpp_afff2da85b0bcdbce50f79a3938e8cfb8}{add}} (\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&vm, std\+::string s1, std\+::string s2)
+\item 
+void \mbox{\hyperlink{virtualmachine_8cpp_a0897204f7115655bac9fd3ec141f02a3}{sub}} (\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&vm, std\+::string s1, std\+::string s2)
+\item 
+void \mbox{\hyperlink{virtualmachine_8cpp_ac1fe387291f3ce3def19482b63d79993}{swp}} (\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&vm, std\+::string s1, std\+::string s2)
+\item 
+void \mbox{\hyperlink{virtualmachine_8cpp_a8d7be3b5269fefe09af303a50d46483c}{sl0}} (\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&vm, std\+::string s1, std\+::string s2)
+\item 
+void \mbox{\hyperlink{virtualmachine_8cpp_a53ed0fe4897961c90e8f8a80135407ab}{sr0}} (\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&vm, std\+::string s1, std\+::string s2)
+\item 
+void \mbox{\hyperlink{virtualmachine_8cpp_a8de6375d47a4f4fa39810a2baec6438c}{jsr}} (\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&vm, std\+::string s1, std\+::string s2)
+\item 
+void \mbox{\hyperlink{virtualmachine_8cpp_a143a953d6f1137d8d84af5f278c974d6}{push}} (\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&vm, std\+::string s1, std\+::string s2)
+\item 
+void \mbox{\hyperlink{virtualmachine_8cpp_a7fd81f93e335b7903d4a3ff3a82a6a4f}{pop}} (\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&vm, std\+::string s1, std\+::string s2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{virtualmachine_8cpp_afff2da85b0bcdbce50f79a3938e8cfb8}\label{virtualmachine_8cpp_afff2da85b0bcdbce50f79a3938e8cfb8}} 
+\index{virtualmachine.\+cpp@{virtualmachine.\+cpp}!add@{add}}
+\index{add@{add}!virtualmachine.\+cpp@{virtualmachine.\+cpp}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&}]{vm,  }\item[{std\+::string}]{s1,  }\item[{std\+::string}]{s2 }\end{DoxyParamCaption})}
+
+Instruktiondefinition. 
+
+Definition at line 17 of file virtualmachine.\+cpp.
+
+
+
+References Virtual\+Machine\+::get\+Reference(), and Virtual\+Machine\+::get\+Value().
+
+
+
+Referenced by Virtual\+Machine\+::\+Virtual\+Machine().
+
+
+\begin{DoxyCode}
+17                                                         \{
+18     vm.\mbox{\hyperlink{class_virtual_machine_a0f55b241f2e14264dfaec5449d136a50}{getReference}}(s1) = vm.\mbox{\hyperlink{class_virtual_machine_a09bdaea77003f19912e0f101faefa26f}{getValue}}(s2) + vm.\mbox{\hyperlink{class_virtual_machine_a09bdaea77003f19912e0f101faefa26f}{getValue}}(s1);
+19 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{virtualmachine_8cpp_afff2da85b0bcdbce50f79a3938e8cfb8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{virtualmachine_8cpp_afff2da85b0bcdbce50f79a3938e8cfb8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{virtualmachine_8cpp_a8de6375d47a4f4fa39810a2baec6438c}\label{virtualmachine_8cpp_a8de6375d47a4f4fa39810a2baec6438c}} 
+\index{virtualmachine.\+cpp@{virtualmachine.\+cpp}!jsr@{jsr}}
+\index{jsr@{jsr}!virtualmachine.\+cpp@{virtualmachine.\+cpp}}
+\subsubsection{\texorpdfstring{jsr()}{jsr()}}
+{\footnotesize\ttfamily void jsr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&}]{vm,  }\item[{std\+::string}]{s1,  }\item[{std\+::string}]{s2 }\end{DoxyParamCaption})}
+
+Instruktiondefinition. 
+
+Definition at line 52 of file virtualmachine.\+cpp.
+
+
+
+References Virtual\+Machine\+::run\+Subroutine().
+
+
+
+Referenced by Virtual\+Machine\+::\+Virtual\+Machine().
+
+
+\begin{DoxyCode}
+52                                                         \{ 
+53     vm.\mbox{\hyperlink{class_virtual_machine_a564ba72b2d0f9e888a1560b523c567ba}{runSubroutine}}(s1);
+54 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{virtualmachine_8cpp_a8de6375d47a4f4fa39810a2baec6438c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{virtualmachine_8cpp_a8de6375d47a4f4fa39810a2baec6438c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{virtualmachine_8cpp_a4a13e90dbe7c735dcdb79b69aeb527a0}\label{virtualmachine_8cpp_a4a13e90dbe7c735dcdb79b69aeb527a0}} 
+\index{virtualmachine.\+cpp@{virtualmachine.\+cpp}!mov@{mov}}
+\index{mov@{mov}!virtualmachine.\+cpp@{virtualmachine.\+cpp}}
+\subsubsection{\texorpdfstring{mov()}{mov()}}
+{\footnotesize\ttfamily void mov (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&}]{vm,  }\item[{std\+::string}]{s1,  }\item[{std\+::string}]{s2 }\end{DoxyParamCaption})}
+
+Instruktiondefinition. 
+
+Definition at line 10 of file virtualmachine.\+cpp.
+
+
+
+References Virtual\+Machine\+::get\+Reference(), and Virtual\+Machine\+::get\+Value().
+
+
+
+Referenced by Virtual\+Machine\+::\+Virtual\+Machine().
+
+
+\begin{DoxyCode}
+10                                                         \{
+11     vm.\mbox{\hyperlink{class_virtual_machine_a0f55b241f2e14264dfaec5449d136a50}{getReference}}(s1) = vm.\mbox{\hyperlink{class_virtual_machine_a09bdaea77003f19912e0f101faefa26f}{getValue}}(s2);
+12 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{virtualmachine_8cpp_a4a13e90dbe7c735dcdb79b69aeb527a0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{virtualmachine_8cpp_a4a13e90dbe7c735dcdb79b69aeb527a0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{virtualmachine_8cpp_a7fd81f93e335b7903d4a3ff3a82a6a4f}\label{virtualmachine_8cpp_a7fd81f93e335b7903d4a3ff3a82a6a4f}} 
+\index{virtualmachine.\+cpp@{virtualmachine.\+cpp}!pop@{pop}}
+\index{pop@{pop}!virtualmachine.\+cpp@{virtualmachine.\+cpp}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily void pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&}]{vm,  }\item[{std\+::string}]{s1,  }\item[{std\+::string}]{s2 }\end{DoxyParamCaption})}
+
+Instruktiondefinition. 
+
+Definition at line 66 of file virtualmachine.\+cpp.
+
+
+
+References Virtual\+Machine\+::get\+Reference(), and Virtual\+Machine\+::pop\+Value().
+
+
+
+Referenced by Virtual\+Machine\+::\+Virtual\+Machine().
+
+
+\begin{DoxyCode}
+66                                                         \{ 
+67     vm.\mbox{\hyperlink{class_virtual_machine_a0f55b241f2e14264dfaec5449d136a50}{getReference}}(s1) = vm.\mbox{\hyperlink{class_virtual_machine_a4cbf0a06938ad9b3acb9a1872452e6a5}{popValue}}();
+68 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{virtualmachine_8cpp_a7fd81f93e335b7903d4a3ff3a82a6a4f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{virtualmachine_8cpp_a7fd81f93e335b7903d4a3ff3a82a6a4f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{virtualmachine_8cpp_a143a953d6f1137d8d84af5f278c974d6}\label{virtualmachine_8cpp_a143a953d6f1137d8d84af5f278c974d6}} 
+\index{virtualmachine.\+cpp@{virtualmachine.\+cpp}!push@{push}}
+\index{push@{push}!virtualmachine.\+cpp@{virtualmachine.\+cpp}}
+\subsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily void push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&}]{vm,  }\item[{std\+::string}]{s1,  }\item[{std\+::string}]{s2 }\end{DoxyParamCaption})}
+
+Instruktiondefinition. 
+
+Definition at line 59 of file virtualmachine.\+cpp.
+
+
+
+References Virtual\+Machine\+::get\+Value(), and Virtual\+Machine\+::push\+Value().
+
+
+
+Referenced by Virtual\+Machine\+::\+Virtual\+Machine().
+
+
+\begin{DoxyCode}
+59                                                          \{ 
+60     vm.\mbox{\hyperlink{class_virtual_machine_ac20f1d6667434866f50880187c521cd4}{pushValue}}(vm.\mbox{\hyperlink{class_virtual_machine_a09bdaea77003f19912e0f101faefa26f}{getValue}}(s1));
+61 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{virtualmachine_8cpp_a143a953d6f1137d8d84af5f278c974d6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{virtualmachine_8cpp_a143a953d6f1137d8d84af5f278c974d6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{virtualmachine_8cpp_a8d7be3b5269fefe09af303a50d46483c}\label{virtualmachine_8cpp_a8d7be3b5269fefe09af303a50d46483c}} 
+\index{virtualmachine.\+cpp@{virtualmachine.\+cpp}!sl0@{sl0}}
+\index{sl0@{sl0}!virtualmachine.\+cpp@{virtualmachine.\+cpp}}
+\subsubsection{\texorpdfstring{sl0()}{sl0()}}
+{\footnotesize\ttfamily void sl0 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&}]{vm,  }\item[{std\+::string}]{s1,  }\item[{std\+::string}]{s2 }\end{DoxyParamCaption})}
+
+Instruktiondefinition. 
+
+Definition at line 38 of file virtualmachine.\+cpp.
+
+
+
+References Virtual\+Machine\+::get\+Reference(), and Virtual\+Machine\+::get\+Value().
+
+
+
+Referenced by Virtual\+Machine\+::\+Virtual\+Machine().
+
+
+\begin{DoxyCode}
+38                                                         \{
+39     vm.\mbox{\hyperlink{class_virtual_machine_a0f55b241f2e14264dfaec5449d136a50}{getReference}}(s1) = vm.\mbox{\hyperlink{class_virtual_machine_a09bdaea77003f19912e0f101faefa26f}{getValue}}(s1) << 1;
+40 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{virtualmachine_8cpp_a8d7be3b5269fefe09af303a50d46483c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{virtualmachine_8cpp_a8d7be3b5269fefe09af303a50d46483c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{virtualmachine_8cpp_a53ed0fe4897961c90e8f8a80135407ab}\label{virtualmachine_8cpp_a53ed0fe4897961c90e8f8a80135407ab}} 
+\index{virtualmachine.\+cpp@{virtualmachine.\+cpp}!sr0@{sr0}}
+\index{sr0@{sr0}!virtualmachine.\+cpp@{virtualmachine.\+cpp}}
+\subsubsection{\texorpdfstring{sr0()}{sr0()}}
+{\footnotesize\ttfamily void sr0 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&}]{vm,  }\item[{std\+::string}]{s1,  }\item[{std\+::string}]{s2 }\end{DoxyParamCaption})}
+
+Instruktiondefinition. 
+
+Definition at line 45 of file virtualmachine.\+cpp.
+
+
+
+References Virtual\+Machine\+::get\+Reference(), and Virtual\+Machine\+::get\+Value().
+
+
+
+Referenced by Virtual\+Machine\+::\+Virtual\+Machine().
+
+
+\begin{DoxyCode}
+45                                                         \{ 
+46     vm.\mbox{\hyperlink{class_virtual_machine_a0f55b241f2e14264dfaec5449d136a50}{getReference}}(s1) = vm.\mbox{\hyperlink{class_virtual_machine_a09bdaea77003f19912e0f101faefa26f}{getValue}}(s1) >> 1;
+47 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{virtualmachine_8cpp_a53ed0fe4897961c90e8f8a80135407ab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{virtualmachine_8cpp_a53ed0fe4897961c90e8f8a80135407ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{virtualmachine_8cpp_a0897204f7115655bac9fd3ec141f02a3}\label{virtualmachine_8cpp_a0897204f7115655bac9fd3ec141f02a3}} 
+\index{virtualmachine.\+cpp@{virtualmachine.\+cpp}!sub@{sub}}
+\index{sub@{sub}!virtualmachine.\+cpp@{virtualmachine.\+cpp}}
+\subsubsection{\texorpdfstring{sub()}{sub()}}
+{\footnotesize\ttfamily void sub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&}]{vm,  }\item[{std\+::string}]{s1,  }\item[{std\+::string}]{s2 }\end{DoxyParamCaption})}
+
+Instruktiondefinition. 
+
+Definition at line 24 of file virtualmachine.\+cpp.
+
+
+
+References Virtual\+Machine\+::get\+Reference(), and Virtual\+Machine\+::get\+Value().
+
+
+
+Referenced by Virtual\+Machine\+::\+Virtual\+Machine().
+
+
+\begin{DoxyCode}
+24                                                         \{
+25     vm.\mbox{\hyperlink{class_virtual_machine_a0f55b241f2e14264dfaec5449d136a50}{getReference}}(s1) = vm.\mbox{\hyperlink{class_virtual_machine_a09bdaea77003f19912e0f101faefa26f}{getValue}}(s1) - vm.\mbox{\hyperlink{class_virtual_machine_a09bdaea77003f19912e0f101faefa26f}{getValue}}(s2);
+26 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{virtualmachine_8cpp_a0897204f7115655bac9fd3ec141f02a3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{virtualmachine_8cpp_a0897204f7115655bac9fd3ec141f02a3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{virtualmachine_8cpp_ac1fe387291f3ce3def19482b63d79993}\label{virtualmachine_8cpp_ac1fe387291f3ce3def19482b63d79993}} 
+\index{virtualmachine.\+cpp@{virtualmachine.\+cpp}!swp@{swp}}
+\index{swp@{swp}!virtualmachine.\+cpp@{virtualmachine.\+cpp}}
+\subsubsection{\texorpdfstring{swp()}{swp()}}
+{\footnotesize\ttfamily void swp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&}]{vm,  }\item[{std\+::string}]{s1,  }\item[{std\+::string}]{s2 }\end{DoxyParamCaption})}
+
+Instruktiondefinition. 
+
+Definition at line 31 of file virtualmachine.\+cpp.
+
+
+
+References Virtual\+Machine\+::get\+Reference(), and Virtual\+Machine\+::get\+Value().
+
+
+
+Referenced by Virtual\+Machine\+::\+Virtual\+Machine().
+
+
+\begin{DoxyCode}
+31                                                         \{
+32     vm.\mbox{\hyperlink{class_virtual_machine_a0f55b241f2e14264dfaec5449d136a50}{getReference}}(s1) = (vm.\mbox{\hyperlink{class_virtual_machine_a09bdaea77003f19912e0f101faefa26f}{getValue}}(s1))  >> 4 | (vm.
+      \mbox{\hyperlink{class_virtual_machine_a09bdaea77003f19912e0f101faefa26f}{getValue}}(s1) << 4);
+33 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{virtualmachine_8cpp_ac1fe387291f3ce3def19482b63d79993_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{virtualmachine_8cpp_ac1fe387291f3ce3def19482b63d79993_icgraph}
+\end{center}
+\end{figure}

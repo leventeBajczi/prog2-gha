@@ -1,0 +1,322 @@
+\hypertarget{class_memory}{}\section{Memory Class Reference}
+\label{class_memory}\index{Memory@{Memory}}
+
+
+{\ttfamily \#include $<$memory.\+hpp$>$}
+
+
+
+Collaboration diagram for Memory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{class_memory__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned int \mbox{\hyperlink{class_memory_a9687fde54e7c10c54060117045060613}{get\+Size}} ()
+\item 
+\mbox{\hyperlink{class_memory_ae9f83eab19db80cb53bf79a5096d05a9}{Memory}} (unsigned int)
+\item 
+\mbox{\hyperlink{class_memory_a0ffa9759ebbf103f11132a505b93bdc0}{$\sim$\+Memory}} ()
+\item 
+\mbox{\hyperlink{class_memory_a074fa74eaf054e7e420c35c573b46e21}{Memory}} (const \mbox{\hyperlink{class_memory}{Memory}} \&)
+\item 
+bool \mbox{\hyperlink{class_memory_a0e00ea7d13e602be37af361426aa3a50}{write}} (unsigned int, uint8\+\_\+t)
+\item 
+uint8\+\_\+t \& \mbox{\hyperlink{class_memory_ab669beeca09308c880af9b13cde7f655}{read}} (unsigned int)
+\item 
+bool \mbox{\hyperlink{class_memory_af57be7a362ba6670fc983ac5cceb34a5}{shift\+Right}} (unsigned int, uint8\+\_\+t, uint8\+\_\+t, uint8\+\_\+t \&, uint8\+\_\+t)
+\item 
+bool \mbox{\hyperlink{class_memory_a274d126eea46f966a36a2eb69da949ab}{shift\+Left}} (unsigned int, uint8\+\_\+t, uint8\+\_\+t, uint8\+\_\+t \&, uint8\+\_\+t)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{class_memory_a31e171332b705e39bb13e421c7863a5f}{speicher\+Bereich}}
+\item 
+const unsigned int \mbox{\hyperlink{class_memory_a97e5472d284e8daceeb740acb2170ae0}{size}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Klasse für die Darstellung des Speicherplatzes. 
+
+Definition at line 11 of file memory.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_memory_ae9f83eab19db80cb53bf79a5096d05a9}\label{class_memory_ae9f83eab19db80cb53bf79a5096d05a9}} 
+\index{Memory@{Memory}!Memory@{Memory}}
+\index{Memory@{Memory}!Memory@{Memory}}
+\subsubsection{\texorpdfstring{Memory()}{Memory()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Memory\+::\+Memory (\begin{DoxyParamCaption}\item[{unsigned int}]{n }\end{DoxyParamCaption})}
+
+Konstruktor des Speicherplatzes. 
+
+Definition at line 7 of file memory.\+cpp.
+
+
+
+References speicher\+Bereich.
+
+
+\begin{DoxyCode}
+7                              : \mbox{\hyperlink{class_memory_a97e5472d284e8daceeb740acb2170ae0}{size}}(n)
+8 \{
+9     \mbox{\hyperlink{class_memory_a31e171332b705e39bb13e421c7863a5f}{speicherBereich}} = \textcolor{keyword}{new} uint8\_t[n];
+10 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_memory_a0ffa9759ebbf103f11132a505b93bdc0}\label{class_memory_a0ffa9759ebbf103f11132a505b93bdc0}} 
+\index{Memory@{Memory}!````~Memory@{$\sim$\+Memory}}
+\index{````~Memory@{$\sim$\+Memory}!Memory@{Memory}}
+\subsubsection{\texorpdfstring{$\sim$\+Memory()}{~Memory()}}
+{\footnotesize\ttfamily Memory\+::$\sim$\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destruktor des Speicherplatzes.. 
+
+Definition at line 25 of file memory.\+cpp.
+
+
+
+References speicher\+Bereich.
+
+
+\begin{DoxyCode}
+26 \{
+27     \textcolor{keyword}{delete} [] \mbox{\hyperlink{class_memory_a31e171332b705e39bb13e421c7863a5f}{speicherBereich}};
+28 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_memory_a074fa74eaf054e7e420c35c573b46e21}\label{class_memory_a074fa74eaf054e7e420c35c573b46e21}} 
+\index{Memory@{Memory}!Memory@{Memory}}
+\index{Memory@{Memory}!Memory@{Memory}}
+\subsubsection{\texorpdfstring{Memory()}{Memory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Memory\+::\+Memory (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_memory}{Memory}} \&}]{obj }\end{DoxyParamCaption})}
+
+Kopierkonstruktor des Speicherplatzes. 
+
+Definition at line 15 of file memory.\+cpp.
+
+
+
+References size, and speicher\+Bereich.
+
+
+\begin{DoxyCode}
+15                                 : \mbox{\hyperlink{class_memory_a97e5472d284e8daceeb740acb2170ae0}{size}}(obj.\mbox{\hyperlink{class_memory_a97e5472d284e8daceeb740acb2170ae0}{size}})
+16 \{
+17     \mbox{\hyperlink{class_memory_a31e171332b705e39bb13e421c7863a5f}{speicherBereich}} = \textcolor{keyword}{new} uint8\_t[\mbox{\hyperlink{class_memory_a97e5472d284e8daceeb740acb2170ae0}{size}}];
+18     memcpy(\mbox{\hyperlink{class_memory_a31e171332b705e39bb13e421c7863a5f}{speicherBereich}}, obj.\mbox{\hyperlink{class_memory_a31e171332b705e39bb13e421c7863a5f}{speicherBereich}}, 
+      \mbox{\hyperlink{class_memory_a97e5472d284e8daceeb740acb2170ae0}{size}});
+19 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_memory_a9687fde54e7c10c54060117045060613}\label{class_memory_a9687fde54e7c10c54060117045060613}} 
+\index{Memory@{Memory}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Memory@{Memory}}
+\subsubsection{\texorpdfstring{get\+Size()}{getSize()}}
+{\footnotesize\ttfamily const unsigned int Memory\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file memory.\+cpp.
+
+
+
+References size.
+
+
+
+Referenced by Virtual\+Machine\+::get\+Reference(), and Virtual\+Machine\+::get\+Value().
+
+
+\begin{DoxyCode}
+32 \{
+33     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_memory_a97e5472d284e8daceeb740acb2170ae0}{size}};
+34 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_memory_a9687fde54e7c10c54060117045060613_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_memory_ab669beeca09308c880af9b13cde7f655}\label{class_memory_ab669beeca09308c880af9b13cde7f655}} 
+\index{Memory@{Memory}!read@{read}}
+\index{read@{read}!Memory@{Memory}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily uint8\+\_\+t \& Memory\+::read (\begin{DoxyParamCaption}\item[{unsigned int}]{address }\end{DoxyParamCaption})}
+
+Gibt den Wert beim {\ttfamily address} zurück. 
+
+Definition at line 51 of file memory.\+cpp.
+
+
+
+References speicher\+Bereich.
+
+
+
+Referenced by Virtual\+Machine\+::get\+Reference(), and Virtual\+Machine\+::get\+Value().
+
+
+\begin{DoxyCode}
+52 \{
+53     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_memory_a31e171332b705e39bb13e421c7863a5f}{speicherBereich}}[address];
+54 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_memory_ab669beeca09308c880af9b13cde7f655_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_memory_a274d126eea46f966a36a2eb69da949ab}\label{class_memory_a274d126eea46f966a36a2eb69da949ab}} 
+\index{Memory@{Memory}!shift\+Left@{shift\+Left}}
+\index{shift\+Left@{shift\+Left}!Memory@{Memory}}
+\subsubsection{\texorpdfstring{shift\+Left()}{shiftLeft()}}
+{\footnotesize\ttfamily bool Memory\+::shift\+Left (\begin{DoxyParamCaption}\item[{unsigned int}]{address,  }\item[{uint8\+\_\+t}]{data,  }\item[{uint8\+\_\+t}]{data\+Mask,  }\item[{uint8\+\_\+t \&}]{flag,  }\item[{uint8\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+Verschiebt den Wert beim {\ttfamily address} nach links. 
+
+Definition at line 73 of file memory.\+cpp.
+
+
+
+References size, speicher\+Bereich, and write().
+
+
+\begin{DoxyCode}
+74 \{
+75     \textcolor{keywordflow}{if}(address >= \mbox{\hyperlink{class_memory_a97e5472d284e8daceeb740acb2170ae0}{size}}) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+76     uint8\_t newdata = ((data & dataMask) && 1) | ((\mbox{\hyperlink{class_memory_a31e171332b705e39bb13e421c7863a5f}{speicherBereich}}[address] & 0x7F) << 1); 
+77     flag &= ~mask;
+78     flag |= ((\mbox{\hyperlink{class_memory_a31e171332b705e39bb13e421c7863a5f}{speicherBereich}}[address] & 0x80)) ? mask : 0;
+79     \textcolor{keywordflow}{return} this->\mbox{\hyperlink{class_memory_a0e00ea7d13e602be37af361426aa3a50}{write}}(address, newdata);
+80     
+81 
+82 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{class_memory_a274d126eea46f966a36a2eb69da949ab_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_memory_af57be7a362ba6670fc983ac5cceb34a5}\label{class_memory_af57be7a362ba6670fc983ac5cceb34a5}} 
+\index{Memory@{Memory}!shift\+Right@{shift\+Right}}
+\index{shift\+Right@{shift\+Right}!Memory@{Memory}}
+\subsubsection{\texorpdfstring{shift\+Right()}{shiftRight()}}
+{\footnotesize\ttfamily bool Memory\+::shift\+Right (\begin{DoxyParamCaption}\item[{unsigned int}]{address,  }\item[{uint8\+\_\+t}]{data,  }\item[{uint8\+\_\+t}]{data\+Mask,  }\item[{uint8\+\_\+t \&}]{flag,  }\item[{uint8\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+Verschiebt den Wert beim {\ttfamily address} nach rechts. 
+
+Definition at line 59 of file memory.\+cpp.
+
+
+
+References size, speicher\+Bereich, and write().
+
+
+\begin{DoxyCode}
+60 \{
+61     \textcolor{keywordflow}{if}(address >= \mbox{\hyperlink{class_memory_a97e5472d284e8daceeb740acb2170ae0}{size}}) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+62     uint8\_t newdata = ((data & dataMask)&&1)<<7 | ((\mbox{\hyperlink{class_memory_a31e171332b705e39bb13e421c7863a5f}{speicherBereich}}[address] & 0xFE) >> 1); 
+63     flag&= ~mask;
+64     flag |= (\mbox{\hyperlink{class_memory_a31e171332b705e39bb13e421c7863a5f}{speicherBereich}}[address] & 0x01) ? mask : 0;
+65     \textcolor{keywordflow}{return} this->\mbox{\hyperlink{class_memory_a0e00ea7d13e602be37af361426aa3a50}{write}}(address, newdata);
+66 
+67 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{class_memory_af57be7a362ba6670fc983ac5cceb34a5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_memory_a0e00ea7d13e602be37af361426aa3a50}\label{class_memory_a0e00ea7d13e602be37af361426aa3a50}} 
+\index{Memory@{Memory}!write@{write}}
+\index{write@{write}!Memory@{Memory}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily bool Memory\+::write (\begin{DoxyParamCaption}\item[{unsigned int}]{address,  }\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+Schreibt data in dem Speicher beim {\ttfamily address} ein. 
+
+Definition at line 39 of file memory.\+cpp.
+
+
+
+References size, and speicher\+Bereich.
+
+
+
+Referenced by shift\+Left(), and shift\+Right().
+
+
+\begin{DoxyCode}
+40 \{
+41     \textcolor{keywordflow}{if}(address >= \mbox{\hyperlink{class_memory_a97e5472d284e8daceeb740acb2170ae0}{size}}) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+42     \mbox{\hyperlink{class_memory_a31e171332b705e39bb13e421c7863a5f}{speicherBereich}}[address] = data;
+43     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+44 
+45 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{class_memory_a0e00ea7d13e602be37af361426aa3a50_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{class_memory_a97e5472d284e8daceeb740acb2170ae0}\label{class_memory_a97e5472d284e8daceeb740acb2170ae0}} 
+\index{Memory@{Memory}!size@{size}}
+\index{size@{size}!Memory@{Memory}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily const unsigned int Memory\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file memory.\+hpp.
+
+
+
+Referenced by get\+Size(), Memory(), shift\+Left(), shift\+Right(), and write().
+
+\mbox{\Hypertarget{class_memory_a31e171332b705e39bb13e421c7863a5f}\label{class_memory_a31e171332b705e39bb13e421c7863a5f}} 
+\index{Memory@{Memory}!speicher\+Bereich@{speicher\+Bereich}}
+\index{speicher\+Bereich@{speicher\+Bereich}!Memory@{Memory}}
+\subsubsection{\texorpdfstring{speicher\+Bereich}{speicherBereich}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ Memory\+::speicher\+Bereich\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 13 of file memory.\+hpp.
+
+
+
+Referenced by Memory(), read(), shift\+Left(), shift\+Right(), write(), and $\sim$\+Memory().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/memory/\mbox{\hyperlink{memory_8hpp}{memory.\+hpp}}\item 
+src/memory/\mbox{\hyperlink{memory_8cpp}{memory.\+cpp}}\end{DoxyCompactItemize}

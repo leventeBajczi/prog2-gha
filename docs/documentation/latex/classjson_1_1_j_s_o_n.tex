@@ -1,0 +1,1620 @@
+\hypertarget{classjson_1_1_j_s_o_n}{}\section{json\+:\+:J\+S\+ON Class Reference}
+\label{classjson_1_1_j_s_o_n}\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+
+
+{\ttfamily \#include $<$json.\+hpp$>$}
+
+
+
+Collaboration diagram for json\+:\+:J\+S\+ON\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data}{Backing\+Data}}
+\item 
+class \mbox{\hyperlink{classjson_1_1_j_s_o_n_1_1_j_s_o_n_const_wrapper}{J\+S\+O\+N\+Const\+Wrapper}}
+\item 
+class \mbox{\hyperlink{classjson_1_1_j_s_o_n_1_1_j_s_o_n_wrapper}{J\+S\+O\+N\+Wrapper}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07}{Class}} \{ \newline
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07abbb93ef26e3c101ff11cdd21cab08a94}{Class\+::\+Null}}, 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a497031794414a552435f90151ac3b54b}{Class\+::\+Object}}, 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4410ec34d9e6c1a68100ca0ce033fb17}{Class\+::\+Array}}, 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27118326006d3829667a400ad23d5d98}{Class\+::\+String}}, 
+\newline
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07ac8df43648942ec3a9aec140f07f47b7c}{Class\+::\+Floating}}, 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4ea94552a2bec56a29592359a1b6069e}{Class\+::\+Integral}}, 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27226c864bac7454a8504f8edb15d95b}{Class\+::\+Boolean}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_a0334c8643ae2a6cd86020e02643bb20f}{J\+S\+ON}} ()
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_acada0833f1b9fb6974610c031b6eabe7}{J\+S\+ON}} (initializer\+\_\+list$<$ \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} $>$ list)
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_aff59b496d6cebc650355071d32c62edb}{J\+S\+ON}} (\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \&\&other)
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \& \mbox{\hyperlink{classjson_1_1_j_s_o_n_ab22885428262d4ed0a95c50d5537b13e}{operator=}} (\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \&\&other)
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_ab147ef429a76d7087fcd7d60ea067405}{J\+S\+ON}} (const \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \&other)
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \& \mbox{\hyperlink{classjson_1_1_j_s_o_n_ac60d87eca03625eb071fb0c98febbb97}{operator=}} (const \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \&other)
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_ae67662933b6cc74a8ee6354448874724}{$\sim$\+J\+S\+ON}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classjson_1_1_j_s_o_n_a8720f6a983f53220b3aa3bb9a461edad}{J\+S\+ON}} (T b, typename enable\+\_\+if$<$ is\+\_\+same$<$ T, bool $>$\+::value $>$\+::type $\ast$=0)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classjson_1_1_j_s_o_n_af9f080d1de172bc533f9ae49e391f5bf}{J\+S\+ON}} (T i, typename enable\+\_\+if$<$ is\+\_\+integral$<$ T $>$\+::value \&\&!is\+\_\+same$<$ T, bool $>$\+::value $>$\+::type $\ast$=0)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classjson_1_1_j_s_o_n_aef0009e7c670dfd4a83e39fa1505da55}{J\+S\+ON}} (T f, typename enable\+\_\+if$<$ is\+\_\+floating\+\_\+point$<$ T $>$\+::value $>$\+::type $\ast$=0)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classjson_1_1_j_s_o_n_af9b32203c09726dd7acbb7e7c11fcd06}{J\+S\+ON}} (T s, typename enable\+\_\+if$<$ is\+\_\+convertible$<$ T, string $>$\+::value $>$\+::type $\ast$=0)
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_ac26eaaa4a2b504b8f7393e73c96e89ec}{J\+S\+ON}} (std\+::nullptr\+\_\+t)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classjson_1_1_j_s_o_n_aafb54a2b47ec9bbd7548a60db23fb4cf}{append}} (T arg)
+\item 
+{\footnotesize template$<$typename T , typename... U$>$ }\\void \mbox{\hyperlink{classjson_1_1_j_s_o_n_ac6a839771cd2c373614e9640eeef6e13}{append}} (T arg, U... args)
+\item 
+{\footnotesize template$<$typename T $>$ }\\enable\+\_\+if$<$ is\+\_\+same$<$ T, bool $>$\+::value, \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \& $>$\+::type \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1ee7a8f339bd04d78a4db4aa09cc4e53}{operator=}} (T b)
+\item 
+{\footnotesize template$<$typename T $>$ }\\enable\+\_\+if$<$ is\+\_\+integral$<$ T $>$\+::value \&\&!is\+\_\+same$<$ T, bool $>$\+::value, \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \& $>$\+::type \mbox{\hyperlink{classjson_1_1_j_s_o_n_aed9846560a9b7c25b26f684e8d9f32f6}{operator=}} (T i)
+\item 
+{\footnotesize template$<$typename T $>$ }\\enable\+\_\+if$<$ is\+\_\+floating\+\_\+point$<$ T $>$\+::value, \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \& $>$\+::type \mbox{\hyperlink{classjson_1_1_j_s_o_n_ac272eeeb42a552c4190a320a4f58a062}{operator=}} (T f)
+\item 
+{\footnotesize template$<$typename T $>$ }\\enable\+\_\+if$<$ is\+\_\+convertible$<$ T, string $>$\+::value, \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \& $>$\+::type \mbox{\hyperlink{classjson_1_1_j_s_o_n_ab2dd5163c63d60978a2067a2c1ba50ee}{operator=}} (T s)
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \& \mbox{\hyperlink{classjson_1_1_j_s_o_n_a29c695c67a5b34a3b59af0da3c25d6b1}{operator\mbox{[}$\,$\mbox{]}}} (const string \&key)
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \& \mbox{\hyperlink{classjson_1_1_j_s_o_n_ad590ba3c1aa11aad67e03138ffdc1488}{operator\mbox{[}$\,$\mbox{]}}} (unsigned index)
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \& \mbox{\hyperlink{classjson_1_1_j_s_o_n_a0980eee524bf7442d5f00612984c89c4}{at}} (const string \&key)
+\item 
+const \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \& \mbox{\hyperlink{classjson_1_1_j_s_o_n_a7c52c700576374ccab54e006bae06c55}{at}} (const string \&key) const
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \& \mbox{\hyperlink{classjson_1_1_j_s_o_n_ab78dbe91cd205fcc61002f29271ee611}{at}} (unsigned index)
+\item 
+const \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \& \mbox{\hyperlink{classjson_1_1_j_s_o_n_a06b051e5e1fc6e6274290042b9a7985d}{at}} (unsigned index) const
+\item 
+int \mbox{\hyperlink{classjson_1_1_j_s_o_n_a691d475ed40e6352ffaa9af37d664ff3}{length}} () const
+\item 
+bool \mbox{\hyperlink{classjson_1_1_j_s_o_n_a87283b4ab9833535d16018634421c090}{has\+Key}} (const string \&key) const
+\item 
+int \mbox{\hyperlink{classjson_1_1_j_s_o_n_af8665d4f94afa84c3e20d52a7184f7ee}{size}} () const
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07}{Class}} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3c91ab49425b2542665a194d6c07ecb6}{J\+S\+O\+N\+Type}} () const
+\item 
+bool \mbox{\hyperlink{classjson_1_1_j_s_o_n_ab047731707304fc5ac9bd9d6851cd2d9}{Is\+Null}} () const
+\begin{DoxyCompactList}\small\item\em Functions for getting primitives from the \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} object. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classjson_1_1_j_s_o_n_a5f1c7695d59c4652f01cb087eff954f5}{To\+String}} () const
+\item 
+string \mbox{\hyperlink{classjson_1_1_j_s_o_n_a08f4e57ef30b5dc6881179017e2196d0}{To\+String}} (bool \&ok) const
+\item 
+double \mbox{\hyperlink{classjson_1_1_j_s_o_n_ae6ff6af2be133af569a9c3dd38f67d93}{To\+Float}} () const
+\item 
+double \mbox{\hyperlink{classjson_1_1_j_s_o_n_ae913234cd95a1338faf8e198b5a0eb38}{To\+Float}} (bool \&ok) const
+\item 
+long \mbox{\hyperlink{classjson_1_1_j_s_o_n_a867eb9869140b69428287c98d4f56388}{To\+Int}} () const
+\item 
+long \mbox{\hyperlink{classjson_1_1_j_s_o_n_a12e5b118ced359fd4a315c95a7486007}{To\+Int}} (bool \&ok) const
+\item 
+bool \mbox{\hyperlink{classjson_1_1_j_s_o_n_adb9ab4683ee30055912b47220780de16}{To\+Bool}} () const
+\item 
+bool \mbox{\hyperlink{classjson_1_1_j_s_o_n_aa86f03b8572b13dd768c902da2d83efa}{To\+Bool}} (bool \&ok) const
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_1_1_j_s_o_n_wrapper}{J\+S\+O\+N\+Wrapper}}$<$ map$<$ string, \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} $>$ $>$ \mbox{\hyperlink{classjson_1_1_j_s_o_n_a5e2527751cd1ae28b29e82fd1de15555}{Object\+Range}} ()
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_1_1_j_s_o_n_wrapper}{J\+S\+O\+N\+Wrapper}}$<$ deque$<$ \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} $>$ $>$ \mbox{\hyperlink{classjson_1_1_j_s_o_n_ab26986d77f63734f154da3606423c098}{Array\+Range}} ()
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_1_1_j_s_o_n_const_wrapper}{J\+S\+O\+N\+Const\+Wrapper}}$<$ map$<$ string, \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} $>$ $>$ \mbox{\hyperlink{classjson_1_1_j_s_o_n_a23a72db5a52bca8b080334198bb25041}{Object\+Range}} () const
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_1_1_j_s_o_n_const_wrapper}{J\+S\+O\+N\+Const\+Wrapper}}$<$ deque$<$ \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} $>$ $>$ \mbox{\hyperlink{classjson_1_1_j_s_o_n_a7e57080ed10b2903c792146f81bf90eb}{Array\+Range}} () const
+\item 
+string \mbox{\hyperlink{classjson_1_1_j_s_o_n_acb99af0df2045a504f6bbc08bf5c4990}{dump}} (int depth=1, string tab=\char`\"{}  \char`\"{}) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{classjson_1_1_j_s_o_n_aa679dc348ed9711357c315a461b65957}{Make}} (\mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07}{Class}} type)
+\item 
+static \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a799ab1cc68cb6e2a41ec948a9a2ecc37}{Load}} (const string \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classjson_1_1_j_s_o_n_a668500208950e48394fc8bfe7c320205}{Set\+Type}} (\mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07}{Class}} type)
+\item 
+void \mbox{\hyperlink{classjson_1_1_j_s_o_n_afefdc8c18c2c40575c2c8463fbd78c67}{Clear\+Internal}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data}{json\+::\+J\+S\+O\+N\+::\+Backing\+Data}} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07}{Class}} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} = \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07abbb93ef26e3c101ff11cdd21cab08a94}{Class\+::\+Null}}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classjson_1_1_j_s_o_n_a5513ab67f2660e88d73c75fc83b6945c}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 45 of file json.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07}\label{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Class@{Class}}
+\index{Class@{Class}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{Class}{Class}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07}{json\+::\+J\+S\+O\+N\+::\+Class}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Null@{Null}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Null@{Null}}}\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07abbb93ef26e3c101ff11cdd21cab08a94}\label{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07abbb93ef26e3c101ff11cdd21cab08a94}} 
+Null&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Object@{Object}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Object@{Object}}}\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a497031794414a552435f90151ac3b54b}\label{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a497031794414a552435f90151ac3b54b}} 
+Object&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Array@{Array}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Array@{Array}}}\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4410ec34d9e6c1a68100ca0ce033fb17}\label{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4410ec34d9e6c1a68100ca0ce033fb17}} 
+Array&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{String@{String}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!String@{String}}}\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27118326006d3829667a400ad23d5d98}\label{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27118326006d3829667a400ad23d5d98}} 
+String&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Floating@{Floating}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Floating@{Floating}}}\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07ac8df43648942ec3a9aec140f07f47b7c}\label{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07ac8df43648942ec3a9aec140f07f47b7c}} 
+Floating&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Integral@{Integral}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Integral@{Integral}}}\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4ea94552a2bec56a29592359a1b6069e}\label{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4ea94552a2bec56a29592359a1b6069e}} 
+Integral&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Boolean@{Boolean}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Boolean@{Boolean}}}\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27226c864bac7454a8504f8edb15d95b}\label{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27226c864bac7454a8504f8edb15d95b}} 
+Boolean&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 63 of file json.\+hpp.
+
+
+\begin{DoxyCode}
+63                          \{
+64             Null,
+65             \mbox{\hyperlink{namespacejson_a7bc7d25f21c18a652a42db29cfdabd06}{Object}},
+66             \mbox{\hyperlink{namespacejson_a805054691c80da00fd9129387f834c21}{Array}},
+67             String,
+68             Floating,
+69             Integral,
+70             Boolean
+71         \};
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a0334c8643ae2a6cd86020e02643bb20f}\label{classjson_1_1_j_s_o_n_a0334c8643ae2a6cd86020e02643bb20f}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!J\+S\+ON@{J\+S\+ON}}
+\index{J\+S\+ON@{J\+S\+ON}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{J\+S\+O\+N()}{JSON()}\hspace{0.1cm}{\footnotesize\ttfamily [1/9]}}
+{\footnotesize\ttfamily json\+::\+J\+S\+O\+N\+::\+J\+S\+ON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 99 of file json.\+hpp.
+
+
+\begin{DoxyCode}
+99 : \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}(), \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07abbb93ef26e3c101ff11cdd21cab08a94}{Class::Null}} )\{\}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_acada0833f1b9fb6974610c031b6eabe7}\label{classjson_1_1_j_s_o_n_acada0833f1b9fb6974610c031b6eabe7}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!J\+S\+ON@{J\+S\+ON}}
+\index{J\+S\+ON@{J\+S\+ON}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{J\+S\+O\+N()}{JSON()}\hspace{0.1cm}{\footnotesize\ttfamily [2/9]}}
+{\footnotesize\ttfamily json\+::\+J\+S\+O\+N\+::\+J\+S\+ON (\begin{DoxyParamCaption}\item[{initializer\+\_\+list$<$ \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} $>$}]{list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 101 of file json.\+hpp.
+
+
+
+References Object, and Set\+Type().
+
+
+\begin{DoxyCode}
+102             : \mbox{\hyperlink{classjson_1_1_j_s_o_n_a0334c8643ae2a6cd86020e02643bb20f}{JSON}}() 
+103         \{
+104             \mbox{\hyperlink{classjson_1_1_j_s_o_n_a668500208950e48394fc8bfe7c320205}{SetType}}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a497031794414a552435f90151ac3b54b}{Class::Object}} );
+105             \textcolor{keywordflow}{for}( \textcolor{keyword}{auto} i = list.begin(), e = list.end(); i != e; ++i, ++i )
+106                 \textcolor{keyword}{operator}[]( i->ToString() ) = *std::next( i );
+107         \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_acada0833f1b9fb6974610c031b6eabe7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_aff59b496d6cebc650355071d32c62edb}\label{classjson_1_1_j_s_o_n_aff59b496d6cebc650355071d32c62edb}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!J\+S\+ON@{J\+S\+ON}}
+\index{J\+S\+ON@{J\+S\+ON}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{J\+S\+O\+N()}{JSON()}\hspace{0.1cm}{\footnotesize\ttfamily [3/9]}}
+{\footnotesize\ttfamily json\+::\+J\+S\+O\+N\+::\+J\+S\+ON (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 109 of file json.\+hpp.
+
+
+
+References Null.
+
+
+\begin{DoxyCode}
+110             : \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}( other.Internal )
+111             , \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}}( other.Type )
+112         \{ other.Type = \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07abbb93ef26e3c101ff11cdd21cab08a94}{Class::Null}}; other.Internal.Map = \textcolor{keyword}{nullptr}; \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_ab147ef429a76d7087fcd7d60ea067405}\label{classjson_1_1_j_s_o_n_ab147ef429a76d7087fcd7d60ea067405}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!J\+S\+ON@{J\+S\+ON}}
+\index{J\+S\+ON@{J\+S\+ON}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{J\+S\+O\+N()}{JSON()}\hspace{0.1cm}{\footnotesize\ttfamily [4/9]}}
+{\footnotesize\ttfamily json\+::\+J\+S\+O\+N\+::\+J\+S\+ON (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 123 of file json.\+hpp.
+
+
+
+References Array, Internal, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+List, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Map, Object, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+String, String, and Type.
+
+
+\begin{DoxyCode}
+123                                   \{
+124             \textcolor{keywordflow}{switch}( other.Type ) \{
+125             \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a497031794414a552435f90151ac3b54b}{Class::Object}}:
+126                 \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab2e19b00745b37d2add157ff3a35c431}{Map}} = 
+127                     \textcolor{keyword}{new} map<string,JSON>( other.Internal.Map->begin(),
+128                                           other.Internal.Map->end() );
+129                 \textcolor{keywordflow}{break};
+130             \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4410ec34d9e6c1a68100ca0ce033fb17}{Class::Array}}:
+131                 \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab85f5e7ad21f9f7a5407ab73128a3ebc}{List}} = 
+132                     \textcolor{keyword}{new} deque<JSON>( other.Internal.List->begin(),
+133                                       other.Internal.List->end() );
+134                 \textcolor{keywordflow}{break};
+135             \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27118326006d3829667a400ad23d5d98}{Class::String}}:
+136                 \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_a883c18d113d2e55767a9530f06a9c772}{String}} = 
+137                     \textcolor{keyword}{new} string( *other.Internal.String );
+138                 \textcolor{keywordflow}{break};
+139             \textcolor{keywordflow}{default}:
+140                 \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}} = other.Internal;
+141             \}
+142             \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} = other.Type;
+143         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_ae67662933b6cc74a8ee6354448874724}\label{classjson_1_1_j_s_o_n_ae67662933b6cc74a8ee6354448874724}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!````~J\+S\+ON@{$\sim$\+J\+S\+ON}}
+\index{````~J\+S\+ON@{$\sim$\+J\+S\+ON}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{$\sim$\+J\+S\+O\+N()}{~JSON()}}
+{\footnotesize\ttfamily json\+::\+J\+S\+O\+N\+::$\sim$\+J\+S\+ON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 169 of file json.\+hpp.
+
+
+
+References Array, Internal, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+List, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Map, Object, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+String, String, and Type.
+
+
+\begin{DoxyCode}
+169                 \{
+170             \textcolor{keywordflow}{switch}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} ) \{
+171             \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4410ec34d9e6c1a68100ca0ce033fb17}{Class::Array}}:
+172                 \textcolor{keyword}{delete} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab85f5e7ad21f9f7a5407ab73128a3ebc}{List}};
+173                 \textcolor{keywordflow}{break};
+174             \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a497031794414a552435f90151ac3b54b}{Class::Object}}:
+175                 \textcolor{keyword}{delete} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab2e19b00745b37d2add157ff3a35c431}{Map}};
+176                 \textcolor{keywordflow}{break};
+177             \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27118326006d3829667a400ad23d5d98}{Class::String}}:
+178                 \textcolor{keyword}{delete} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_a883c18d113d2e55767a9530f06a9c772}{String}};
+179                 \textcolor{keywordflow}{break};
+180             \textcolor{keywordflow}{default}:;
+181             \}
+182         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a8720f6a983f53220b3aa3bb9a461edad}\label{classjson_1_1_j_s_o_n_a8720f6a983f53220b3aa3bb9a461edad}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!J\+S\+ON@{J\+S\+ON}}
+\index{J\+S\+ON@{J\+S\+ON}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{J\+S\+O\+N()}{JSON()}\hspace{0.1cm}{\footnotesize\ttfamily [5/9]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+json\+::\+J\+S\+O\+N\+::\+J\+S\+ON (\begin{DoxyParamCaption}\item[{T}]{b,  }\item[{typename enable\+\_\+if$<$ is\+\_\+same$<$ T, bool $>$\+::value $>$\+::type $\ast$}]{ = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 185 of file json.\+hpp.
+
+
+\begin{DoxyCode}
+185 : \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}( b ), \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27226c864bac7454a8504f8edb15d95b}{Class::Boolean}} )\{\}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_af9f080d1de172bc533f9ae49e391f5bf}\label{classjson_1_1_j_s_o_n_af9f080d1de172bc533f9ae49e391f5bf}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!J\+S\+ON@{J\+S\+ON}}
+\index{J\+S\+ON@{J\+S\+ON}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{J\+S\+O\+N()}{JSON()}\hspace{0.1cm}{\footnotesize\ttfamily [6/9]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+json\+::\+J\+S\+O\+N\+::\+J\+S\+ON (\begin{DoxyParamCaption}\item[{T}]{i,  }\item[{typename enable\+\_\+if$<$ is\+\_\+integral$<$ T $>$\+::value \&\&!is\+\_\+same$<$ T, bool $>$\+::value $>$\+::type $\ast$}]{ = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 188 of file json.\+hpp.
+
+
+\begin{DoxyCode}
+188 : \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}( (\textcolor{keywordtype}{long})i ), \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4ea94552a2bec56a29592359a1b6069e}{Class::Integral}} )\{\}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_aef0009e7c670dfd4a83e39fa1505da55}\label{classjson_1_1_j_s_o_n_aef0009e7c670dfd4a83e39fa1505da55}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!J\+S\+ON@{J\+S\+ON}}
+\index{J\+S\+ON@{J\+S\+ON}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{J\+S\+O\+N()}{JSON()}\hspace{0.1cm}{\footnotesize\ttfamily [7/9]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+json\+::\+J\+S\+O\+N\+::\+J\+S\+ON (\begin{DoxyParamCaption}\item[{T}]{f,  }\item[{typename enable\+\_\+if$<$ is\+\_\+floating\+\_\+point$<$ T $>$\+::value $>$\+::type $\ast$}]{ = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 191 of file json.\+hpp.
+
+
+\begin{DoxyCode}
+191 : \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}( (\textcolor{keywordtype}{double})f ), \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07ac8df43648942ec3a9aec140f07f47b7c}{Class::Floating}} )\{\}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_af9b32203c09726dd7acbb7e7c11fcd06}\label{classjson_1_1_j_s_o_n_af9b32203c09726dd7acbb7e7c11fcd06}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!J\+S\+ON@{J\+S\+ON}}
+\index{J\+S\+ON@{J\+S\+ON}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{J\+S\+O\+N()}{JSON()}\hspace{0.1cm}{\footnotesize\ttfamily [8/9]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+json\+::\+J\+S\+O\+N\+::\+J\+S\+ON (\begin{DoxyParamCaption}\item[{T}]{s,  }\item[{typename enable\+\_\+if$<$ is\+\_\+convertible$<$ T, string $>$\+::value $>$\+::type $\ast$}]{ = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 194 of file json.\+hpp.
+
+
+\begin{DoxyCode}
+194 : \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}( \textcolor{keywordtype}{string}( s ) ), \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27118326006d3829667a400ad23d5d98}{Class::String}} )\{\}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_ac26eaaa4a2b504b8f7393e73c96e89ec}\label{classjson_1_1_j_s_o_n_ac26eaaa4a2b504b8f7393e73c96e89ec}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!J\+S\+ON@{J\+S\+ON}}
+\index{J\+S\+ON@{J\+S\+ON}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{J\+S\+O\+N()}{JSON()}\hspace{0.1cm}{\footnotesize\ttfamily [9/9]}}
+{\footnotesize\ttfamily json\+::\+J\+S\+O\+N\+::\+J\+S\+ON (\begin{DoxyParamCaption}\item[{std\+::nullptr\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 196 of file json.\+hpp.
+
+
+\begin{DoxyCode}
+196 : \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}(), \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07abbb93ef26e3c101ff11cdd21cab08a94}{Class::Null}} )\{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_aafb54a2b47ec9bbd7548a60db23fb4cf}\label{classjson_1_1_j_s_o_n_aafb54a2b47ec9bbd7548a60db23fb4cf}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!append@{append}}
+\index{append@{append}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{append()}{append()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void json\+::\+J\+S\+O\+N\+::append (\begin{DoxyParamCaption}\item[{T}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 206 of file json.\+hpp.
+
+
+
+References Array, Internal, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+List, and Set\+Type().
+
+
+
+Referenced by append(), and json\+::\+Array().
+
+
+\begin{DoxyCode}
+206                              \{
+207             \mbox{\hyperlink{classjson_1_1_j_s_o_n_a668500208950e48394fc8bfe7c320205}{SetType}}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4410ec34d9e6c1a68100ca0ce033fb17}{Class::Array}} ); \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab85f5e7ad21f9f7a5407ab73128a3ebc}{List}}->emplace\_back( arg );
+208         \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_aafb54a2b47ec9bbd7548a60db23fb4cf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{classjson_1_1_j_s_o_n_aafb54a2b47ec9bbd7548a60db23fb4cf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_ac6a839771cd2c373614e9640eeef6e13}\label{classjson_1_1_j_s_o_n_ac6a839771cd2c373614e9640eeef6e13}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!append@{append}}
+\index{append@{append}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{append()}{append()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename... U$>$ \\
+void json\+::\+J\+S\+O\+N\+::append (\begin{DoxyParamCaption}\item[{T}]{arg,  }\item[{U...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 211 of file json.\+hpp.
+
+
+
+References append().
+
+
+\begin{DoxyCode}
+211                                         \{
+212             \mbox{\hyperlink{classjson_1_1_j_s_o_n_aafb54a2b47ec9bbd7548a60db23fb4cf}{append}}( arg ); \mbox{\hyperlink{classjson_1_1_j_s_o_n_aafb54a2b47ec9bbd7548a60db23fb4cf}{append}}( args... );
+213         \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_ac6a839771cd2c373614e9640eeef6e13_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_ab26986d77f63734f154da3606423c098}\label{classjson_1_1_j_s_o_n_ab26986d77f63734f154da3606423c098}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Array\+Range@{Array\+Range}}
+\index{Array\+Range@{Array\+Range}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{Array\+Range()}{ArrayRange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n_1_1_j_s_o_n_wrapper}{J\+S\+O\+N\+Wrapper}}$<$deque$<$\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}}$>$ $>$ json\+::\+J\+S\+O\+N\+::\+Array\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 318 of file json.\+hpp.
+
+
+
+References Array, Internal, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+List, and Type.
+
+
+\begin{DoxyCode}
+318                                               \{
+319             \textcolor{keywordflow}{if}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} == \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4410ec34d9e6c1a68100ca0ce033fb17}{Class::Array}} )
+320                 \textcolor{keywordflow}{return} JSONWrapper<deque<JSON>>( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab85f5e7ad21f9f7a5407ab73128a3ebc}{List}} );
+321             \textcolor{keywordflow}{return} JSONWrapper<deque<JSON>>( nullptr );
+322         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a7e57080ed10b2903c792146f81bf90eb}\label{classjson_1_1_j_s_o_n_a7e57080ed10b2903c792146f81bf90eb}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Array\+Range@{Array\+Range}}
+\index{Array\+Range@{Array\+Range}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{Array\+Range()}{ArrayRange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n_1_1_j_s_o_n_const_wrapper}{J\+S\+O\+N\+Const\+Wrapper}}$<$deque$<$\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}}$>$ $>$ json\+::\+J\+S\+O\+N\+::\+Array\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 331 of file json.\+hpp.
+
+
+
+References Array, Internal, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+List, and Type.
+
+
+\begin{DoxyCode}
+331                                                          \{ 
+332             \textcolor{keywordflow}{if}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} == \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4410ec34d9e6c1a68100ca0ce033fb17}{Class::Array}} )
+333                 \textcolor{keywordflow}{return} JSONConstWrapper<deque<JSON>>( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab85f5e7ad21f9f7a5407ab73128a3ebc}{List}} );
+334             \textcolor{keywordflow}{return} JSONConstWrapper<deque<JSON>>( nullptr );
+335         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a0980eee524bf7442d5f00612984c89c4}\label{classjson_1_1_j_s_o_n_a0980eee524bf7442d5f00612984c89c4}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!at@{at}}
+\index{at@{at}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}}\& json\+::\+J\+S\+O\+N\+::at (\begin{DoxyParamCaption}\item[{const string \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 245 of file json.\+hpp.
+
+
+
+References operator\mbox{[}$\,$\mbox{]}().
+
+
+\begin{DoxyCode}
+245                                       \{
+246             \textcolor{keywordflow}{return} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a29c695c67a5b34a3b59af0da3c25d6b1}{operator[]}}( key );
+247         \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_a0980eee524bf7442d5f00612984c89c4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a7c52c700576374ccab54e006bae06c55}\label{classjson_1_1_j_s_o_n_a7c52c700576374ccab54e006bae06c55}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!at@{at}}
+\index{at@{at}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}}\& json\+::\+J\+S\+O\+N\+::at (\begin{DoxyParamCaption}\item[{const string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 249 of file json.\+hpp.
+
+
+
+References Internal, and json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Map.
+
+
+\begin{DoxyCode}
+249                                                   \{
+250             \textcolor{keywordflow}{return} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab2e19b00745b37d2add157ff3a35c431}{Map}}->at( key );
+251         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_ab78dbe91cd205fcc61002f29271ee611}\label{classjson_1_1_j_s_o_n_ab78dbe91cd205fcc61002f29271ee611}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!at@{at}}
+\index{at@{at}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}}\& json\+::\+J\+S\+O\+N\+::at (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 253 of file json.\+hpp.
+
+
+
+References operator\mbox{[}$\,$\mbox{]}().
+
+
+\begin{DoxyCode}
+253                                    \{
+254             \textcolor{keywordflow}{return} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a29c695c67a5b34a3b59af0da3c25d6b1}{operator[]}}( index );
+255         \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_ab78dbe91cd205fcc61002f29271ee611_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a06b051e5e1fc6e6274290042b9a7985d}\label{classjson_1_1_j_s_o_n_a06b051e5e1fc6e6274290042b9a7985d}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!at@{at}}
+\index{at@{at}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}}\& json\+::\+J\+S\+O\+N\+::at (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 257 of file json.\+hpp.
+
+
+
+References Internal, and json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+List.
+
+
+\begin{DoxyCode}
+257                                                \{
+258             \textcolor{keywordflow}{return} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab85f5e7ad21f9f7a5407ab73128a3ebc}{List}}->at( index );
+259         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_afefdc8c18c2c40575c2c8463fbd78c67}\label{classjson_1_1_j_s_o_n_afefdc8c18c2c40575c2c8463fbd78c67}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Clear\+Internal@{Clear\+Internal}}
+\index{Clear\+Internal@{Clear\+Internal}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{Clear\+Internal()}{ClearInternal()}}
+{\footnotesize\ttfamily void json\+::\+J\+S\+O\+N\+::\+Clear\+Internal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 407 of file json.\+hpp.
+
+
+
+References Array, Internal, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+List, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Map, Object, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+String, String, and Type.
+
+
+
+Referenced by operator=(), and Set\+Type().
+
+
+\begin{DoxyCode}
+407                            \{
+408         \textcolor{keywordflow}{switch}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} ) \{
+409           \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a497031794414a552435f90151ac3b54b}{Class::Object}}: \textcolor{keyword}{delete} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab2e19b00745b37d2add157ff3a35c431}{Map}};    \textcolor{keywordflow}{break};
+410           \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4410ec34d9e6c1a68100ca0ce033fb17}{Class::Array}}:  \textcolor{keyword}{delete} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab85f5e7ad21f9f7a5407ab73128a3ebc}{List}};   \textcolor{keywordflow}{break};
+411           \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27118326006d3829667a400ad23d5d98}{Class::String}}: \textcolor{keyword}{delete} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_a883c18d113d2e55767a9530f06a9c772}{String}}; \textcolor{keywordflow}{break};
+412           \textcolor{keywordflow}{default}:;
+413         \}
+414       \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_afefdc8c18c2c40575c2c8463fbd78c67_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_acb99af0df2045a504f6bbc08bf5c4990}\label{classjson_1_1_j_s_o_n_acb99af0df2045a504f6bbc08bf5c4990}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!dump@{dump}}
+\index{dump@{dump}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily string json\+::\+J\+S\+O\+N\+::dump (\begin{DoxyParamCaption}\item[{int}]{depth = {\ttfamily 1},  }\item[{string}]{tab = {\ttfamily \char`\"{}~~\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 337 of file json.\+hpp.
+
+
+
+References Array, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Bool, Boolean, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Float, Floating, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Int, Integral, Internal, json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::json\+\_\+escape(), json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+List, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Map, Null, Object, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+String, String, and Type.
+
+
+
+Referenced by J\+S\+O\+N\+Object\+::put(), and J\+S\+O\+N\+Array\+::set().
+
+
+\begin{DoxyCode}
+337                                                              \{
+338             \textcolor{keywordtype}{string} pad = \textcolor{stringliteral}{""};
+339             \textcolor{keywordflow}{for}( \textcolor{keywordtype}{int} i = 0; i < depth; ++i, pad += tab );
+340 
+341             \textcolor{keywordflow}{switch}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} ) \{
+342                 \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07abbb93ef26e3c101ff11cdd21cab08a94}{Class::Null}}:
+343                     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"null"};
+344                 \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a497031794414a552435f90151ac3b54b}{Class::Object}}: \{
+345                     \textcolor{keywordtype}{string} s = \textcolor{stringliteral}{"\{\(\backslash\)n"};
+346                     \textcolor{keywordtype}{bool} skip = \textcolor{keyword}{true};
+347                     \textcolor{keywordflow}{for}( \textcolor{keyword}{auto} &p : *\mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab2e19b00745b37d2add157ff3a35c431}{Map}} ) \{
+348                         \textcolor{keywordflow}{if}( !skip ) s += \textcolor{stringliteral}{",\(\backslash\)n"};
+349                         s += ( pad + \textcolor{stringliteral}{""} + p.first + \textcolor{stringliteral}{" : "} + p.second.dump( depth + 1, tab ) );
+350                         skip = \textcolor{keyword}{false};
+351                     \}
+352                     s += ( \textcolor{stringliteral}{"\(\backslash\)n"} + pad.erase( 0, 2 ) + \textcolor{stringliteral}{"\}"} ) ;
+353                     \textcolor{keywordflow}{return} s;
+354                 \}
+355                 \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4410ec34d9e6c1a68100ca0ce033fb17}{Class::Array}}: \{
+356                     \textcolor{keywordtype}{string} s = \textcolor{stringliteral}{"["};
+357                     \textcolor{keywordtype}{bool} skip = \textcolor{keyword}{true};
+358                     \textcolor{keywordflow}{for}( \textcolor{keyword}{auto} &p : *\mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab85f5e7ad21f9f7a5407ab73128a3ebc}{List}} ) \{
+359                         \textcolor{keywordflow}{if}( !skip ) s += \textcolor{stringliteral}{", "};
+360                         s += p.dump( depth + 1, tab );
+361                         skip = \textcolor{keyword}{false};
+362                     \}
+363                     s += \textcolor{stringliteral}{"]"};
+364                     \textcolor{keywordflow}{return} s;
+365                 \}
+366                 \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27118326006d3829667a400ad23d5d98}{Class::String}}:
+367                     \textcolor{keywordflow}{return} \textcolor{stringliteral}{""} + \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a623a6fca4cd1735d2bf3d081b875a350}{json\_escape}}( *\mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_a883c18d113d2e55767a9530f06a9c772}{String}} ) + \textcolor{stringliteral}{""};
+368                 \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07ac8df43648942ec3a9aec140f07f47b7c}{Class::Floating}}:
+369                     \textcolor{keywordflow}{return} std::to\_string( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_aac4950afa6b9205bb367a33de47faa5c}{Float}} );
+370                 \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4ea94552a2bec56a29592359a1b6069e}{Class::Integral}}:
+371                     \textcolor{keywordflow}{return} std::to\_string( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_a0d80815a70ff5bb9345f75de79ec81c3}{Int}} );
+372                 \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27226c864bac7454a8504f8edb15d95b}{Class::Boolean}}:
+373                     \textcolor{keywordflow}{return} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_a0659fafaedb7de535ae3e79e4ff4688c}{Bool}} ? \textcolor{stringliteral}{"true"} : \textcolor{stringliteral}{"false"};
+374                 \textcolor{keywordflow}{default}:
+375                     \textcolor{keywordflow}{return} \textcolor{stringliteral}{""};
+376             \}
+377             \textcolor{keywordflow}{return} \textcolor{stringliteral}{""};
+378         \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_acb99af0df2045a504f6bbc08bf5c4990_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classjson_1_1_j_s_o_n_acb99af0df2045a504f6bbc08bf5c4990_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a87283b4ab9833535d16018634421c090}\label{classjson_1_1_j_s_o_n_a87283b4ab9833535d16018634421c090}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!has\+Key@{has\+Key}}
+\index{has\+Key@{has\+Key}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{has\+Key()}{hasKey()}}
+{\footnotesize\ttfamily bool json\+::\+J\+S\+O\+N\+::has\+Key (\begin{DoxyParamCaption}\item[{const string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 268 of file json.\+hpp.
+
+
+
+References Internal, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Map, Object, and Type.
+
+
+\begin{DoxyCode}
+268                                                \{
+269             \textcolor{keywordflow}{if}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} == \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a497031794414a552435f90151ac3b54b}{Class::Object}} )
+270                 \textcolor{keywordflow}{return} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab2e19b00745b37d2add157ff3a35c431}{Map}}->find( key ) != \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.
+      \mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab2e19b00745b37d2add157ff3a35c431}{Map}}->end();
+271             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+272         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_ab047731707304fc5ac9bd9d6851cd2d9}\label{classjson_1_1_j_s_o_n_ab047731707304fc5ac9bd9d6851cd2d9}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Is\+Null@{Is\+Null}}
+\index{Is\+Null@{Is\+Null}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{Is\+Null()}{IsNull()}}
+{\footnotesize\ttfamily bool json\+::\+J\+S\+O\+N\+::\+Is\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Functions for getting primitives from the \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} object. 
+
+
+
+Definition at line 286 of file json.\+hpp.
+
+
+
+References Null, and Type.
+
+
+\begin{DoxyCode}
+286 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} == \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07abbb93ef26e3c101ff11cdd21cab08a94}{Class::Null}}; \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a3c91ab49425b2542665a194d6c07ecb6}\label{classjson_1_1_j_s_o_n_a3c91ab49425b2542665a194d6c07ecb6}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!J\+S\+O\+N\+Type@{J\+S\+O\+N\+Type}}
+\index{J\+S\+O\+N\+Type@{J\+S\+O\+N\+Type}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{J\+S\+O\+N\+Type()}{JSONType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07}{Class}} json\+::\+J\+S\+O\+N\+::\+J\+S\+O\+N\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 283 of file json.\+hpp.
+
+
+
+References Type.
+
+
+\begin{DoxyCode}
+283 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}}; \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a691d475ed40e6352ffaa9af37d664ff3}\label{classjson_1_1_j_s_o_n_a691d475ed40e6352ffaa9af37d664ff3}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!length@{length}}
+\index{length@{length}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily int json\+::\+J\+S\+O\+N\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 261 of file json.\+hpp.
+
+
+
+References Array, Internal, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+List, and Type.
+
+
+\begin{DoxyCode}
+261                            \{
+262             \textcolor{keywordflow}{if}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} == \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4410ec34d9e6c1a68100ca0ce033fb17}{Class::Array}} )
+263                 \textcolor{keywordflow}{return} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab85f5e7ad21f9f7a5407ab73128a3ebc}{List}}->size();
+264             \textcolor{keywordflow}{else}
+265                 \textcolor{keywordflow}{return} -1;
+266         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a799ab1cc68cb6e2a41ec948a9a2ecc37}\label{classjson_1_1_j_s_o_n_a799ab1cc68cb6e2a41ec948a9a2ecc37}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Load@{Load}}
+\index{Load@{Load}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} J\+S\+O\+N\+::\+Load (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 644 of file json.\+hpp.
+
+
+
+References json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+next().
+
+
+
+Referenced by J\+S\+O\+N\+Object\+::get(), J\+S\+O\+N\+Array\+::operator\mbox{[}$\,$\mbox{]}(), J\+S\+O\+N\+Object\+::put(), and J\+S\+O\+N\+Array\+::set().
+
+
+\begin{DoxyCode}
+644                                           \{
+645     \textcolor{keywordtype}{size\_t} offset = 0;
+646     \textcolor{keywordflow}{return} std::move( \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_acd55b945d1583038db8633516df7cf3f}{parse\_next}}( str, offset ) );
+647 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_a799ab1cc68cb6e2a41ec948a9a2ecc37_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{classjson_1_1_j_s_o_n_a799ab1cc68cb6e2a41ec948a9a2ecc37_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_aa679dc348ed9711357c315a461b65957}\label{classjson_1_1_j_s_o_n_aa679dc348ed9711357c315a461b65957}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Make@{Make}}
+\index{Make@{Make}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{Make()}{Make()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} json\+::\+J\+S\+O\+N\+::\+Make (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07}{Class}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 198 of file json.\+hpp.
+
+
+
+References Set\+Type().
+
+
+
+Referenced by json\+::\+Array(), json\+::\+Object(), json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+array(), json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+bool(), json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+null(), json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+number(), json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+object(), and json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+string().
+
+
+\begin{DoxyCode}
+198                                        \{
+199             \mbox{\hyperlink{class_j_s_o_n}{JSON}} ret; ret.SetType( type );
+200             \textcolor{keywordflow}{return} ret;
+201         \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_aa679dc348ed9711357c315a461b65957_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_aa679dc348ed9711357c315a461b65957_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a5e2527751cd1ae28b29e82fd1de15555}\label{classjson_1_1_j_s_o_n_a5e2527751cd1ae28b29e82fd1de15555}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Object\+Range@{Object\+Range}}
+\index{Object\+Range@{Object\+Range}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{Object\+Range()}{ObjectRange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n_1_1_j_s_o_n_wrapper}{J\+S\+O\+N\+Wrapper}}$<$map$<$string,\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}}$>$ $>$ json\+::\+J\+S\+O\+N\+::\+Object\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 312 of file json.\+hpp.
+
+
+
+References Internal, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Map, Object, and Type.
+
+
+\begin{DoxyCode}
+312                                                     \{
+313             \textcolor{keywordflow}{if}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} == \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a497031794414a552435f90151ac3b54b}{Class::Object}} )
+314                 \textcolor{keywordflow}{return} JSONWrapper<map<string,JSON>>( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab2e19b00745b37d2add157ff3a35c431}{Map}} );
+315             \textcolor{keywordflow}{return} JSONWrapper<map<string,JSON>>( nullptr );
+316         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a23a72db5a52bca8b080334198bb25041}\label{classjson_1_1_j_s_o_n_a23a72db5a52bca8b080334198bb25041}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Object\+Range@{Object\+Range}}
+\index{Object\+Range@{Object\+Range}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{Object\+Range()}{ObjectRange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n_1_1_j_s_o_n_const_wrapper}{J\+S\+O\+N\+Const\+Wrapper}}$<$map$<$string,\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}}$>$ $>$ json\+::\+J\+S\+O\+N\+::\+Object\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 324 of file json.\+hpp.
+
+
+
+References Internal, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Map, Object, and Type.
+
+
+\begin{DoxyCode}
+324                                                                \{
+325             \textcolor{keywordflow}{if}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} == \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a497031794414a552435f90151ac3b54b}{Class::Object}} )
+326                 \textcolor{keywordflow}{return} JSONConstWrapper<map<string,JSON>>( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab2e19b00745b37d2add157ff3a35c431}{Map}} );
+327             \textcolor{keywordflow}{return} JSONConstWrapper<map<string,JSON>>( nullptr );
+328         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_ab22885428262d4ed0a95c50d5537b13e}\label{classjson_1_1_j_s_o_n_ab22885428262d4ed0a95c50d5537b13e}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!operator=@{operator=}}
+\index{operator=@{operator=}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}}\& json\+::\+J\+S\+O\+N\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 114 of file json.\+hpp.
+
+
+
+References Clear\+Internal(), Internal, Null, and Type.
+
+
+\begin{DoxyCode}
+114                                         \{
+115             \mbox{\hyperlink{classjson_1_1_j_s_o_n_afefdc8c18c2c40575c2c8463fbd78c67}{ClearInternal}}();
+116             \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}} = other.Internal;
+117             \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} = other.Type;
+118             other.Internal.Map = \textcolor{keyword}{nullptr};
+119             other.Type = \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07abbb93ef26e3c101ff11cdd21cab08a94}{Class::Null}};
+120             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+121         \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_ab22885428262d4ed0a95c50d5537b13e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_ac60d87eca03625eb071fb0c98febbb97}\label{classjson_1_1_j_s_o_n_ac60d87eca03625eb071fb0c98febbb97}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!operator=@{operator=}}
+\index{operator=@{operator=}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}}\& json\+::\+J\+S\+O\+N\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 145 of file json.\+hpp.
+
+
+
+References Array, Clear\+Internal(), Internal, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+List, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Map, Object, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+String, String, and Type.
+
+
+\begin{DoxyCode}
+145                                              \{
+146             \mbox{\hyperlink{classjson_1_1_j_s_o_n_afefdc8c18c2c40575c2c8463fbd78c67}{ClearInternal}}();
+147             \textcolor{keywordflow}{switch}( other.Type ) \{
+148             \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a497031794414a552435f90151ac3b54b}{Class::Object}}:
+149                 \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab2e19b00745b37d2add157ff3a35c431}{Map}} = 
+150                     \textcolor{keyword}{new} map<string,JSON>( other.Internal.Map->begin(),
+151                                           other.Internal.Map->end() );
+152                 \textcolor{keywordflow}{break};
+153             \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4410ec34d9e6c1a68100ca0ce033fb17}{Class::Array}}:
+154                 \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab85f5e7ad21f9f7a5407ab73128a3ebc}{List}} = 
+155                     \textcolor{keyword}{new} deque<JSON>( other.Internal.List->begin(),
+156                                       other.Internal.List->end() );
+157                 \textcolor{keywordflow}{break};
+158             \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27118326006d3829667a400ad23d5d98}{Class::String}}:
+159                 \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_a883c18d113d2e55767a9530f06a9c772}{String}} = 
+160                     \textcolor{keyword}{new} string( *other.Internal.String );
+161                 \textcolor{keywordflow}{break};
+162             \textcolor{keywordflow}{default}:
+163                 \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}} = other.Internal;
+164             \}
+165             \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} = other.Type;
+166             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+167         \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_ac60d87eca03625eb071fb0c98febbb97_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a1ee7a8f339bd04d78a4db4aa09cc4e53}\label{classjson_1_1_j_s_o_n_a1ee7a8f339bd04d78a4db4aa09cc4e53}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!operator=@{operator=}}
+\index{operator=@{operator=}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+enable\+\_\+if$<$is\+\_\+same$<$T,bool$>$\+::value, \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}}\&$>$\+::type json\+::\+J\+S\+O\+N\+::operator= (\begin{DoxyParamCaption}\item[{T}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 216 of file json.\+hpp.
+
+
+
+References json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Bool, Boolean, Internal, and Set\+Type().
+
+
+\begin{DoxyCode}
+216                                                                                  \{
+217                 \mbox{\hyperlink{classjson_1_1_j_s_o_n_a668500208950e48394fc8bfe7c320205}{SetType}}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27226c864bac7454a8504f8edb15d95b}{Class::Boolean}} ); \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.
+      \mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_a0659fafaedb7de535ae3e79e4ff4688c}{Bool}} = b; \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+218             \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_a1ee7a8f339bd04d78a4db4aa09cc4e53_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_aed9846560a9b7c25b26f684e8d9f32f6}\label{classjson_1_1_j_s_o_n_aed9846560a9b7c25b26f684e8d9f32f6}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!operator=@{operator=}}
+\index{operator=@{operator=}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+enable\+\_\+if$<$is\+\_\+integral$<$T$>$\+::value \&\& !is\+\_\+same$<$T,bool$>$\+::value, \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}}\&$>$\+::type json\+::\+J\+S\+O\+N\+::operator= (\begin{DoxyParamCaption}\item[{T}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 221 of file json.\+hpp.
+
+
+
+References json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Int, Integral, Internal, and Set\+Type().
+
+
+\begin{DoxyCode}
+221                                                                                                          \{
+222                 \mbox{\hyperlink{classjson_1_1_j_s_o_n_a668500208950e48394fc8bfe7c320205}{SetType}}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4ea94552a2bec56a29592359a1b6069e}{Class::Integral}} ); \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.
+      \mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_a0d80815a70ff5bb9345f75de79ec81c3}{Int}} = i; \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+223             \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_aed9846560a9b7c25b26f684e8d9f32f6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_ac272eeeb42a552c4190a320a4f58a062}\label{classjson_1_1_j_s_o_n_ac272eeeb42a552c4190a320a4f58a062}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!operator=@{operator=}}
+\index{operator=@{operator=}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+enable\+\_\+if$<$is\+\_\+floating\+\_\+point$<$T$>$\+::value, \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}}\&$>$\+::type json\+::\+J\+S\+O\+N\+::operator= (\begin{DoxyParamCaption}\item[{T}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 226 of file json.\+hpp.
+
+
+
+References json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Float, Floating, Internal, and Set\+Type().
+
+
+\begin{DoxyCode}
+226                                                                                       \{
+227                 \mbox{\hyperlink{classjson_1_1_j_s_o_n_a668500208950e48394fc8bfe7c320205}{SetType}}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07ac8df43648942ec3a9aec140f07f47b7c}{Class::Floating}} ); \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.
+      \mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_aac4950afa6b9205bb367a33de47faa5c}{Float}} = f; \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+228             \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_ac272eeeb42a552c4190a320a4f58a062_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_ab2dd5163c63d60978a2067a2c1ba50ee}\label{classjson_1_1_j_s_o_n_ab2dd5163c63d60978a2067a2c1ba50ee}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!operator=@{operator=}}
+\index{operator=@{operator=}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+enable\+\_\+if$<$is\+\_\+convertible$<$T,string$>$\+::value, \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}}\&$>$\+::type json\+::\+J\+S\+O\+N\+::operator= (\begin{DoxyParamCaption}\item[{T}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 231 of file json.\+hpp.
+
+
+
+References Internal, Set\+Type(), json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+String, and String.
+
+
+\begin{DoxyCode}
+231                                                                                           \{
+232                 \mbox{\hyperlink{classjson_1_1_j_s_o_n_a668500208950e48394fc8bfe7c320205}{SetType}}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27118326006d3829667a400ad23d5d98}{Class::String}} ); *\mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.
+      \mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_a883c18d113d2e55767a9530f06a9c772}{String}} = string( s ); \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+233             \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_ab2dd5163c63d60978a2067a2c1ba50ee_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a29c695c67a5b34a3b59af0da3c25d6b1}\label{classjson_1_1_j_s_o_n_a29c695c67a5b34a3b59af0da3c25d6b1}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}}\& json\+::\+J\+S\+O\+N\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const string \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 235 of file json.\+hpp.
+
+
+
+References Internal, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Map, Object, and Set\+Type().
+
+
+
+Referenced by at().
+
+
+\begin{DoxyCode}
+235                                               \{
+236             \mbox{\hyperlink{classjson_1_1_j_s_o_n_a668500208950e48394fc8bfe7c320205}{SetType}}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a497031794414a552435f90151ac3b54b}{Class::Object}} ); \textcolor{keywordflow}{return} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.
+      \mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab2e19b00745b37d2add157ff3a35c431}{Map}}->operator[]( key );
+237         \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_a29c695c67a5b34a3b59af0da3c25d6b1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{classjson_1_1_j_s_o_n_a29c695c67a5b34a3b59af0da3c25d6b1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_ad590ba3c1aa11aad67e03138ffdc1488}\label{classjson_1_1_j_s_o_n_ad590ba3c1aa11aad67e03138ffdc1488}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}}\& json\+::\+J\+S\+O\+N\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 239 of file json.\+hpp.
+
+
+
+References Array, Internal, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+List, and Set\+Type().
+
+
+\begin{DoxyCode}
+239                                            \{
+240             \mbox{\hyperlink{classjson_1_1_j_s_o_n_a668500208950e48394fc8bfe7c320205}{SetType}}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4410ec34d9e6c1a68100ca0ce033fb17}{Class::Array}} );
+241             \textcolor{keywordflow}{if}( index >= \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab85f5e7ad21f9f7a5407ab73128a3ebc}{List}}->size() ) \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.
+      \mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab85f5e7ad21f9f7a5407ab73128a3ebc}{List}}->resize( index + 1 );
+242             \textcolor{keywordflow}{return} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab85f5e7ad21f9f7a5407ab73128a3ebc}{List}}->operator[]( index );
+243         \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_ad590ba3c1aa11aad67e03138ffdc1488_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a668500208950e48394fc8bfe7c320205}\label{classjson_1_1_j_s_o_n_a668500208950e48394fc8bfe7c320205}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Set\+Type@{Set\+Type}}
+\index{Set\+Type@{Set\+Type}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{Set\+Type()}{SetType()}}
+{\footnotesize\ttfamily void json\+::\+J\+S\+O\+N\+::\+Set\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07}{Class}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 383 of file json.\+hpp.
+
+
+
+References Array, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Bool, Boolean, Clear\+Internal(), json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Float, Floating, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Int, Integral, Internal, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+List, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Map, Null, Object, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+String, String, and Type.
+
+
+
+Referenced by append(), J\+S\+O\+N(), Make(), operator=(), and operator\mbox{[}$\,$\mbox{]}().
+
+
+\begin{DoxyCode}
+383                                    \{
+384             \textcolor{keywordflow}{if}( type == \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} )
+385                 \textcolor{keywordflow}{return};
+386 
+387             \mbox{\hyperlink{classjson_1_1_j_s_o_n_afefdc8c18c2c40575c2c8463fbd78c67}{ClearInternal}}();
+388           
+389             \textcolor{keywordflow}{switch}( type ) \{
+390             \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07abbb93ef26e3c101ff11cdd21cab08a94}{Class::Null}}:      \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab2e19b00745b37d2add157ff3a35c431}{Map}}    = \textcolor{keyword}{nullptr};                \textcolor{keywordflow}{break};
+391             \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a497031794414a552435f90151ac3b54b}{Class::Object}}:    \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab2e19b00745b37d2add157ff3a35c431}{Map}}    = \textcolor{keyword}{new} map<string,JSON>(); \textcolor{keywordflow}{break};
+392             \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4410ec34d9e6c1a68100ca0ce033fb17}{Class::Array}}:     \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab85f5e7ad21f9f7a5407ab73128a3ebc}{List}}   = \textcolor{keyword}{new} deque<JSON>();     \textcolor{keywordflow}{break};
+393             \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27118326006d3829667a400ad23d5d98}{Class::String}}:    \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_a883c18d113d2e55767a9530f06a9c772}{String}} = \textcolor{keyword}{new} string();           \textcolor{keywordflow}{
+      break};
+394             \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07ac8df43648942ec3a9aec140f07f47b7c}{Class::Floating}}:  \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_aac4950afa6b9205bb367a33de47faa5c}{Float}}  = 0.0;                    \textcolor{keywordflow}{
+      break};
+395             \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4ea94552a2bec56a29592359a1b6069e}{Class::Integral}}:  \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_a0d80815a70ff5bb9345f75de79ec81c3}{Int}}    = 0;                      \textcolor{keywordflow}{
+      break};
+396             \textcolor{keywordflow}{case} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27226c864bac7454a8504f8edb15d95b}{Class::Boolean}}:   \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_a0659fafaedb7de535ae3e79e4ff4688c}{Bool}}   = \textcolor{keyword}{false};                  \textcolor{keywordflow}{
+      break};
+397             \}
+398 
+399             \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} = type;
+400         \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_a668500208950e48394fc8bfe7c320205_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_a668500208950e48394fc8bfe7c320205_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_af8665d4f94afa84c3e20d52a7184f7ee}\label{classjson_1_1_j_s_o_n_af8665d4f94afa84c3e20d52a7184f7ee}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!size@{size}}
+\index{size@{size}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int json\+::\+J\+S\+O\+N\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 274 of file json.\+hpp.
+
+
+
+References Array, Internal, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+List, json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Map, Object, and Type.
+
+
+\begin{DoxyCode}
+274                          \{
+275             \textcolor{keywordflow}{if}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} == \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a497031794414a552435f90151ac3b54b}{Class::Object}} )
+276                 \textcolor{keywordflow}{return} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab2e19b00745b37d2add157ff3a35c431}{Map}}->size();
+277             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} == \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4410ec34d9e6c1a68100ca0ce033fb17}{Class::Array}} )
+278                 \textcolor{keywordflow}{return} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_ab85f5e7ad21f9f7a5407ab73128a3ebc}{List}}->size();
+279             \textcolor{keywordflow}{else}
+280                 \textcolor{keywordflow}{return} -1;
+281         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_adb9ab4683ee30055912b47220780de16}\label{classjson_1_1_j_s_o_n_adb9ab4683ee30055912b47220780de16}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!To\+Bool@{To\+Bool}}
+\index{To\+Bool@{To\+Bool}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{To\+Bool()}{ToBool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool json\+::\+J\+S\+O\+N\+::\+To\+Bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 306 of file json.\+hpp.
+
+
+
+References To\+Bool().
+
+
+
+Referenced by json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+bool(), and To\+Bool().
+
+
+\begin{DoxyCode}
+306 \{ \textcolor{keywordtype}{bool} b; \textcolor{keywordflow}{return} \mbox{\hyperlink{classjson_1_1_j_s_o_n_adb9ab4683ee30055912b47220780de16}{ToBool}}( b ); \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classjson_1_1_j_s_o_n_adb9ab4683ee30055912b47220780de16_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_adb9ab4683ee30055912b47220780de16_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_aa86f03b8572b13dd768c902da2d83efa}\label{classjson_1_1_j_s_o_n_aa86f03b8572b13dd768c902da2d83efa}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!To\+Bool@{To\+Bool}}
+\index{To\+Bool@{To\+Bool}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{To\+Bool()}{ToBool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool json\+::\+J\+S\+O\+N\+::\+To\+Bool (\begin{DoxyParamCaption}\item[{bool \&}]{ok }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 307 of file json.\+hpp.
+
+
+
+References json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Bool, Boolean, Internal, and Type.
+
+
+\begin{DoxyCode}
+307                                       \{
+308             ok = (\mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} == \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27226c864bac7454a8504f8edb15d95b}{Class::Boolean}});
+309             \textcolor{keywordflow}{return} ok ? \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_a0659fafaedb7de535ae3e79e4ff4688c}{Bool}} : \textcolor{keyword}{false};
+310         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_ae6ff6af2be133af569a9c3dd38f67d93}\label{classjson_1_1_j_s_o_n_ae6ff6af2be133af569a9c3dd38f67d93}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!To\+Float@{To\+Float}}
+\index{To\+Float@{To\+Float}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{To\+Float()}{ToFloat()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double json\+::\+J\+S\+O\+N\+::\+To\+Float (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 294 of file json.\+hpp.
+
+
+
+References To\+Float().
+
+
+
+Referenced by To\+Float().
+
+
+\begin{DoxyCode}
+294 \{ \textcolor{keywordtype}{bool} b; \textcolor{keywordflow}{return} \mbox{\hyperlink{classjson_1_1_j_s_o_n_ae6ff6af2be133af569a9c3dd38f67d93}{ToFloat}}( b ); \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classjson_1_1_j_s_o_n_ae6ff6af2be133af569a9c3dd38f67d93_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classjson_1_1_j_s_o_n_ae6ff6af2be133af569a9c3dd38f67d93_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_ae913234cd95a1338faf8e198b5a0eb38}\label{classjson_1_1_j_s_o_n_ae913234cd95a1338faf8e198b5a0eb38}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!To\+Float@{To\+Float}}
+\index{To\+Float@{To\+Float}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{To\+Float()}{ToFloat()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double json\+::\+J\+S\+O\+N\+::\+To\+Float (\begin{DoxyParamCaption}\item[{bool \&}]{ok }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 295 of file json.\+hpp.
+
+
+
+References json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Float, Floating, Internal, and Type.
+
+
+\begin{DoxyCode}
+295                                          \{
+296             ok = (\mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} == \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07ac8df43648942ec3a9aec140f07f47b7c}{Class::Floating}});
+297             \textcolor{keywordflow}{return} ok ? \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_aac4950afa6b9205bb367a33de47faa5c}{Float}} : 0.0;
+298         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a867eb9869140b69428287c98d4f56388}\label{classjson_1_1_j_s_o_n_a867eb9869140b69428287c98d4f56388}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!To\+Int@{To\+Int}}
+\index{To\+Int@{To\+Int}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{To\+Int()}{ToInt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily long json\+::\+J\+S\+O\+N\+::\+To\+Int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 300 of file json.\+hpp.
+
+
+
+References To\+Int().
+
+
+
+Referenced by To\+Int().
+
+
+\begin{DoxyCode}
+300 \{ \textcolor{keywordtype}{bool} b; \textcolor{keywordflow}{return} \mbox{\hyperlink{classjson_1_1_j_s_o_n_a867eb9869140b69428287c98d4f56388}{ToInt}}( b ); \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classjson_1_1_j_s_o_n_a867eb9869140b69428287c98d4f56388_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classjson_1_1_j_s_o_n_a867eb9869140b69428287c98d4f56388_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a12e5b118ced359fd4a315c95a7486007}\label{classjson_1_1_j_s_o_n_a12e5b118ced359fd4a315c95a7486007}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!To\+Int@{To\+Int}}
+\index{To\+Int@{To\+Int}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{To\+Int()}{ToInt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily long json\+::\+J\+S\+O\+N\+::\+To\+Int (\begin{DoxyParamCaption}\item[{bool \&}]{ok }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 301 of file json.\+hpp.
+
+
+
+References json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+Int, Integral, Internal, and Type.
+
+
+\begin{DoxyCode}
+301                                      \{
+302             ok = (\mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} == \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a4ea94552a2bec56a29592359a1b6069e}{Class::Integral}});
+303             \textcolor{keywordflow}{return} ok ? \mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.\mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_a0d80815a70ff5bb9345f75de79ec81c3}{Int}} : 0;
+304         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a5f1c7695d59c4652f01cb087eff954f5}\label{classjson_1_1_j_s_o_n_a5f1c7695d59c4652f01cb087eff954f5}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{To\+String()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string json\+::\+J\+S\+O\+N\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 288 of file json.\+hpp.
+
+
+
+References To\+String().
+
+
+
+Referenced by json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+object(), and To\+String().
+
+
+\begin{DoxyCode}
+288 \{ \textcolor{keywordtype}{bool} b; \textcolor{keywordflow}{return} std::move( \mbox{\hyperlink{classjson_1_1_j_s_o_n_a5f1c7695d59c4652f01cb087eff954f5}{ToString}}( b ) ); \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classjson_1_1_j_s_o_n_a5f1c7695d59c4652f01cb087eff954f5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_a5f1c7695d59c4652f01cb087eff954f5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a08f4e57ef30b5dc6881179017e2196d0}\label{classjson_1_1_j_s_o_n_a08f4e57ef30b5dc6881179017e2196d0}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{To\+String()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string json\+::\+J\+S\+O\+N\+::\+To\+String (\begin{DoxyParamCaption}\item[{bool \&}]{ok }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 289 of file json.\+hpp.
+
+
+
+References Internal, json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::json\+\_\+escape(), json\+::\+J\+S\+O\+N\+::\+Backing\+Data\+::\+String, String, and Type.
+
+
+\begin{DoxyCode}
+289                                           \{
+290             ok = (\mbox{\hyperlink{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}{Type}} == \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07a27118326006d3829667a400ad23d5d98}{Class::String}});
+291             \textcolor{keywordflow}{return} ok ? std::move( \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03_a623a6fca4cd1735d2bf3d081b875a350}{json\_escape}}( *\mbox{\hyperlink{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}{Internal}}.
+      \mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data_a883c18d113d2e55767a9530f06a9c772}{String}} ) ): string(\textcolor{stringliteral}{""});
+292         \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_j_s_o_n_a08f4e57ef30b5dc6881179017e2196d0_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a5513ab67f2660e88d73c75fc83b6945c}\label{classjson_1_1_j_s_o_n_a5513ab67f2660e88d73c75fc83b6945c}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 436 of file json.\+hpp.
+
+
+\begin{DoxyCode}
+436                                                                   \{
+437     os << \mbox{\hyperlink{namespacejson}{json}}.dump();
+438     \textcolor{keywordflow}{return} os;
+439 \}
+\end{DoxyCode}
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}\label{classjson_1_1_j_s_o_n_a1e2a064794c3d55c8bb8887fc5734947}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Internal@{Internal}}
+\index{Internal@{Internal}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{Internal}{Internal}}
+{\footnotesize\ttfamily union \mbox{\hyperlink{unionjson_1_1_j_s_o_n_1_1_backing_data}{json\+::\+J\+S\+O\+N\+::\+Backing\+Data}}  json\+::\+J\+S\+O\+N\+::\+Internal\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by append(), Array\+Range(), at(), Clear\+Internal(), dump(), has\+Key(), J\+S\+O\+N(), length(), Object\+Range(), operator=(), operator\mbox{[}$\,$\mbox{]}(), Set\+Type(), size(), To\+Bool(), To\+Float(), To\+Int(), To\+String(), and $\sim$\+J\+S\+O\+N().
+
+\mbox{\Hypertarget{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}\label{classjson_1_1_j_s_o_n_a3fa6923afa41bdfe38077fbc0079aaf5}} 
+\index{json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}!Type@{Type}}
+\index{Type@{Type}!json\+::\+J\+S\+ON@{json\+::\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07}{Class}} json\+::\+J\+S\+O\+N\+::\+Type = \mbox{\hyperlink{classjson_1_1_j_s_o_n_a762f55df6d407c1af61607ed516ffe07abbb93ef26e3c101ff11cdd21cab08a94}{Class\+::\+Null}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 418 of file json.\+hpp.
+
+
+
+Referenced by Array\+Range(), Clear\+Internal(), dump(), has\+Key(), Is\+Null(), J\+S\+O\+N(), J\+S\+O\+N\+Type(), length(), Object\+Range(), operator=(), Set\+Type(), size(), To\+Bool(), To\+Float(), To\+Int(), To\+String(), and $\sim$\+J\+S\+O\+N().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/simplejson/\mbox{\hyperlink{lib_2simplejson_2json_8hpp}{json.\+hpp}}\end{DoxyCompactItemize}

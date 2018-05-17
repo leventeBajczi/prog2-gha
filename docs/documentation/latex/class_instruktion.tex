@@ -1,0 +1,92 @@
+\hypertarget{class_instruktion}{}\section{Instruktion Class Reference}
+\label{class_instruktion}\index{Instruktion@{Instruktion}}
+
+
+{\ttfamily \#include $<$instruction.\+hpp$>$}
+
+
+
+Inheritance diagram for Instruktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{class_instruktion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Instruktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{class_instruktion__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_instruktion_a26d54febd2022c7402a22a8b55ba097a}{Instruktion}} (std\+::string str)
+\item 
+virtual std\+::string \mbox{\hyperlink{class_instruktion_a267ff36e98ec889cceccb2f464c36bc6}{print}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_instruktion_ad701f6b5537e5aa8c8c08b81a8946f63}{run}} (\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&)=0
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Den Basisklasse für die Instruktionentypen. 
+
+Definition at line 13 of file instruction.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_instruktion_a26d54febd2022c7402a22a8b55ba097a}\label{class_instruktion_a26d54febd2022c7402a22a8b55ba097a}} 
+\index{Instruktion@{Instruktion}!Instruktion@{Instruktion}}
+\index{Instruktion@{Instruktion}!Instruktion@{Instruktion}}
+\subsubsection{\texorpdfstring{Instruktion()}{Instruktion()}}
+{\footnotesize\ttfamily Instruktion\+::\+Instruktion (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 16 of file instruction.\+hpp.
+
+
+\begin{DoxyCode}
+16 : \mbox{\hyperlink{class_datei_a9a9e1149154603548fdfc889821cf418}{Datei}}(str) \{\}    \textcolor{comment}{/* Konstruktor der Instruktionklasse */}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_instruktion_a267ff36e98ec889cceccb2f464c36bc6}\label{class_instruktion_a267ff36e98ec889cceccb2f464c36bc6}} 
+\index{Instruktion@{Instruktion}!print@{print}}
+\index{print@{print}!Instruktion@{Instruktion}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily virtual std\+::string Instruktion\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_datei_a5dedc9776ebe637f0842300f648d4b17}{Datei}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_complex_instruktion_a476d0f6ed0296cd4751543c4be6ca422}{Complex\+Instruktion}}, and \mbox{\hyperlink{class_simple_instruktion_a0533865319bd39a0ecd1db463d488cb8}{Simple\+Instruktion}}.
+
+\mbox{\Hypertarget{class_instruktion_ad701f6b5537e5aa8c8c08b81a8946f63}\label{class_instruktion_ad701f6b5537e5aa8c8c08b81a8946f63}} 
+\index{Instruktion@{Instruktion}!run@{run}}
+\index{run@{run}!Instruktion@{Instruktion}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily virtual void Instruktion\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_complex_instruktion_ab9e037eda3cf53252902f15541a01a21}{Complex\+Instruktion}}, and \mbox{\hyperlink{class_simple_instruktion_a5beecc39bbd465d001c41216ef4d46e7}{Simple\+Instruktion}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/datei/instruction/\mbox{\hyperlink{instruction_8hpp}{instruction.\+hpp}}\end{DoxyCompactItemize}

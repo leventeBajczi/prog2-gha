@@ -1,0 +1,154 @@
+\hypertarget{namespacejson}{}\section{json Namespace Reference}
+\label{namespacejson}\index{json@{json}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacejson_1_1anonymous__namespace_02json_8hpp_03}{anonymous\+\_\+namespace\{json.\+hpp\}}}
+\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_a805054691c80da00fd9129387f834c21}{Array}} ()
+\item 
+{\footnotesize template$<$typename... T$>$ }\\\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_a8c39b1bf99577bc140f0647d0192219f}{Array}} (T... args)
+\item 
+\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \mbox{\hyperlink{namespacejson_a7bc7d25f21c18a652a42db29cfdabd06}{Object}} ()
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespacejson_a348c2e5bffbeca243a52de2977e71b08}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \&json)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacejson_a805054691c80da00fd9129387f834c21}\label{namespacejson_a805054691c80da00fd9129387f834c21}} 
+\index{json@{json}!Array@{Array}}
+\index{Array@{Array}!json@{json}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} json\+::\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 421 of file json.\+hpp.
+
+
+
+References json\+::\+J\+S\+O\+N\+::\+Array, and json\+::\+J\+S\+O\+N\+::\+Make().
+
+
+
+Referenced by json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+array().
+
+
+\begin{DoxyCode}
+421                     \{
+422     \textcolor{keywordflow}{return} std::move( JSON::Make( \mbox{\hyperlink{namespacejson_a8c39b1bf99577bc140f0647d0192219f}{JSON::Class::Array}} ) );
+423 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_a805054691c80da00fd9129387f834c21_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_a805054691c80da00fd9129387f834c21_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacejson_a8c39b1bf99577bc140f0647d0192219f}\label{namespacejson_a8c39b1bf99577bc140f0647d0192219f}} 
+\index{json@{json}!Array@{Array}}
+\index{Array@{Array}!json@{json}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename... T$>$ \\
+\mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} json\+::\+Array (\begin{DoxyParamCaption}\item[{T...}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 426 of file json.\+hpp.
+
+
+
+References json\+::\+J\+S\+O\+N\+::append(), json\+::\+J\+S\+O\+N\+::\+Array, and json\+::\+J\+S\+O\+N\+::\+Make().
+
+
+\begin{DoxyCode}
+426                         \{
+427     \mbox{\hyperlink{class_j_s_o_n}{JSON}} arr = JSON::Make( \mbox{\hyperlink{namespacejson_a8c39b1bf99577bc140f0647d0192219f}{JSON::Class::Array}} );
+428     arr.append( args... );
+429     \textcolor{keywordflow}{return} std::move( arr );
+430 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_a8c39b1bf99577bc140f0647d0192219f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacejson_a7bc7d25f21c18a652a42db29cfdabd06}\label{namespacejson_a7bc7d25f21c18a652a42db29cfdabd06}} 
+\index{json@{json}!Object@{Object}}
+\index{Object@{Object}!json@{json}}
+\subsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} json\+::\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 432 of file json.\+hpp.
+
+
+
+References json\+::\+J\+S\+O\+N\+::\+Make(), and json\+::\+J\+S\+O\+N\+::\+Object.
+
+
+
+Referenced by json\+::anonymous\+\_\+namespace\{json.\+hpp\}\+::parse\+\_\+object().
+
+
+\begin{DoxyCode}
+432                      \{
+433     \textcolor{keywordflow}{return} std::move( JSON::Make( \mbox{\hyperlink{namespacejson_a7bc7d25f21c18a652a42db29cfdabd06}{JSON::Class::Object}} ) );
+434 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_a7bc7d25f21c18a652a42db29cfdabd06_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_a7bc7d25f21c18a652a42db29cfdabd06_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacejson_a348c2e5bffbeca243a52de2977e71b08}\label{namespacejson_a348c2e5bffbeca243a52de2977e71b08}} 
+\index{json@{json}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!json@{json}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& json\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classjson_1_1_j_s_o_n}{J\+S\+ON}} \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 436 of file json.\+hpp.
+
+
+\begin{DoxyCode}
+436                                                                   \{
+437     os << \mbox{\hyperlink{namespacejson}{json}}.dump();
+438     \textcolor{keywordflow}{return} os;
+439 \}
+\end{DoxyCode}

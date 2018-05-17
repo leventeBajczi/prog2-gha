@@ -1,0 +1,52 @@
+\subsection*{Die Idee}
+
+Die Hauptidee des Programmes ist, den User eine eigene Beschreibungssprache konstruieren zu erlauben und dasselbe \mbox{\hyperlink{class_sprache}{Sprache}} in einem dynamisch geschriebenen Art verwenden um eine eigene Programm zusammenzustellen (der später im File gespeichert werden kann). Das \mbox{\hyperlink{class_sprache}{Sprache}} ist an den Prinzipen des Assembly-\/\+Spraches basiert, und enthält nur sehr atomische Instruktionen, die natürlich jede sinnvolle Problem lösen lassen.
+
+\subsection*{Die geplannte Umsetzung}
+
+Der Benutzer bekommt eine C\+LI Tool, die die folgende machen kann\+:
+
+
+\begin{DoxyEnumerate}
+\item Eine leere, zu füllende Sprachendatei erstellen (J\+S\+O\+N-\/basiert, damit es automatisch generiert werden kann sowohl aus dieser Programm als auch mit Hilfe von 3rd Party Programms).\textsuperscript{1}
+\item Eine gefüllte Sprachendatei einladen (und natürlich verifizieren, ob es wirklich gut gefüllt wurde).
+\item Aus der eingeladeten \mbox{\hyperlink{class_sprache}{Sprache}} einen inneren Konzol erstellen, in denen der Benutzer folgende tun kann\+:
+\begin{DoxyEnumerate}
+\item Schritt für Schritt eine Programm eintippen und diese Schritte sofort laufen lassen.
+\item Subroutine und Labels definieren (mit Hilfe von einer reservierten Schlusswort oder Bezeichnung, z.\+B. {\ttfamily def} oder {\ttfamily \+:}).
+\item Definitionsbibliotheken aus speziellen Dateien einladen.
+\item Soweit eingetippte Schritte ansehen und die ganze History im \mbox{\hyperlink{class_datei}{Datei}} speichern.
+\item Registern, Stack und Speicher im File (oder aus dem Standardausgang) schreiben
+\end{DoxyEnumerate}
+\item Mit Hilfe von verschiedenen Sprachendateien Programme zwischen Sprachen umwandeln (erledigt z.\+B. wirkliche Assemblykode zu generieren, der später assembliert werden kann).
+\end{DoxyEnumerate}
+
+\subsection*{Der Komplexität}
+
+Obwohl ich nach eine sehr einfaches Implementation streben möchte, damit es nicht schwierig wird den ganzen Software überzusehen, ist es unvermeidlich einige komplexere Sachen im Program zu verwenden. Damit zu hilfen habe ich die folgende Typusgraphen erstellt\+:
+
+A \mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} class für den Ausführung des Kodes\+:
+
+
+
+Dieses \mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} enthält verschiedene Speichern (Stack, Registers, R\+AM), diese sind in den folgenden Klassen implementiert\+:
+
+
+
+Sowohl Instruktionen, als auch Sprachendateien können im File geschrieben werden, bzw. mit Dateioperationen ist eine \mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}} Implementation zu hilfen\+:
+
+
+
+Diese sind natürlich nur Planen, und können während der Entwicklung geändert werden, sie stehen hier nur um die Erklärung der Idee zu erleitern.
+
+Die folgende Komplexitätskriterien stehen im Plan (aus der 5 spezifizierte Kriterien)\+:
+\begin{DoxyItemize}
+\item Templates
+\item Operatorüberladung
+\item Mehrfachvererbung
+\item Dynamische Membervariable 
+
+ \textsuperscript{1}\+: Eine Beispieldatei (nur die Idee zu zeigen, dass es eine eineindeutige Zuordnung von Mnemoniken zu inner definierte Funktionen enthält)\+:
+\end{DoxyItemize}
+
+ 

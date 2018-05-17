@@ -1,0 +1,669 @@
+\hypertarget{class_virtual_machine}{}\section{Virtual\+Machine Class Reference}
+\label{class_virtual_machine}\index{Virtual\+Machine@{Virtual\+Machine}}
+
+
+{\ttfamily \#include $<$virtualmachine.\+hpp$>$}
+
+
+
+Collaboration diagram for Virtual\+Machine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_virtual_machine__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_virtual_machine_aaaef932333f031a51e9aa16e93931edf}{Virtual\+Machine}} (\mbox{\hyperlink{class_sprache}{Sprache}}, unsigned int=1024, unsigned int=16)
+\item 
+bool \mbox{\hyperlink{class_virtual_machine_aabeb8078a57ca3bb98c24bc655296e9f}{run\+Instruction}} (std\+::string)
+\item 
+void \mbox{\hyperlink{class_virtual_machine_a572584de47b0e95303e71832b684175f}{re\+Run\+All}} ()
+\item 
+bool \mbox{\hyperlink{class_virtual_machine_a52907412b34a0b747bfaa26c48253aa9}{add\+Subroutine}} (std\+::string)
+\item 
+uint8\+\_\+t \& \mbox{\hyperlink{class_virtual_machine_a0f55b241f2e14264dfaec5449d136a50}{get\+Reference}} (std\+::string)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_virtual_machine_a09bdaea77003f19912e0f101faefa26f}{get\+Value}} (std\+::string)
+\item 
+void \mbox{\hyperlink{class_virtual_machine_a564ba72b2d0f9e888a1560b523c567ba}{run\+Subroutine}} (std\+::string)
+\item 
+void \mbox{\hyperlink{class_virtual_machine_ac20f1d6667434866f50880187c521cd4}{push\+Value}} (uint8\+\_\+t)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_virtual_machine_a4cbf0a06938ad9b3acb9a1872452e6a5}{pop\+Value}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{class_virtual_machine_a7029636f9766e0394a8b9d60264a3565}{get\+Ptr}} (std\+::string)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::stack$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{class_virtual_machine_a3a4c8cdda0913c9c0cdc75df23ac7cbb}{stack}}
+\item 
+\mbox{\hyperlink{class_memory}{Memory}} \mbox{\hyperlink{class_virtual_machine_a54136a9c003e36e77c28f31c7bef2dc2}{memory}}
+\item 
+\mbox{\hyperlink{class_memory}{Memory}} \mbox{\hyperlink{class_virtual_machine_aae855da52e8f3b0a167b8fec497d44d9}{general\+Register\+Array}}
+\item 
+\mbox{\hyperlink{class_memory}{Memory}} \mbox{\hyperlink{class_virtual_machine_a957d36537fd7570d30e342c5400ad4a6}{special\+Register\+Array}}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{class_complex_instruktion}{Complex\+Instruktion}} $\ast$ $>$ \mbox{\hyperlink{class_virtual_machine_a109df714b628452e9a958eddb28df6e9}{labels}}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{class_complex_instruktion}{Complex\+Instruktion}} $\ast$ $>$ \mbox{\hyperlink{class_virtual_machine_a91f5b9cfc45eaea5ce95b659705b2803}{subroutines}}
+\item 
+\mbox{\hyperlink{class_sprache}{Sprache}} \mbox{\hyperlink{class_virtual_machine_af4dd2663e7f1ea25ba6c88da94e6ef01}{language}}
+\item 
+std\+::map$<$ std\+::string, void $\ast$ $>$ \mbox{\hyperlink{class_virtual_machine_a1b1e03784277347206641bf47e39d6d1}{functions}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Klasse für den virtuellen Gerät, wodurch die Instruktionen ausgeführt werden können. 
+
+Definition at line 18 of file virtualmachine.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_virtual_machine_aaaef932333f031a51e9aa16e93931edf}\label{class_virtual_machine_aaaef932333f031a51e9aa16e93931edf}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!Virtual\+Machine@{Virtual\+Machine}}
+\index{Virtual\+Machine@{Virtual\+Machine}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{Virtual\+Machine()}{VirtualMachine()}}
+{\footnotesize\ttfamily Virtual\+Machine\+::\+Virtual\+Machine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sprache}{Sprache}}}]{sprache,  }\item[{unsigned int}]{memory = {\ttfamily 1024},  }\item[{unsigned int}]{general = {\ttfamily 16} }\end{DoxyParamCaption})}
+
+Konstruktor der Klasse \mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}}.. 
+
+Definition at line 170 of file virtualmachine.\+cpp.
+
+
+
+References add(), functions, Datei\+::get\+Lang(), jsr(), language, Sprache\+::language\+Elements, mov(), pop(), push(), sl0(), sr0(), sub(), subroutines, and swp().
+
+
+\begin{DoxyCode}
+170                                                                                          : 
+      \mbox{\hyperlink{class_virtual_machine_a54136a9c003e36e77c28f31c7bef2dc2}{memory}}(\mbox{\hyperlink{class_virtual_machine_a54136a9c003e36e77c28f31c7bef2dc2}{memory}}), \mbox{\hyperlink{class_virtual_machine_aae855da52e8f3b0a167b8fec497d44d9}{generalRegisterArray}}(general), 
+      \mbox{\hyperlink{class_virtual_machine_a957d36537fd7570d30e342c5400ad4a6}{specialRegisterArray}}(2), \mbox{\hyperlink{class_virtual_machine_af4dd2663e7f1ea25ba6c88da94e6ef01}{language}}(sprache)
+171 \{
+172     std::vector<std::string>::iterator i = sprache.\mbox{\hyperlink{class_sprache_ac0e8018bac279c35c325ad162cb0ba17}{languageElements}}.begin();
+173     \mbox{\hyperlink{class_virtual_machine_a1b1e03784277347206641bf47e39d6d1}{functions}}.insert(std::make\_pair( *(i++), (\textcolor{keywordtype}{void}*)\mbox{\hyperlink{virtualmachine_8cpp_a4a13e90dbe7c735dcdb79b69aeb527a0}{mov}}));
+174     \mbox{\hyperlink{class_virtual_machine_a1b1e03784277347206641bf47e39d6d1}{functions}}.insert(std::make\_pair( *(i++), (\textcolor{keywordtype}{void}*)\mbox{\hyperlink{virtualmachine_8cpp_afff2da85b0bcdbce50f79a3938e8cfb8}{add}}));
+175     \mbox{\hyperlink{class_virtual_machine_a1b1e03784277347206641bf47e39d6d1}{functions}}.insert(std::make\_pair( *(i++), (\textcolor{keywordtype}{void}*)\mbox{\hyperlink{virtualmachine_8cpp_a0897204f7115655bac9fd3ec141f02a3}{sub}}));
+176     \mbox{\hyperlink{class_virtual_machine_a1b1e03784277347206641bf47e39d6d1}{functions}}.insert(std::make\_pair( *(i++), (\textcolor{keywordtype}{void}*)\mbox{\hyperlink{virtualmachine_8cpp_ac1fe387291f3ce3def19482b63d79993}{swp}}));
+177     \mbox{\hyperlink{class_virtual_machine_a1b1e03784277347206641bf47e39d6d1}{functions}}.insert(std::make\_pair( *(i++), (\textcolor{keywordtype}{void}*)\mbox{\hyperlink{virtualmachine_8cpp_a8d7be3b5269fefe09af303a50d46483c}{sl0}}));
+178     \mbox{\hyperlink{class_virtual_machine_a1b1e03784277347206641bf47e39d6d1}{functions}}.insert(std::make\_pair( *(i++), (\textcolor{keywordtype}{void}*)\mbox{\hyperlink{virtualmachine_8cpp_a53ed0fe4897961c90e8f8a80135407ab}{sr0}}));
+179     \mbox{\hyperlink{class_virtual_machine_a1b1e03784277347206641bf47e39d6d1}{functions}}.insert(std::make\_pair( *(i++), (\textcolor{keywordtype}{void}*)\mbox{\hyperlink{virtualmachine_8cpp_a8de6375d47a4f4fa39810a2baec6438c}{jsr}}));
+180     \mbox{\hyperlink{class_virtual_machine_a1b1e03784277347206641bf47e39d6d1}{functions}}.insert(std::make\_pair( *(i++), (\textcolor{keywordtype}{void}*)\mbox{\hyperlink{virtualmachine_8cpp_a143a953d6f1137d8d84af5f278c974d6}{push}}));
+181     \mbox{\hyperlink{class_virtual_machine_a1b1e03784277347206641bf47e39d6d1}{functions}}.insert(std::make\_pair( *(i++), (\textcolor{keywordtype}{void}*)\mbox{\hyperlink{virtualmachine_8cpp_a7fd81f93e335b7903d4a3ff3a82a6a4f}{pop}}));
+182     
+183     \mbox{\hyperlink{class_virtual_machine_a91f5b9cfc45eaea5ce95b659705b2803}{subroutines}}.insert(std::make\_pair(\textcolor{stringliteral}{"\_start"},(\textcolor{keyword}{new} 
+      \mbox{\hyperlink{class_complex_instruktion}{ComplexInstruktion}}(\mbox{\hyperlink{class_virtual_machine_af4dd2663e7f1ea25ba6c88da94e6ef01}{language}}.\mbox{\hyperlink{class_datei_aeeaf8e269f4d2b53e209ad905b5b75c5}{getLang}}()))));
+184 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_virtual_machine_aaaef932333f031a51e9aa16e93931edf_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_virtual_machine_a52907412b34a0b747bfaa26c48253aa9}\label{class_virtual_machine_a52907412b34a0b747bfaa26c48253aa9}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!add\+Subroutine@{add\+Subroutine}}
+\index{add\+Subroutine@{add\+Subroutine}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{add\+Subroutine()}{addSubroutine()}}
+{\footnotesize\ttfamily bool Virtual\+Machine\+::add\+Subroutine (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})}
+
+Addieren eine Subroutine 
+
+Definition at line 262 of file virtualmachine.\+cpp.
+
+
+
+References Complex\+Instruktion\+::add(), Datei\+::get\+Lang(), get\+Ptr(), language, and subroutines.
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+263 \{
+264     std::istringstream iss(s);
+265     std::string buff;
+266     \mbox{\hyperlink{class_complex_instruktion}{ComplexInstruktion}} *ci = \textcolor{keyword}{new} \mbox{\hyperlink{class_complex_instruktion}{ComplexInstruktion}}(
+      \mbox{\hyperlink{class_virtual_machine_af4dd2663e7f1ea25ba6c88da94e6ef01}{language}}.\mbox{\hyperlink{class_datei_aeeaf8e269f4d2b53e209ad905b5b75c5}{getLang}}());
+267     std::getline(iss, buff);
+268     \mbox{\hyperlink{class_virtual_machine_a91f5b9cfc45eaea5ce95b659705b2803}{subroutines}}.insert(std::make\_pair(buff, ci));
+269     \textcolor{keywordflow}{while} (std::getline(iss, buff)) \{
+270         std::istringstream is(buff);
+271         std::string instruction, param1, param2;
+272         is>>instruction;
+273         is>>param1;
+274         is>>param2;
+275         \mbox{\hyperlink{class_simple_instruktion}{SimpleInstruktion}} *sNew = \textcolor{keyword}{new} \mbox{\hyperlink{class_simple_instruktion}{SimpleInstruktion}}(
+      \mbox{\hyperlink{class_virtual_machine_af4dd2663e7f1ea25ba6c88da94e6ef01}{language}}.\mbox{\hyperlink{class_datei_aeeaf8e269f4d2b53e209ad905b5b75c5}{getLang}}(), buff, \mbox{\hyperlink{class_virtual_machine_a7029636f9766e0394a8b9d60264a3565}{getPtr}}(instruction), param1, param2);
+276         ci->\mbox{\hyperlink{class_complex_instruktion_ae92fcdd92e0328d4eed826dea81b8c9c}{add}}(*sNew);
+277     \}
+278 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_virtual_machine_a52907412b34a0b747bfaa26c48253aa9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{class_virtual_machine_a52907412b34a0b747bfaa26c48253aa9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_virtual_machine_a7029636f9766e0394a8b9d60264a3565}\label{class_virtual_machine_a7029636f9766e0394a8b9d60264a3565}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!get\+Ptr@{get\+Ptr}}
+\index{get\+Ptr@{get\+Ptr}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{get\+Ptr()}{getPtr()}}
+{\footnotesize\ttfamily void $\ast$ Virtual\+Machine\+::get\+Ptr (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Gibt den Funktionenpointer zum Befehl zurück.. 
+
+Definition at line 190 of file virtualmachine.\+cpp.
+
+
+
+References functions, Sprache\+::instructions, and language.
+
+
+
+Referenced by add\+Subroutine(), and run\+Instruction().
+
+
+\begin{DoxyCode}
+191 \{
+192     std::string str;
+193     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} pair : \mbox{\hyperlink{class_virtual_machine_af4dd2663e7f1ea25ba6c88da94e6ef01}{language}}.\mbox{\hyperlink{class_sprache_a6052a9ec0d1202da4b8ff6e6a52e6244}{instructions}})
+194     \{
+195         \textcolor{keywordflow}{if}(pair.first == s)
+196         \{   
+197             str = pair.second;
+198             \textcolor{keywordflow}{break};
+199         \}
+200     \}
+201     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} pair : \mbox{\hyperlink{class_virtual_machine_a1b1e03784277347206641bf47e39d6d1}{functions}})
+202     \{
+203         \textcolor{keywordflow}{if}(pair.first == str)
+204         \{
+205             \textcolor{keywordflow}{return} (pair.second);
+206         \}
+207     \}
+208 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_virtual_machine_a7029636f9766e0394a8b9d60264a3565_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_virtual_machine_a0f55b241f2e14264dfaec5449d136a50}\label{class_virtual_machine_a0f55b241f2e14264dfaec5449d136a50}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!get\+Reference@{get\+Reference}}
+\index{get\+Reference@{get\+Reference}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{get\+Reference()}{getReference()}}
+{\footnotesize\ttfamily uint8\+\_\+t \& Virtual\+Machine\+::get\+Reference (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})}
+
+Gibt den Referenz des Wertes zurück (also es geändert werden kann). 
+
+Definition at line 108 of file virtualmachine.\+cpp.
+
+
+
+References general\+Register\+Array, Memory\+::get\+Size(), memory, and Memory\+::read().
+
+
+
+Referenced by add(), mov(), pop(), sl0(), sr0(), sub(), and swp().
+
+
+\begin{DoxyCode}
+109 \{
+110     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} reg;
+111     std::stringstream ss;
+112     \textcolor{keywordflow}{switch}(s[0])
+113     \{
+114         \textcolor{keywordflow}{case} \textcolor{charliteral}{'('}:
+115             ss << s.substr(2, s.size()-1);
+116             ss >> reg;
+117             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_virtual_machine_aae855da52e8f3b0a167b8fec497d44d9}{generalRegisterArray}}.\mbox{\hyperlink{class_memory_ab669beeca09308c880af9b13cde7f655}{read}}(reg) > (this->
+      \mbox{\hyperlink{class_virtual_machine_a54136a9c003e36e77c28f31c7bef2dc2}{memory}}).getSize()) \textcolor{keywordflow}{throw} (\textcolor{stringliteral}{"Memory is out of bounds. Please cross-check syntax!"});
+118             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_virtual_machine_a54136a9c003e36e77c28f31c7bef2dc2}{memory}}.\mbox{\hyperlink{class_memory_ab669beeca09308c880af9b13cde7f655}{read}}(\mbox{\hyperlink{class_virtual_machine_aae855da52e8f3b0a167b8fec497d44d9}{generalRegisterArray}}.
+      \mbox{\hyperlink{class_memory_ab669beeca09308c880af9b13cde7f655}{read}}(reg));
+119             \textcolor{keywordflow}{break};
+120         \textcolor{keywordflow}{case} \textcolor{charliteral}{'r'}:
+121             ss << s.substr(1, s.size());
+122             ss >> reg;
+123             \textcolor{keywordflow}{if}(reg > \mbox{\hyperlink{class_virtual_machine_aae855da52e8f3b0a167b8fec497d44d9}{generalRegisterArray}}.\mbox{\hyperlink{class_memory_a9687fde54e7c10c54060117045060613}{getSize}}()) \textcolor{keywordflow}{throw} (\textcolor{stringliteral}{"Register does not
+       exist. Please cross-check syntax!"});
+124             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_virtual_machine_aae855da52e8f3b0a167b8fec497d44d9}{generalRegisterArray}}.\mbox{\hyperlink{class_memory_ab669beeca09308c880af9b13cde7f655}{read}}(reg);
+125             \textcolor{keywordflow}{break};
+126         \textcolor{keywordflow}{default}:
+127             \textcolor{keywordflow}{throw} (\textcolor{stringliteral}{"Please cross-check syntax!"});
+128             \textcolor{keywordflow}{break};
+129     \}
+130 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_virtual_machine_a0f55b241f2e14264dfaec5449d136a50_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_virtual_machine_a0f55b241f2e14264dfaec5449d136a50_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_virtual_machine_a09bdaea77003f19912e0f101faefa26f}\label{class_virtual_machine_a09bdaea77003f19912e0f101faefa26f}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily uint8\+\_\+t Virtual\+Machine\+::get\+Value (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})}
+
+Gibt den Wert zurück (nicht veränderbar). 
+
+Definition at line 136 of file virtualmachine.\+cpp.
+
+
+
+References general\+Register\+Array, Memory\+::get\+Size(), memory, and Memory\+::read().
+
+
+
+Referenced by add(), main(), mov(), push(), sl0(), sr0(), sub(), and swp().
+
+
+\begin{DoxyCode}
+137 \{
+138     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} reg;
+139     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ret;
+140     std::stringstream ss;
+141     std::istringstream iss(s);
+142     \textcolor{keywordflow}{switch}(s[0])
+143     \{
+144         \textcolor{keywordflow}{case} \textcolor{charliteral}{'('}:
+145             ss << s.substr(2, s.size()-1);
+146             ss >> reg;
+147             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_virtual_machine_aae855da52e8f3b0a167b8fec497d44d9}{generalRegisterArray}}.\mbox{\hyperlink{class_memory_ab669beeca09308c880af9b13cde7f655}{read}}(reg) > (this->
+      \mbox{\hyperlink{class_virtual_machine_a54136a9c003e36e77c28f31c7bef2dc2}{memory}}).getSize()) \textcolor{keywordflow}{throw} (\textcolor{stringliteral}{"Memory is out of bounds. Please cross-check syntax!"});
+148             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_virtual_machine_a54136a9c003e36e77c28f31c7bef2dc2}{memory}}.\mbox{\hyperlink{class_memory_ab669beeca09308c880af9b13cde7f655}{read}}(\mbox{\hyperlink{class_virtual_machine_aae855da52e8f3b0a167b8fec497d44d9}{generalRegisterArray}}.
+      \mbox{\hyperlink{class_memory_ab669beeca09308c880af9b13cde7f655}{read}}(reg));
+149             \textcolor{keywordflow}{break};
+150         \textcolor{keywordflow}{case} \textcolor{charliteral}{'r'}:
+151             ss << s.substr(1, s.size());
+152             ss >> reg;
+153             \textcolor{keywordflow}{if}(reg > \mbox{\hyperlink{class_virtual_machine_aae855da52e8f3b0a167b8fec497d44d9}{generalRegisterArray}}.\mbox{\hyperlink{class_memory_a9687fde54e7c10c54060117045060613}{getSize}}()) \textcolor{keywordflow}{throw} (\textcolor{stringliteral}{"Register does not
+       exist. Please cross-check syntax!"});
+154             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_virtual_machine_aae855da52e8f3b0a167b8fec497d44d9}{generalRegisterArray}}.\mbox{\hyperlink{class_memory_ab669beeca09308c880af9b13cde7f655}{read}}(reg);
+155             \textcolor{keywordflow}{break};
+156         \textcolor{keywordflow}{case} \textcolor{charliteral}{'0'}:
+157             iss >> std::hex >> ret;
+158             \textcolor{keywordflow}{return} ret;
+159         \textcolor{keywordflow}{default}:
+160             \textcolor{keywordflow}{throw} (\textcolor{stringliteral}{"Please cross-check syntax!"});
+161             \textcolor{keywordflow}{break};
+162     \}
+163 
+164 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_virtual_machine_a09bdaea77003f19912e0f101faefa26f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_virtual_machine_a09bdaea77003f19912e0f101faefa26f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_virtual_machine_a4cbf0a06938ad9b3acb9a1872452e6a5}\label{class_virtual_machine_a4cbf0a06938ad9b3acb9a1872452e6a5}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!pop\+Value@{pop\+Value}}
+\index{pop\+Value@{pop\+Value}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{pop\+Value()}{popValue()}}
+{\footnotesize\ttfamily uint8\+\_\+t Virtual\+Machine\+::pop\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stackmanipulation. 
+
+Definition at line 81 of file virtualmachine.\+cpp.
+
+
+
+References stack.
+
+
+
+Referenced by pop().
+
+
+\begin{DoxyCode}
+82 \{
+83     uint8\_t t = \mbox{\hyperlink{class_virtual_machine_a3a4c8cdda0913c9c0cdc75df23ac7cbb}{stack}}.top();
+84     \mbox{\hyperlink{class_virtual_machine_a3a4c8cdda0913c9c0cdc75df23ac7cbb}{stack}}.pop();
+85     \textcolor{keywordflow}{return} t;
+86 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_virtual_machine_a4cbf0a06938ad9b3acb9a1872452e6a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_virtual_machine_ac20f1d6667434866f50880187c521cd4}\label{class_virtual_machine_ac20f1d6667434866f50880187c521cd4}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!push\+Value@{push\+Value}}
+\index{push\+Value@{push\+Value}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{push\+Value()}{pushValue()}}
+{\footnotesize\ttfamily void Virtual\+Machine\+::push\+Value (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{t }\end{DoxyParamCaption})}
+
+Stackmanipulation 
+
+Definition at line 73 of file virtualmachine.\+cpp.
+
+
+
+References stack.
+
+
+
+Referenced by push().
+
+
+\begin{DoxyCode}
+74 \{
+75     \mbox{\hyperlink{class_virtual_machine_a3a4c8cdda0913c9c0cdc75df23ac7cbb}{stack}}.push(t);
+76 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_virtual_machine_ac20f1d6667434866f50880187c521cd4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_virtual_machine_a572584de47b0e95303e71832b684175f}\label{class_virtual_machine_a572584de47b0e95303e71832b684175f}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!re\+Run\+All@{re\+Run\+All}}
+\index{re\+Run\+All@{re\+Run\+All}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{re\+Run\+All()}{reRunAll()}}
+{\footnotesize\ttfamily void Virtual\+Machine\+::re\+Run\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Ausführen jede \mbox{\hyperlink{class_instruktion}{Instruktion}} nocheinmal. 
+
+Definition at line 246 of file virtualmachine.\+cpp.
+
+
+
+References subroutines.
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+247 \{
+248     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} pair : \mbox{\hyperlink{class_virtual_machine_a91f5b9cfc45eaea5ce95b659705b2803}{subroutines}})
+249         \{
+250             \textcolor{keywordflow}{if}(pair.first == \textcolor{stringliteral}{"\_start"})
+251             \{
+252                 
+253                 pair.second->run((*\textcolor{keyword}{this}));
+254             \}
+255         \}
+256 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{class_virtual_machine_a572584de47b0e95303e71832b684175f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_virtual_machine_aabeb8078a57ca3bb98c24bc655296e9f}\label{class_virtual_machine_aabeb8078a57ca3bb98c24bc655296e9f}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!run\+Instruction@{run\+Instruction}}
+\index{run\+Instruction@{run\+Instruction}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{run\+Instruction()}{runInstruction()}}
+{\footnotesize\ttfamily bool Virtual\+Machine\+::run\+Instruction (\begin{DoxyParamCaption}\item[{std\+::string}]{r }\end{DoxyParamCaption})}
+
+Parsen eine \mbox{\hyperlink{class_instruktion}{Instruktion}} aus einem String, zum VM history einfügen und danach laufen lassen 
+
+Definition at line 215 of file virtualmachine.\+cpp.
+
+
+
+References Datei\+::get\+Lang(), get\+Ptr(), Sprache\+::instructions, language, and subroutines.
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+216 \{
+217     std::istringstream is(r);
+218     std::string instruction, param1, param2;
+219     is>>instruction;
+220     \textcolor{keywordtype}{bool} is\_ok = \textcolor{keyword}{false};
+221     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i : \mbox{\hyperlink{class_virtual_machine_af4dd2663e7f1ea25ba6c88da94e6ef01}{language}}.\mbox{\hyperlink{class_sprache_a6052a9ec0d1202da4b8ff6e6a52e6244}{instructions}})
+222     \{
+223         \textcolor{keywordflow}{if}(i.first == instruction) is\_ok = \textcolor{keyword}{true};
+224     \}
+225     \textcolor{keywordflow}{if}(!is\_ok) \textcolor{keywordflow}{throw} (\textcolor{stringliteral}{"Please cross-check spelling of the mnemonik!"});  
+226     is>>param1;
+227     is>>param2;
+228     \mbox{\hyperlink{class_simple_instruktion}{SimpleInstruktion}} *sNew = \textcolor{keyword}{new} \mbox{\hyperlink{class_simple_instruktion}{SimpleInstruktion}}(
+      \mbox{\hyperlink{class_virtual_machine_af4dd2663e7f1ea25ba6c88da94e6ef01}{language}}.\mbox{\hyperlink{class_datei_aeeaf8e269f4d2b53e209ad905b5b75c5}{getLang}}(), r, \mbox{\hyperlink{class_virtual_machine_a7029636f9766e0394a8b9d60264a3565}{getPtr}}(instruction), param1, param2);
+229     \textcolor{keywordflow}{for}(std::pair<std::string, ComplexInstruktion*> pair : \mbox{\hyperlink{class_virtual_machine_a91f5b9cfc45eaea5ce95b659705b2803}{subroutines}})
+230     \{
+231         \textcolor{keywordflow}{if}(pair.first == \textcolor{stringliteral}{"\_start"})
+232         \{
+233 
+234             pair.second->add(*sNew);
+235             \textcolor{keywordflow}{break};
+236         \}
+237     \}
+238     sNew -> run(*\textcolor{keyword}{this});
+239     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+240 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_virtual_machine_aabeb8078a57ca3bb98c24bc655296e9f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{class_virtual_machine_aabeb8078a57ca3bb98c24bc655296e9f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_virtual_machine_a564ba72b2d0f9e888a1560b523c567ba}\label{class_virtual_machine_a564ba72b2d0f9e888a1560b523c567ba}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!run\+Subroutine@{run\+Subroutine}}
+\index{run\+Subroutine@{run\+Subroutine}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{run\+Subroutine()}{runSubroutine()}}
+{\footnotesize\ttfamily void Virtual\+Machine\+::run\+Subroutine (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})}
+
+Ausführt eine andere subroutine. 
+
+Definition at line 92 of file virtualmachine.\+cpp.
+
+
+
+References subroutines.
+
+
+
+Referenced by jsr().
+
+
+\begin{DoxyCode}
+93 \{
+94     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} pair : \mbox{\hyperlink{class_virtual_machine_a91f5b9cfc45eaea5ce95b659705b2803}{subroutines}})
+95     \{
+96         \textcolor{keywordflow}{if}(pair.first == s)
+97         \{
+98             
+99             pair.second->run((*\textcolor{keyword}{this}));
+100         \}
+101     \}
+102 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_virtual_machine_a564ba72b2d0f9e888a1560b523c567ba_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{class_virtual_machine_a1b1e03784277347206641bf47e39d6d1}\label{class_virtual_machine_a1b1e03784277347206641bf47e39d6d1}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!functions@{functions}}
+\index{functions@{functions}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{functions}{functions}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, void$\ast$$>$ Virtual\+Machine\+::functions\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 28 of file virtualmachine.\+hpp.
+
+
+
+Referenced by get\+Ptr(), and Virtual\+Machine().
+
+\mbox{\Hypertarget{class_virtual_machine_aae855da52e8f3b0a167b8fec497d44d9}\label{class_virtual_machine_aae855da52e8f3b0a167b8fec497d44d9}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!general\+Register\+Array@{general\+Register\+Array}}
+\index{general\+Register\+Array@{general\+Register\+Array}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{general\+Register\+Array}{generalRegisterArray}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_memory}{Memory}} Virtual\+Machine\+::general\+Register\+Array\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 23 of file virtualmachine.\+hpp.
+
+
+
+Referenced by get\+Reference(), and get\+Value().
+
+\mbox{\Hypertarget{class_virtual_machine_a109df714b628452e9a958eddb28df6e9}\label{class_virtual_machine_a109df714b628452e9a958eddb28df6e9}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!labels@{labels}}
+\index{labels@{labels}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{labels}{labels}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{class_complex_instruktion}{Complex\+Instruktion}}$\ast$$>$ Virtual\+Machine\+::labels\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 25 of file virtualmachine.\+hpp.
+
+\mbox{\Hypertarget{class_virtual_machine_af4dd2663e7f1ea25ba6c88da94e6ef01}\label{class_virtual_machine_af4dd2663e7f1ea25ba6c88da94e6ef01}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!language@{language}}
+\index{language@{language}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{language}{language}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sprache}{Sprache}} Virtual\+Machine\+::language\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 27 of file virtualmachine.\+hpp.
+
+
+
+Referenced by add\+Subroutine(), get\+Ptr(), run\+Instruction(), and Virtual\+Machine().
+
+\mbox{\Hypertarget{class_virtual_machine_a54136a9c003e36e77c28f31c7bef2dc2}\label{class_virtual_machine_a54136a9c003e36e77c28f31c7bef2dc2}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!memory@{memory}}
+\index{memory@{memory}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{memory}{memory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_memory}{Memory}} Virtual\+Machine\+::memory\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 22 of file virtualmachine.\+hpp.
+
+
+
+Referenced by get\+Reference(), and get\+Value().
+
+\mbox{\Hypertarget{class_virtual_machine_a957d36537fd7570d30e342c5400ad4a6}\label{class_virtual_machine_a957d36537fd7570d30e342c5400ad4a6}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!special\+Register\+Array@{special\+Register\+Array}}
+\index{special\+Register\+Array@{special\+Register\+Array}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{special\+Register\+Array}{specialRegisterArray}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_memory}{Memory}} Virtual\+Machine\+::special\+Register\+Array\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 24 of file virtualmachine.\+hpp.
+
+\mbox{\Hypertarget{class_virtual_machine_a3a4c8cdda0913c9c0cdc75df23ac7cbb}\label{class_virtual_machine_a3a4c8cdda0913c9c0cdc75df23ac7cbb}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!stack@{stack}}
+\index{stack@{stack}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{stack}{stack}}
+{\footnotesize\ttfamily std\+::stack$<$uint8\+\_\+t$>$ Virtual\+Machine\+::stack\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 21 of file virtualmachine.\+hpp.
+
+
+
+Referenced by pop\+Value(), and push\+Value().
+
+\mbox{\Hypertarget{class_virtual_machine_a91f5b9cfc45eaea5ce95b659705b2803}\label{class_virtual_machine_a91f5b9cfc45eaea5ce95b659705b2803}} 
+\index{Virtual\+Machine@{Virtual\+Machine}!subroutines@{subroutines}}
+\index{subroutines@{subroutines}!Virtual\+Machine@{Virtual\+Machine}}
+\subsubsection{\texorpdfstring{subroutines}{subroutines}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{class_complex_instruktion}{Complex\+Instruktion}}$\ast$$>$ Virtual\+Machine\+::subroutines\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 26 of file virtualmachine.\+hpp.
+
+
+
+Referenced by add\+Subroutine(), re\+Run\+All(), run\+Instruction(), run\+Subroutine(), and Virtual\+Machine().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/virtualmachine/\mbox{\hyperlink{virtualmachine_8hpp}{virtualmachine.\+hpp}}\item 
+src/virtualmachine/\mbox{\hyperlink{virtualmachine_8cpp}{virtualmachine.\+cpp}}\end{DoxyCompactItemize}

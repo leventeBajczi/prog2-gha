@@ -1,0 +1,207 @@
+\hypertarget{class_complex_instruktion}{}\section{Complex\+Instruktion Class Reference}
+\label{class_complex_instruktion}\index{Complex\+Instruktion@{Complex\+Instruktion}}
+
+
+{\ttfamily \#include $<$instruction.\+hpp$>$}
+
+
+
+Inheritance diagram for Complex\+Instruktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{class_complex_instruktion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Complex\+Instruktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{class_complex_instruktion__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_complex_instruktion_a954dad29a6453083400008671c0c05eb}{Complex\+Instruktion}} (std\+::string)
+\item 
+\mbox{\hyperlink{class_complex_instruktion_a781aafaec2554b759f887f2667272f06}{Complex\+Instruktion}} (std\+::string, \mbox{\hyperlink{class_simple_instruktion}{Simple\+Instruktion}} \&)
+\item 
+std\+::string \mbox{\hyperlink{class_complex_instruktion_a476d0f6ed0296cd4751543c4be6ca422}{print}} ()
+\item 
+void \mbox{\hyperlink{class_complex_instruktion_ab9e037eda3cf53252902f15541a01a21}{run}} (\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&)
+\item 
+void \mbox{\hyperlink{class_complex_instruktion_ae92fcdd92e0328d4eed826dea81b8c9c}{add}} (\mbox{\hyperlink{class_simple_instruktion}{Simple\+Instruktion}} \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_simple_instruktion}{Simple\+Instruktion}} $>$ \mbox{\hyperlink{class_complex_instruktion_af8a7ed862ee24675b75750a470dcf22a}{instructions}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Klasse für mehrerern Instruktionen. Funktioniert wie eine klügere Array (aber komplexer, auch). 
+
+Definition at line 42 of file instruction.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_complex_instruktion_a954dad29a6453083400008671c0c05eb}\label{class_complex_instruktion_a954dad29a6453083400008671c0c05eb}} 
+\index{Complex\+Instruktion@{Complex\+Instruktion}!Complex\+Instruktion@{Complex\+Instruktion}}
+\index{Complex\+Instruktion@{Complex\+Instruktion}!Complex\+Instruktion@{Complex\+Instruktion}}
+\subsubsection{\texorpdfstring{Complex\+Instruktion()}{ComplexInstruktion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Complex\+Instruktion\+::\+Complex\+Instruktion (\begin{DoxyParamCaption}\item[{std\+::string}]{lang }\end{DoxyParamCaption})}
+
+Initialisiert \mbox{\hyperlink{class_complex_instruktion}{Complex\+Instruktion}} nur mit der \mbox{\hyperlink{class_sprache}{Sprache}}. 
+
+Definition at line 35 of file instruction.\+cpp.
+
+
+\begin{DoxyCode}
+35                                                      : \mbox{\hyperlink{class_instruktion_a26d54febd2022c7402a22a8b55ba097a}{Instruktion}}(lang)
+36 \{
+37 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_complex_instruktion_a781aafaec2554b759f887f2667272f06}\label{class_complex_instruktion_a781aafaec2554b759f887f2667272f06}} 
+\index{Complex\+Instruktion@{Complex\+Instruktion}!Complex\+Instruktion@{Complex\+Instruktion}}
+\index{Complex\+Instruktion@{Complex\+Instruktion}!Complex\+Instruktion@{Complex\+Instruktion}}
+\subsubsection{\texorpdfstring{Complex\+Instruktion()}{ComplexInstruktion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Complex\+Instruktion\+::\+Complex\+Instruktion (\begin{DoxyParamCaption}\item[{std\+::string}]{lang,  }\item[{\mbox{\hyperlink{class_simple_instruktion}{Simple\+Instruktion}} \&}]{begin }\end{DoxyParamCaption})}
+
+Initialisiert \mbox{\hyperlink{class_complex_instruktion}{Complex\+Instruktion}} sowohl mit der \mbox{\hyperlink{class_sprache}{Sprache}} als auch mit einem \mbox{\hyperlink{class_simple_instruktion}{Simple\+Instruktion}}. 
+
+Definition at line 43 of file instruction.\+cpp.
+
+
+
+References instructions.
+
+
+\begin{DoxyCode}
+43                                                                                : 
+      \mbox{\hyperlink{class_instruktion_a26d54febd2022c7402a22a8b55ba097a}{Instruktion}}(lang)
+44 \{
+45     \mbox{\hyperlink{class_complex_instruktion_af8a7ed862ee24675b75750a470dcf22a}{instructions}}.push\_back(begin);
+46 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_complex_instruktion_ae92fcdd92e0328d4eed826dea81b8c9c}\label{class_complex_instruktion_ae92fcdd92e0328d4eed826dea81b8c9c}} 
+\index{Complex\+Instruktion@{Complex\+Instruktion}!add@{add}}
+\index{add@{add}!Complex\+Instruktion@{Complex\+Instruktion}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Complex\+Instruktion\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_simple_instruktion}{Simple\+Instruktion}} \&}]{si }\end{DoxyParamCaption})}
+
+Eine neue \mbox{\hyperlink{class_simple_instruktion}{Simple\+Instruktion}} einfügen. 
+
+Definition at line 77 of file instruction.\+cpp.
+
+
+
+References instructions.
+
+
+
+Referenced by Virtual\+Machine\+::add\+Subroutine().
+
+
+\begin{DoxyCode}
+78 \{
+79     \mbox{\hyperlink{class_complex_instruktion_af8a7ed862ee24675b75750a470dcf22a}{instructions}}.push\_back(si);
+80 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_complex_instruktion_ae92fcdd92e0328d4eed826dea81b8c9c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_complex_instruktion_a476d0f6ed0296cd4751543c4be6ca422}\label{class_complex_instruktion_a476d0f6ed0296cd4751543c4be6ca422}} 
+\index{Complex\+Instruktion@{Complex\+Instruktion}!print@{print}}
+\index{print@{print}!Complex\+Instruktion@{Complex\+Instruktion}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily std\+::string Complex\+Instruktion\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Gibt die String-\/\+Representation des ganzen Instruktionenliste zurück. 
+
+Implements \mbox{\hyperlink{class_instruktion_a267ff36e98ec889cceccb2f464c36bc6}{Instruktion}}.
+
+
+
+Definition at line 52 of file instruction.\+cpp.
+
+
+
+References instructions.
+
+
+\begin{DoxyCode}
+53 \{
+54     std::string ret = \textcolor{stringliteral}{""};
+55     \textcolor{keywordflow}{for}(\mbox{\hyperlink{class_simple_instruktion}{SimpleInstruktion}} si : \mbox{\hyperlink{class_complex_instruktion_af8a7ed862ee24675b75750a470dcf22a}{instructions}})
+56     \{
+57         ret+=si.print()+=\textcolor{charliteral}{'\(\backslash\)n'};
+58     \}
+59     \textcolor{keywordflow}{return} ret;
+60 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_complex_instruktion_ab9e037eda3cf53252902f15541a01a21}\label{class_complex_instruktion_ab9e037eda3cf53252902f15541a01a21}} 
+\index{Complex\+Instruktion@{Complex\+Instruktion}!run@{run}}
+\index{run@{run}!Complex\+Instruktion@{Complex\+Instruktion}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Complex\+Instruktion\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&}]{vm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Ausführt jede \mbox{\hyperlink{class_instruktion}{Instruktion}}, denen sie enthielt. 
+
+Implements \mbox{\hyperlink{class_instruktion_ad701f6b5537e5aa8c8c08b81a8946f63}{Instruktion}}.
+
+
+
+Definition at line 65 of file instruction.\+cpp.
+
+
+
+References instructions.
+
+
+\begin{DoxyCode}
+66 \{
+67     \textcolor{keywordflow}{for}(\mbox{\hyperlink{class_simple_instruktion}{SimpleInstruktion}} si : \mbox{\hyperlink{class_complex_instruktion_af8a7ed862ee24675b75750a470dcf22a}{instructions}})
+68     \{
+69         si.run(vm);
+70     \}
+71 \}
+\end{DoxyCode}
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{class_complex_instruktion_af8a7ed862ee24675b75750a470dcf22a}\label{class_complex_instruktion_af8a7ed862ee24675b75750a470dcf22a}} 
+\index{Complex\+Instruktion@{Complex\+Instruktion}!instructions@{instructions}}
+\index{instructions@{instructions}!Complex\+Instruktion@{Complex\+Instruktion}}
+\subsubsection{\texorpdfstring{instructions}{instructions}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_simple_instruktion}{Simple\+Instruktion}}$>$ Complex\+Instruktion\+::instructions\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 45 of file instruction.\+hpp.
+
+
+
+Referenced by add(), Complex\+Instruktion(), print(), and run().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/datei/instruction/\mbox{\hyperlink{instruction_8hpp}{instruction.\+hpp}}\item 
+src/datei/instruction/\mbox{\hyperlink{instruction_8cpp}{instruction.\+cpp}}\end{DoxyCompactItemize}

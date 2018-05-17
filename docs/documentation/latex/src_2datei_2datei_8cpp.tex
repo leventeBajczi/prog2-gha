@@ -1,0 +1,48 @@
+\hypertarget{src_2datei_2datei_8cpp}{}\section{src/datei/datei.cpp File Reference}
+\label{src_2datei_2datei_8cpp}\index{src/datei/datei.\+cpp@{src/datei/datei.\+cpp}}
+{\ttfamily \#include \char`\"{}datei.\+hpp\char`\"{}}\newline
+Include dependency graph for datei.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{src_2datei_2datei_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{src_2datei_2datei_8cpp_a77fcce6061365443462afeb51b673da2}{operator$<$$<$}} (std\+::ostream \&os, \mbox{\hyperlink{class_datei}{Datei}} \&d)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{src_2datei_2datei_8cpp_a77fcce6061365443462afeb51b673da2}\label{src_2datei_2datei_8cpp_a77fcce6061365443462afeb51b673da2}} 
+\index{src/datei/datei.\+cpp@{src/datei/datei.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!src/datei/datei.\+cpp@{src/datei/datei.\+cpp}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\mbox{\hyperlink{class_datei}{Datei}} \&}]{d }\end{DoxyParamCaption})}
+
+Auschreiben. 
+
+Definition at line 13 of file datei.\+cpp.
+
+
+
+References Datei\+::print().
+
+
+\begin{DoxyCode}
+14 \{
+15     os<<d.\mbox{\hyperlink{class_datei_a5dedc9776ebe637f0842300f648d4b17}{print}}();
+16     \textcolor{keywordflow}{return} os;
+17 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{src_2datei_2datei_8cpp_a77fcce6061365443462afeb51b673da2_cgraph}
+\end{center}
+\end{figure}

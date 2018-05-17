@@ -1,0 +1,190 @@
+\hypertarget{class_simple_instruktion}{}\section{Simple\+Instruktion Class Reference}
+\label{class_simple_instruktion}\index{Simple\+Instruktion@{Simple\+Instruktion}}
+
+
+{\ttfamily \#include $<$instruction.\+hpp$>$}
+
+
+
+Inheritance diagram for Simple\+Instruktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_simple_instruktion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Simple\+Instruktion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{class_simple_instruktion__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_simple_instruktion_ac79f8b3b04c300e9eda72e09377e61a9}{Simple\+Instruktion}} (std\+::string, std\+::string, void $\ast$, std\+::string, std\+::string)
+\item 
+std\+::string \mbox{\hyperlink{class_simple_instruktion_a0533865319bd39a0ecd1db463d488cb8}{print}} ()
+\item 
+void \mbox{\hyperlink{class_simple_instruktion_a5beecc39bbd465d001c41216ef4d46e7}{run}} (\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_simple_instruktion_a1e2b7a4f9d38ec973e030062570c4fe2}{representation}}
+\item 
+void $\ast$ \mbox{\hyperlink{class_simple_instruktion_ab5d048147bade8aa9ebcd2e020eb0a92}{function}}
+\item 
+std\+::string \mbox{\hyperlink{class_simple_instruktion_a8a19958470817ee23384ac0c64fdc393}{param1}}
+\item 
+std\+::string \mbox{\hyperlink{class_simple_instruktion_a9682f053735fffdf061ec43a989482e2}{param2}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Klasse für eine einzige \mbox{\hyperlink{class_instruktion}{Instruktion}}. 
+
+Definition at line 25 of file instruction.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_simple_instruktion_ac79f8b3b04c300e9eda72e09377e61a9}\label{class_simple_instruktion_ac79f8b3b04c300e9eda72e09377e61a9}} 
+\index{Simple\+Instruktion@{Simple\+Instruktion}!Simple\+Instruktion@{Simple\+Instruktion}}
+\index{Simple\+Instruktion@{Simple\+Instruktion}!Simple\+Instruktion@{Simple\+Instruktion}}
+\subsubsection{\texorpdfstring{Simple\+Instruktion()}{SimpleInstruktion()}}
+{\footnotesize\ttfamily Simple\+Instruktion\+::\+Simple\+Instruktion (\begin{DoxyParamCaption}\item[{std\+::string}]{lang,  }\item[{std\+::string}]{repr,  }\item[{void $\ast$}]{ptr,  }\item[{std\+::string}]{p1,  }\item[{std\+::string}]{p2 }\end{DoxyParamCaption})}
+
+Konstruktor der \mbox{\hyperlink{class_simple_instruktion}{Simple\+Instruktion}} Klasse und initialisiert die Membervariablen \mbox{\hyperlink{class_sprache}{Sprache}}, representation, function und die 2 Parametern. 
+
+Definition at line 8 of file instruction.\+cpp.
+
+
+\begin{DoxyCode}
+8                                                                                                           :
+       \mbox{\hyperlink{class_instruktion_a26d54febd2022c7402a22a8b55ba097a}{Instruktion}}(lang), \mbox{\hyperlink{class_simple_instruktion_a1e2b7a4f9d38ec973e030062570c4fe2}{representation}}(repr), \textcolor{keyword}{function}(ptr), 
+      \mbox{\hyperlink{class_simple_instruktion_a8a19958470817ee23384ac0c64fdc393}{param1}}(p1), \mbox{\hyperlink{class_simple_instruktion_a9682f053735fffdf061ec43a989482e2}{param2}}(p2) 
+9 \{
+10     this->\textcolor{keyword}{function} = ptr;
+11 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_simple_instruktion_a0533865319bd39a0ecd1db463d488cb8}\label{class_simple_instruktion_a0533865319bd39a0ecd1db463d488cb8}} 
+\index{Simple\+Instruktion@{Simple\+Instruktion}!print@{print}}
+\index{print@{print}!Simple\+Instruktion@{Simple\+Instruktion}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily std\+::string Simple\+Instruktion\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Gibt eine String-\/\+Representation zurück. 
+
+Implements \mbox{\hyperlink{class_instruktion_a267ff36e98ec889cceccb2f464c36bc6}{Instruktion}}.
+
+
+
+Definition at line 16 of file instruction.\+cpp.
+
+
+
+References representation.
+
+
+\begin{DoxyCode}
+17 \{
+18     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_simple_instruktion_a1e2b7a4f9d38ec973e030062570c4fe2}{representation}};
+19 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_simple_instruktion_a5beecc39bbd465d001c41216ef4d46e7}\label{class_simple_instruktion_a5beecc39bbd465d001c41216ef4d46e7}} 
+\index{Simple\+Instruktion@{Simple\+Instruktion}!run@{run}}
+\index{run@{run}!Simple\+Instruktion@{Simple\+Instruktion}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Simple\+Instruktion\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_virtual_machine}{Virtual\+Machine}} \&}]{vm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+ausführt den Inhaltinstruktion durch eine Funktionenpointer zum entsprechenden Funktion. 
+
+Implements \mbox{\hyperlink{class_instruktion_ad701f6b5537e5aa8c8c08b81a8946f63}{Instruktion}}.
+
+
+
+Definition at line 25 of file instruction.\+cpp.
+
+
+
+References param1, and param2.
+
+
+\begin{DoxyCode}
+26 \{
+27     void (*ptr)(\mbox{\hyperlink{class_virtual_machine}{VirtualMachine}}&, std::string, std::string) = (\textcolor{keywordtype}{void} (*)(
+      \mbox{\hyperlink{class_virtual_machine}{VirtualMachine}}&, std::string, std::string))\textcolor{keyword}{function};
+28     (*ptr)(vm, \mbox{\hyperlink{class_simple_instruktion_a8a19958470817ee23384ac0c64fdc393}{param1}}, \mbox{\hyperlink{class_simple_instruktion_a9682f053735fffdf061ec43a989482e2}{param2}});
+29 \}
+\end{DoxyCode}
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{class_simple_instruktion_ab5d048147bade8aa9ebcd2e020eb0a92}\label{class_simple_instruktion_ab5d048147bade8aa9ebcd2e020eb0a92}} 
+\index{Simple\+Instruktion@{Simple\+Instruktion}!function@{function}}
+\index{function@{function}!Simple\+Instruktion@{Simple\+Instruktion}}
+\subsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily void$\ast$ Simple\+Instruktion\+::function\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 29 of file instruction.\+hpp.
+
+\mbox{\Hypertarget{class_simple_instruktion_a8a19958470817ee23384ac0c64fdc393}\label{class_simple_instruktion_a8a19958470817ee23384ac0c64fdc393}} 
+\index{Simple\+Instruktion@{Simple\+Instruktion}!param1@{param1}}
+\index{param1@{param1}!Simple\+Instruktion@{Simple\+Instruktion}}
+\subsubsection{\texorpdfstring{param1}{param1}}
+{\footnotesize\ttfamily std\+::string Simple\+Instruktion\+::param1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 30 of file instruction.\+hpp.
+
+
+
+Referenced by run().
+
+\mbox{\Hypertarget{class_simple_instruktion_a9682f053735fffdf061ec43a989482e2}\label{class_simple_instruktion_a9682f053735fffdf061ec43a989482e2}} 
+\index{Simple\+Instruktion@{Simple\+Instruktion}!param2@{param2}}
+\index{param2@{param2}!Simple\+Instruktion@{Simple\+Instruktion}}
+\subsubsection{\texorpdfstring{param2}{param2}}
+{\footnotesize\ttfamily std\+::string Simple\+Instruktion\+::param2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 31 of file instruction.\+hpp.
+
+
+
+Referenced by run().
+
+\mbox{\Hypertarget{class_simple_instruktion_a1e2b7a4f9d38ec973e030062570c4fe2}\label{class_simple_instruktion_a1e2b7a4f9d38ec973e030062570c4fe2}} 
+\index{Simple\+Instruktion@{Simple\+Instruktion}!representation@{representation}}
+\index{representation@{representation}!Simple\+Instruktion@{Simple\+Instruktion}}
+\subsubsection{\texorpdfstring{representation}{representation}}
+{\footnotesize\ttfamily std\+::string Simple\+Instruktion\+::representation\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 28 of file instruction.\+hpp.
+
+
+
+Referenced by print().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/datei/instruction/\mbox{\hyperlink{instruction_8hpp}{instruction.\+hpp}}\item 
+src/datei/instruction/\mbox{\hyperlink{instruction_8cpp}{instruction.\+cpp}}\end{DoxyCompactItemize}

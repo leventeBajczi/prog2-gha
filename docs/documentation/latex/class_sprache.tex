@@ -1,0 +1,155 @@
+\hypertarget{class_sprache}{}\section{Sprache Class Reference}
+\label{class_sprache}\index{Sprache@{Sprache}}
+
+
+{\ttfamily \#include $<$sprache.\+hpp$>$}
+
+
+
+Inheritance diagram for Sprache\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{class_sprache__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Sprache\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sprache__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sprache_adae8df1e07febd0a493436a0fef2042b}{Sprache}} (std\+::string, std\+::string)
+\item 
+std\+::string \mbox{\hyperlink{class_sprache_a1e1e39e91e6d33e068fed01333fa99cc}{print}} ()
+\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{class_sprache_a6052a9ec0d1202da4b8ff6e6a52e6244}{instructions}}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_sprache_ac0e8018bac279c35c325ad162cb0ba17}{language\+Elements}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Child von 2 Basisklassen. Enthielt die Definitionen des Befehle. 
+
+Definition at line 14 of file sprache.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sprache_adae8df1e07febd0a493436a0fef2042b}\label{class_sprache_adae8df1e07febd0a493436a0fef2042b}} 
+\index{Sprache@{Sprache}!Sprache@{Sprache}}
+\index{Sprache@{Sprache}!Sprache@{Sprache}}
+\subsubsection{\texorpdfstring{Sprache()}{Sprache()}}
+{\footnotesize\ttfamily Sprache\+::\+Sprache (\begin{DoxyParamCaption}\item[{std\+::string}]{data,  }\item[{std\+::string}]{lang }\end{DoxyParamCaption})}
+
+Konstruktor für Klasse \mbox{\hyperlink{class_sprache}{Sprache}}. Ordnet die Befehle zu ihnen Bedeutungen. 
+
+Definition at line 19 of file sprache.\+cpp.
+
+
+\begin{DoxyCode}
+19                                                : \mbox{\hyperlink{class_datei_a9a9e1149154603548fdfc889821cf418}{Datei}}(lang), \mbox{\hyperlink{class_j_s_o_n_object_a88fb28a2f166ecc545ae94f170ddd0ab}{JSONObject}}(data), 
+      \mbox{\hyperlink{class_sprache_a6052a9ec0d1202da4b8ff6e6a52e6244}{instructions}}(\{
+20     \{this->\textcolor{keyword}{get}(\textcolor{stringliteral}{"Move B to A"}), \textcolor{stringliteral}{"Move B to A"}\},
+21     \{this->\textcolor{keyword}{get}(\textcolor{stringliteral}{"Add B to A"}), \textcolor{stringliteral}{"Add B to A"}\},
+22     \{this->\textcolor{keyword}{get}(\textcolor{stringliteral}{"Substract B from A"}), \textcolor{stringliteral}{"Substract B from A"}\},
+23     \{this->\textcolor{keyword}{get}(\textcolor{stringliteral}{"Swap the upper and lower 4 bits"}), \textcolor{stringliteral}{"Swap the upper and lower 4 bits"}\},
+24     \{this->\textcolor{keyword}{get}(\textcolor{stringliteral}{"Shift left, insert 0"}), \textcolor{stringliteral}{"Shift left, insert 0"}\},
+25     \{this->\textcolor{keyword}{get}(\textcolor{stringliteral}{"Shift right, insert 0"}), \textcolor{stringliteral}{"Shift right, insert 0"}\},
+26     \{this->\textcolor{keyword}{get}(\textcolor{stringliteral}{"Jump to subroutine"}), \textcolor{stringliteral}{"Jump to subroutine"}\},
+27     \{this->\textcolor{keyword}{get}(\textcolor{stringliteral}{"Push value to stack"}), \textcolor{stringliteral}{"Push value to stack"}\},
+28     \{this->\textcolor{keyword}{get}(\textcolor{stringliteral}{"Pop value from stack"}), \textcolor{stringliteral}{"Pop value from stack"}\},
+29     \})
+30 \{ 
+31 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sprache_a1e1e39e91e6d33e068fed01333fa99cc}\label{class_sprache_a1e1e39e91e6d33e068fed01333fa99cc}} 
+\index{Sprache@{Sprache}!print@{print}}
+\index{print@{print}!Sprache@{Sprache}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily std\+::string Sprache\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_datei_a5dedc9776ebe637f0842300f648d4b17}{Datei}}.
+
+
+
+Definition at line 34 of file sprache.\+cpp.
+
+
+\begin{DoxyCode}
+35 \{
+36     \textcolor{keywordflow}{return} (std::string)*\textcolor{keyword}{this};
+37 \}
+\end{DoxyCode}
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{class_sprache_a6052a9ec0d1202da4b8ff6e6a52e6244}\label{class_sprache_a6052a9ec0d1202da4b8ff6e6a52e6244}} 
+\index{Sprache@{Sprache}!instructions@{instructions}}
+\index{instructions@{instructions}!Sprache@{Sprache}}
+\subsubsection{\texorpdfstring{instructions}{instructions}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::string$>$ Sprache\+::instructions}
+
+
+
+Definition at line 17 of file sprache.\+hpp.
+
+
+
+Referenced by Virtual\+Machine\+::get\+Ptr(), and Virtual\+Machine\+::run\+Instruction().
+
+\mbox{\Hypertarget{class_sprache_ac0e8018bac279c35c325ad162cb0ba17}\label{class_sprache_ac0e8018bac279c35c325ad162cb0ba17}} 
+\index{Sprache@{Sprache}!language\+Elements@{language\+Elements}}
+\index{language\+Elements@{language\+Elements}!Sprache@{Sprache}}
+\subsubsection{\texorpdfstring{language\+Elements}{languageElements}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Sprache\+::language\+Elements\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \textcolor{stringliteral}{"Move B to A"},
+    \textcolor{stringliteral}{"Add B to A"},
+    \textcolor{stringliteral}{"Substract B from A"},
+    \textcolor{stringliteral}{"Swap the upper and lower 4 bits"},
+    \textcolor{stringliteral}{"Shift left, insert 0"},
+    \textcolor{stringliteral}{"Shift right, insert 0"},
+    \textcolor{stringliteral}{"Jump to subroutine"},
+    \textcolor{stringliteral}{"Push value to stack"},
+    \textcolor{stringliteral}{"Pop value from stack"}
+\}
+\end{DoxyCode}
+
+
+Definition at line 18 of file sprache.\+hpp.
+
+
+
+Referenced by Virtual\+Machine\+::\+Virtual\+Machine().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/datei/sprache/\mbox{\hyperlink{sprache_8hpp}{sprache.\+hpp}}\item 
+src/datei/sprache/\mbox{\hyperlink{sprache_8cpp}{sprache.\+cpp}}\end{DoxyCompactItemize}

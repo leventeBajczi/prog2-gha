@@ -1,0 +1,59 @@
+\hypertarget{src_2json_2json_8hpp}{}\section{src/json/json.hpp File Reference}
+\label{src_2json_2json_8hpp}\index{src/json/json.\+hpp@{src/json/json.\+hpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}../../lib/simplejson/json.\+hpp\char`\"{}}\newline
+Include dependency graph for json.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src_2json_2json_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src_2json_2json_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}}
+\item 
+class \mbox{\hyperlink{class_j_s_o_n_array}{J\+S\+O\+N\+Array}}
+\item 
+class \mbox{\hyperlink{class_j_s_o_n_object}{J\+S\+O\+N\+Object}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{src_2json_2json_8hpp_a34df0f2d0b7939ec7974a36a20f51351}{operator$<$$<$}} (std\+::ostream \&os, \mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}} \&content)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{src_2json_2json_8hpp_a34df0f2d0b7939ec7974a36a20f51351}\label{src_2json_2json_8hpp_a34df0f2d0b7939ec7974a36a20f51351}} 
+\index{src/json/json.\+hpp@{src/json/json.\+hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!src/json/json.\+hpp@{src/json/json.\+hpp}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}} \&}]{content }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Operatorüberladung für den $<$$<$ operator, schreibt den Inhalt des \mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}} Klasses (also entweder eine \mbox{\hyperlink{class_j_s_o_n_object}{J\+S\+O\+N\+Object}} or eine \mbox{\hyperlink{class_j_s_o_n_array}{J\+S\+O\+N\+Array}}) zum ostream. 
+
+Definition at line 70 of file json.\+hpp.
+
+
+
+References J\+S\+O\+N\+::content.
+
+
+\begin{DoxyCode}
+71 \{
+72     os<<content.\mbox{\hyperlink{class_j_s_o_n_ad1ace77234b963a2994178ce7f76a181}{content}};
+73     \textcolor{keywordflow}{return} os;
+74 \}
+\end{DoxyCode}

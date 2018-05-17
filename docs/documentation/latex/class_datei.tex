@@ -1,0 +1,167 @@
+\hypertarget{class_datei}{}\section{Datei Class Reference}
+\label{class_datei}\index{Datei@{Datei}}
+
+
+{\ttfamily \#include $<$datei.\+hpp$>$}
+
+
+
+Inheritance diagram for Datei\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{class_datei__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Datei\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{class_datei__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_datei_a9a9e1149154603548fdfc889821cf418}{Datei}} (std\+::string)
+\item 
+virtual std\+::string \mbox{\hyperlink{class_datei_a5dedc9776ebe637f0842300f648d4b17}{print}} ()=0
+\item 
+std\+::string \mbox{\hyperlink{class_datei_aeeaf8e269f4d2b53e209ad905b5b75c5}{get\+Lang}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_datei_a49b90e65e1e9523b2a61e370727d9510}{language}}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_datei_aca7b8a47eeafb9d0860bebec55d21923}{operator$<$$<$}} (std\+::ostream \&, \mbox{\hyperlink{class_datei}{Datei}} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Klasse für Dateien. 
+
+Definition at line 10 of file datei.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_datei_a9a9e1149154603548fdfc889821cf418}\label{class_datei_a9a9e1149154603548fdfc889821cf418}} 
+\index{Datei@{Datei}!Datei@{Datei}}
+\index{Datei@{Datei}!Datei@{Datei}}
+\subsubsection{\texorpdfstring{Datei()}{Datei()}}
+{\footnotesize\ttfamily Datei\+::\+Datei (\begin{DoxyParamCaption}\item[{std\+::string}]{lang }\end{DoxyParamCaption})}
+
+Konstruktor für Dateien, stellt die \mbox{\hyperlink{class_sprache}{Sprache}} ein. 
+
+Definition at line 7 of file datei.\+cpp.
+
+
+\begin{DoxyCode}
+7 : \mbox{\hyperlink{class_datei_a49b90e65e1e9523b2a61e370727d9510}{language}}(lang) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_datei_aeeaf8e269f4d2b53e209ad905b5b75c5}\label{class_datei_aeeaf8e269f4d2b53e209ad905b5b75c5}} 
+\index{Datei@{Datei}!get\+Lang@{get\+Lang}}
+\index{get\+Lang@{get\+Lang}!Datei@{Datei}}
+\subsubsection{\texorpdfstring{get\+Lang()}{getLang()}}
+{\footnotesize\ttfamily std\+::string Datei\+::get\+Lang (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getterfunktion für die \mbox{\hyperlink{class_sprache}{Sprache}}. 
+
+Definition at line 22 of file datei.\+cpp.
+
+
+
+References language.
+
+
+
+Referenced by Virtual\+Machine\+::add\+Subroutine(), Virtual\+Machine\+::run\+Instruction(), and Virtual\+Machine\+::\+Virtual\+Machine().
+
+
+\begin{DoxyCode}
+22 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_datei_a49b90e65e1e9523b2a61e370727d9510}{language}};\}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_datei_aeeaf8e269f4d2b53e209ad905b5b75c5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_datei_a5dedc9776ebe637f0842300f648d4b17}\label{class_datei_a5dedc9776ebe637f0842300f648d4b17}} 
+\index{Datei@{Datei}!print@{print}}
+\index{print@{print}!Datei@{Datei}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily virtual std\+::string Datei\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_complex_instruktion_a476d0f6ed0296cd4751543c4be6ca422}{Complex\+Instruktion}}, \mbox{\hyperlink{class_simple_instruktion_a0533865319bd39a0ecd1db463d488cb8}{Simple\+Instruktion}}, \mbox{\hyperlink{class_sprache_a1e1e39e91e6d33e068fed01333fa99cc}{Sprache}}, and \mbox{\hyperlink{class_instruktion_a267ff36e98ec889cceccb2f464c36bc6}{Instruktion}}.
+
+
+
+Referenced by operator$<$$<$().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{class_datei_a5dedc9776ebe637f0842300f648d4b17_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_datei_aca7b8a47eeafb9d0860bebec55d21923}\label{class_datei_aca7b8a47eeafb9d0860bebec55d21923}} 
+\index{Datei@{Datei}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Datei@{Datei}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\mbox{\hyperlink{class_datei}{Datei}} \&}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Auschreiben. 
+
+Definition at line 13 of file datei.\+cpp.
+
+
+\begin{DoxyCode}
+14 \{
+15     os<<d.\mbox{\hyperlink{class_datei_a5dedc9776ebe637f0842300f648d4b17}{print}}();
+16     \textcolor{keywordflow}{return} os;
+17 \}
+\end{DoxyCode}
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{class_datei_a49b90e65e1e9523b2a61e370727d9510}\label{class_datei_a49b90e65e1e9523b2a61e370727d9510}} 
+\index{Datei@{Datei}!language@{language}}
+\index{language@{language}!Datei@{Datei}}
+\subsubsection{\texorpdfstring{language}{language}}
+{\footnotesize\ttfamily std\+::string Datei\+::language\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 12 of file datei.\+hpp.
+
+
+
+Referenced by get\+Lang().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/datei/\mbox{\hyperlink{datei_8hpp}{datei.\+hpp}}\item 
+src/datei/\mbox{\hyperlink{src_2datei_2datei_8cpp}{datei.\+cpp}}\end{DoxyCompactItemize}

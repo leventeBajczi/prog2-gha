@@ -1,0 +1,202 @@
+\hypertarget{class_j_s_o_n_array}{}\section{J\+S\+O\+N\+Array Class Reference}
+\label{class_j_s_o_n_array}\index{J\+S\+O\+N\+Array@{J\+S\+O\+N\+Array}}
+
+
+{\ttfamily \#include $<$json.\+hpp$>$}
+
+
+
+Inheritance diagram for J\+S\+O\+N\+Array\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{class_j_s_o_n_array__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for J\+S\+O\+N\+Array\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{class_j_s_o_n_array__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_j_s_o_n_array_ac7403c8a053c8dcc205ae8f4b6953cc8}{J\+S\+O\+N\+Array}} (std\+::string=\char`\"{}\mbox{[}$\,$\mbox{]}\char`\"{})
+\item 
+\mbox{\hyperlink{class_j_s_o_n_object}{J\+S\+O\+N\+Object}} \mbox{\hyperlink{class_j_s_o_n_array_a8c2bac974ee9b2806e9dbb78062f3abd}{operator\mbox{[}$\,$\mbox{]}}} (int n)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{class_j_s_o_n_array_ad012cef04a71b2e708d28f88f3c1c4e7}{set}} (int, T)
+\item 
+{\footnotesize template$<$$>$ }\\void \mbox{\hyperlink{class_j_s_o_n_array_a40043037244507bd344c9cae26962bde}{set}} (int n, \mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}} t)
+\item 
+{\footnotesize template$<$$>$ }\\void \mbox{\hyperlink{class_j_s_o_n_array_a6cbff0aa889890a84af41d6f5eae23f2}{set}} (int key, \mbox{\hyperlink{class_j_s_o_n_object}{J\+S\+O\+N\+Object}} value)
+\item 
+{\footnotesize template$<$$>$ }\\void \mbox{\hyperlink{class_j_s_o_n_array_adabcf6ff104db56de01192e17f488aed}{set}} (int key, \mbox{\hyperlink{class_j_s_o_n_array}{J\+S\+O\+N\+Array}} value)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Klasse für den Arbeit mit J\+S\+O\+N\+Arrays, ein Child von \mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}} 
+
+Definition at line 36 of file json.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_j_s_o_n_array_ac7403c8a053c8dcc205ae8f4b6953cc8}\label{class_j_s_o_n_array_ac7403c8a053c8dcc205ae8f4b6953cc8}} 
+\index{J\+S\+O\+N\+Array@{J\+S\+O\+N\+Array}!J\+S\+O\+N\+Array@{J\+S\+O\+N\+Array}}
+\index{J\+S\+O\+N\+Array@{J\+S\+O\+N\+Array}!J\+S\+O\+N\+Array@{J\+S\+O\+N\+Array}}
+\subsubsection{\texorpdfstring{J\+S\+O\+N\+Array()}{JSONArray()}}
+{\footnotesize\ttfamily J\+S\+O\+N\+Array\+::\+J\+S\+O\+N\+Array (\begin{DoxyParamCaption}\item[{std\+::string}]{content = {\ttfamily \char`\"{}\mbox{[}\mbox{]}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Konstruktor für die Klasse \mbox{\hyperlink{class_j_s_o_n_array}{J\+S\+O\+N\+Array}}. Ladet den {\ttfamily content} ein. 
+
+Definition at line 152 of file json.\+hpp.
+
+
+\begin{DoxyCode}
+152                                               : \mbox{\hyperlink{class_j_s_o_n_ae9b8a305b1bdc0aa66d096b226e1d7bb}{JSON}}(\mbox{\hyperlink{class_j_s_o_n_ad1ace77234b963a2994178ce7f76a181}{content}})
+153 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_s_o_n_array_a8c2bac974ee9b2806e9dbb78062f3abd}\label{class_j_s_o_n_array_a8c2bac974ee9b2806e9dbb78062f3abd}} 
+\index{J\+S\+O\+N\+Array@{J\+S\+O\+N\+Array}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!J\+S\+O\+N\+Array@{J\+S\+O\+N\+Array}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_s_o_n_object}{J\+S\+O\+N\+Object}} J\+S\+O\+N\+Array\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gibt den Wert beim Platz n zurück. 
+
+Definition at line 158 of file json.\+hpp.
+
+
+
+References J\+S\+O\+N\+::content, and json\+::\+J\+S\+O\+N\+::\+Load().
+
+
+\begin{DoxyCode}
+159 \{
+160     \mbox{\hyperlink{classjson_1_1_j_s_o_n}{json::JSON}} obj = \mbox{\hyperlink{classjson_1_1_j_s_o_n_a799ab1cc68cb6e2a41ec948a9a2ecc37}{json::JSON::Load}}(\mbox{\hyperlink{class_j_s_o_n_ad1ace77234b963a2994178ce7f76a181}{content}});
+161     \mbox{\hyperlink{class_j_s_o_n_object}{JSONObject}} \mbox{\hyperlink{namespacejson}{json}}(obj[n].dump());
+162     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacejson}{json}};
+163 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_j_s_o_n_array_a8c2bac974ee9b2806e9dbb78062f3abd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_s_o_n_array_ad012cef04a71b2e708d28f88f3c1c4e7}\label{class_j_s_o_n_array_ad012cef04a71b2e708d28f88f3c1c4e7}} 
+\index{J\+S\+O\+N\+Array@{J\+S\+O\+N\+Array}!set@{set}}
+\index{set@{set}!J\+S\+O\+N\+Array@{J\+S\+O\+N\+Array}}
+\subsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void J\+S\+O\+N\+Array\+::set (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{T}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Einstellen den Wert beim Platz n. Der neue Wert wird t sein (Template). 
+
+Definition at line 168 of file json.\+hpp.
+
+
+
+References J\+S\+O\+N\+::content, json\+::\+J\+S\+O\+N\+::dump(), and json\+::\+J\+S\+O\+N\+::\+Load().
+
+
+\begin{DoxyCode}
+169 \{
+170         \mbox{\hyperlink{classjson_1_1_j_s_o_n}{json::JSON}} obj = \mbox{\hyperlink{classjson_1_1_j_s_o_n_a799ab1cc68cb6e2a41ec948a9a2ecc37}{json::JSON::Load}}(\mbox{\hyperlink{class_j_s_o_n_ad1ace77234b963a2994178ce7f76a181}{content}});
+171         obj[n] = t;
+172         \mbox{\hyperlink{class_j_s_o_n_ad1ace77234b963a2994178ce7f76a181}{content}} = obj.\mbox{\hyperlink{classjson_1_1_j_s_o_n_acb99af0df2045a504f6bbc08bf5c4990}{dump}}();
+173 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_j_s_o_n_array_ad012cef04a71b2e708d28f88f3c1c4e7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_s_o_n_array_a40043037244507bd344c9cae26962bde}\label{class_j_s_o_n_array_a40043037244507bd344c9cae26962bde}} 
+\index{J\+S\+O\+N\+Array@{J\+S\+O\+N\+Array}!set@{set}}
+\index{set@{set}!J\+S\+O\+N\+Array@{J\+S\+O\+N\+Array}}
+\subsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void J\+S\+O\+N\+Array\+::set (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{\mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Einstellen den Wert beim Platz n. Der neue Wert wird t sein (\mbox{\hyperlink{class_j_s_o_n}{J\+S\+ON}}). 
+
+Definition at line 179 of file json.\+hpp.
+
+
+
+References json\+::\+J\+S\+O\+N\+::dump(), and json\+::\+J\+S\+O\+N\+::\+Load().
+
+
+\begin{DoxyCode}
+180 \{
+181         \mbox{\hyperlink{classjson_1_1_j_s_o_n}{json::JSON}} obj = \mbox{\hyperlink{classjson_1_1_j_s_o_n_a799ab1cc68cb6e2a41ec948a9a2ecc37}{json::JSON::Load}}(\mbox{\hyperlink{class_j_s_o_n_ad1ace77234b963a2994178ce7f76a181}{content}});
+182         \mbox{\hyperlink{classjson_1_1_j_s_o_n}{json::JSON}} obj2 = \mbox{\hyperlink{classjson_1_1_j_s_o_n_a799ab1cc68cb6e2a41ec948a9a2ecc37}{json::JSON::Load}}((std::string)t);
+183         obj[n] = obj2;
+184         \mbox{\hyperlink{class_j_s_o_n_ad1ace77234b963a2994178ce7f76a181}{content}} = obj.\mbox{\hyperlink{classjson_1_1_j_s_o_n_acb99af0df2045a504f6bbc08bf5c4990}{dump}}();
+185 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_j_s_o_n_array_a40043037244507bd344c9cae26962bde_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_s_o_n_array_a6cbff0aa889890a84af41d6f5eae23f2}\label{class_j_s_o_n_array_a6cbff0aa889890a84af41d6f5eae23f2}} 
+\index{J\+S\+O\+N\+Array@{J\+S\+O\+N\+Array}!set@{set}}
+\index{set@{set}!J\+S\+O\+N\+Array@{J\+S\+O\+N\+Array}}
+\subsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void J\+S\+O\+N\+Array\+::set (\begin{DoxyParamCaption}\item[{int}]{key,  }\item[{\mbox{\hyperlink{class_j_s_o_n_object}{J\+S\+O\+N\+Object}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Einstellen den Wert beim Platz n. Der neue Wert wird t sein (\mbox{\hyperlink{class_j_s_o_n_object}{J\+S\+O\+N\+Object}}). 
+
+Definition at line 191 of file json.\+hpp.
+
+
+\begin{DoxyCode}
+192 \{
+193     (*this).set(key, dynamic\_cast<JSON&>(value));
+194 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_j_s_o_n_array_adabcf6ff104db56de01192e17f488aed}\label{class_j_s_o_n_array_adabcf6ff104db56de01192e17f488aed}} 
+\index{J\+S\+O\+N\+Array@{J\+S\+O\+N\+Array}!set@{set}}
+\index{set@{set}!J\+S\+O\+N\+Array@{J\+S\+O\+N\+Array}}
+\subsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void J\+S\+O\+N\+Array\+::set (\begin{DoxyParamCaption}\item[{int}]{key,  }\item[{\mbox{\hyperlink{class_j_s_o_n_array}{J\+S\+O\+N\+Array}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Einstellen den Wert beim Platz n. Der neue Wert wird t sein (\mbox{\hyperlink{class_j_s_o_n_array}{J\+S\+O\+N\+Array}}). 
+
+Definition at line 199 of file json.\+hpp.
+
+
+\begin{DoxyCode}
+200 \{
+201     (*this).set(key, dynamic\_cast<JSON&>(value));
+202 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/json/\mbox{\hyperlink{src_2json_2json_8hpp}{json.\+hpp}}\end{DoxyCompactItemize}
